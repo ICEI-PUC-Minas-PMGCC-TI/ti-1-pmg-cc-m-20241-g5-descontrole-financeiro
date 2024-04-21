@@ -1,18 +1,31 @@
-# Nome do projeto
+# Guarda Grana
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+1) Geral:  
+•	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
+•	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
+•	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário.
+
+2) Específico:
+•	 Verificar se o jovem recebe renda fixa ou não.
+•	 Verificar se o jovem possui planejamentos financeiros.
+•	 Verificar se o jovem possui reserva financeira.
+•	 Analisar rotina de estudo e/ou trabalho.
+•	 Analisar compromisso com rotina de estudo e/ou trabalho
+
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Miguel Alves Sá de Paula
+* Arthur Carvalho Rodrigues
+* Arthur Soares Rolla
+* Vitor Costa Oliveira Rolla
+* João Marcos de Sousa Bortolaia
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Luciana Mara Freitas Diniz
+* João Carlos Oliveira Caetano
 
 ## Instruções de utilização
 
