@@ -28,16 +28,16 @@ Segundo metodologias propostas por grandes empreendedores, é fundamental que os
 ## Objetivos
 
 1) Geral:  
-•	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
-•	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
-•	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário.
+*	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
+*	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
+*	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário.
 
 2) Específico:
-•	 Verificar se o jovem recebe renda fixa ou não.
-•	 Verificar se o jovem possui planejamentos financeiros.
-•	 Verificar se o jovem possui reserva financeira.
-•	 Analisar rotina de estudo e/ou trabalho.
-•	 Analisar compromisso com rotina de estudo e/ou trabalho
+*	 Verificar se o jovem recebe renda fixa ou não.
+*	 Verificar se o jovem possui planejamentos financeiros.
+*	 Verificar se o jovem possui reserva financeira.
+*	 Analisar rotina de estudo e/ou trabalho.
+*	 Analisar compromisso com rotina de estudo e/ou trabalho
 
 
 ## Justificativa
