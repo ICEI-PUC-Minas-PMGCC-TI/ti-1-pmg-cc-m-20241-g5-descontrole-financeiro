@@ -313,11 +313,11 @@ O usuário vai aprender a manusear seu dinheiro e obter controle sobre seus gast
 
 ### Divisão de Papéis e Tarefas:
 
-*   **Product Owner**: Responsável por definir as necessidades do usuário, priorizar o backlog e garantir que o produto final atenda às expectativas dos usuários e dos stakeholders.
+*   **Product Owner**: Arthur Carvalho
     
-*   **Scrum Master**: Facilitador do processo Scrum, responsável por garantir que a equipe siga os princípios e práticas do Scrum, removendo impedimentos e ajudando a resolver conflitos.
+*   **Scrum Master**: Vitor Costa
     
-*   **Equipe de Desenvolvimento**: Responsável por implementar as funcionalidades definidas no backlog durante cada sprint.
+*   **Equipe de Desenvolvimento**: Arthur Soares, João Marcos, Miguel Alves
     
 
 ### Ferramentas:
