@@ -1,0 +1,53 @@
+/*Configurações gerais*/
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(23, 33, 33);
+}
+
+.form-control{
+    background-color: rgb(93, 165, 165);
+    border: none;
+}
+/*Fim configurações gerais*/
+
+
+
+
+/*Configurações do modal*/
+.close:hover{
+    color: rgb(45, 226, 226);
+}
+
+.close{
+    color: antiquewhite;
+}
+
+.modal-header{
+    background-color: rgb(23, 33, 33);
+    color: antiquewhite;
+    border: none;
+}
+
+.modal-body{
+    background-color: rgb(23, 33, 33);
+}
+
+.modal-footer{
+    background-color: rgb(23, 33, 33);
+    border: none;
+}
+/*Fim configurações do modal*/
+
+
+
+
+.btn-info{
+    margin-left: 13px ;
+}
+
