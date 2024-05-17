@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: black;
+    color: aliceblue;
+}
+.bg-azul-escuro {
+    background-color: #002366;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+#el {
+    margin-top: 50px;
+}
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.botao {
+    padding: 10px 20px;
+    background-color: orange;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.voltar {
+    margin-left: 20px;
+}
+.continuar {
+    margin-right: 20px;
+}
+.botao:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
