@@ -1,6 +1,6 @@
 # Guarda Grana
 
-1) Geral:  
+1) Geral:  arthur
 *	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
 *	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
 *	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário. !!
