@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (opcaoEscolhida) {
             const respostaCorreta = opcaoEscolhida.classList.contains('opcao-correta');
             sessionStorage.setItem('resposta', respostaCorreta ? 'correta' : 'incorreta');
-            // Redirecionar para a próxima página
             window.location.href = 'RespostaQuiz.html';
         } else {
             event.preventDefault();
