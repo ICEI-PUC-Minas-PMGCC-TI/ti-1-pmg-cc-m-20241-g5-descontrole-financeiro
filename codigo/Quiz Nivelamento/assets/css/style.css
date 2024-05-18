@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #131F24;
+    background-color: #110e09;
     color: whitesmoke;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -136,31 +136,6 @@
     text-overflow: ellipsis;
     flex-shrink: 1;
     margin: 0;
-<<<<<<< HEAD
-  }
-
- a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
- }
-
-  .btn_continuar{
-    color: white;
-    background-color:   rgb(223, 100, 23);
-    box-shadow: 0 1vh 0 rgb(223, 70, 23);
-    border: none;
-    border-radius: 5px;
-    padding: 40px; 
-    width: 150px; 
-    height: 70px;
-  }
-
-  .btn_continuar:hover{
-    background-color: rgb(169, 71, 14);
-    color: rgb(211, 186, 186);
-  }
-=======
     text-align: center;
   }
 
@@ -198,5 +173,48 @@
     transform: translateY(3px);
     box-shadow: none;
   }
+
+  .icon-perg {
+    width: auto;
+    height: 6rem
+  }
+
+  .icon-perg img {
+    max-height: 100%;
+  }
+
+  .pet {
+    width: auto;
+    height:10rem;
+  }
+
+  .pet img {
+    max-height: 100%;
+  }
+
+
+  .pet_perg p {
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .perguntas {
+      width: 100%;
+    }
+  }
   
->>>>>>> 2da5fd7b3334c1cc9529b15c86e0b37dbdda6d54
+  @media only screen and (max-width: 768px) {
+    .perguntas {
+      width: 100%;
+    }
+
+    main {
+      width: 90%;
+    }
+    .pet {
+      padding-left: 25%;
+    }
+    
+  }
