@@ -1,10 +1,9 @@
 # Guarda Grana Torvi
 
-1) Geral:  
+1) Geral:  arthur
 *	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
 *	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
-*	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário. !!
-
+*	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário. !!!!
 2) Específico:
 *	 Verificar se o jovem recebe renda fixa ou não.
 *	 Verificar se o jovem possui planejamentos financeiros.
