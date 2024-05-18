@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -18,7 +20,28 @@
     align-items: center;
     background-color: #110e09;
     color: whitesmoke;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:  400;
+    font-style: normal;
+  }
+
+  @media screen and (max-width: 360px){
+    main {
+      width: 100%;
+      max-width: 100%;
+      gap: 2rem;
+    }
+    .pet_perg {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .pet img {
+      min-width: 83px;
+    }
+    
   }
   
   .progresso {
@@ -52,7 +75,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding-top: 2rem;
     gap: 7rem
   }
   
@@ -67,13 +90,9 @@
   }
   
   .pet img {
-    max-width: 90%;
-    max-height: auto;
+    max-width: 100%;
   }
-  .pet {
-    width: 10rem;
-    height:auto;
-  }
+  
   .pet_perg h3 {
     border: 2px solid rgba(78, 71, 54, 0.5);
     border-radius: 15px;
@@ -88,6 +107,7 @@
     flex-wrap: wrap;
     gap: 1em;
     width: 40%;
+    min-width: 120px;
     max-width: 100%;
   }
   
@@ -99,33 +119,102 @@
     border: 2px solid rgba(78, 71, 54, 0.5);
     border-radius: 15px;
     box-shadow: 0 3px 0 rgba(78, 71, 54, 0.5);
-    padding: 1.5rem;
+    padding: 1rem;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
     gap: 1rem;
-    /* Added box-sizing */
+  }
+
+  .perg:active {
+    transform: translateY(3px);
+    box-shadow: none;
   }
   
-  .perg img {
-    width: 100%;
-    /* Adjust this value as needed */
-    flex-shrink: 0;
-    /* Prevent image from shrinking */
-  }
   
   .perg p {
     overflow: hidden;
+    text-overflow: ellipsis;
     flex-shrink: 1;
     margin: 0;
+    text-align: center;
   }
 
-.icon-perg {
-  height: auto;
-  width: 5rem;
-}
+  footer {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    border-top: 1px solid #4e4736;
+  }
 
-.icon-perg img {
-  max-width: 100%;
+  .btn_footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 70%;
+    max-width: 100%;
+  }
+
+  footer a {
+    text-decoration: none;
+    font-weight: 900;
+    text-align: right;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0 3px 0 rgba(255, 150, 0, 0.5);
+    padding: 1rem;
+    border-radius: 13px;
+  }
+
+  footer a:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+
+  .icon-perg {
+    width: auto;
+    height: 6rem
+  }
+
+  .icon-perg img {
+    max-height: 100%;
+  }
+
+  .pet {
+    width: auto;
+    height:10rem;
+  }
+
+  .pet img {
+    max-height: 100%;
+  }
+
+
+  .pet_perg p {
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .perguntas {
+      width: 100%;
+    }
+  }
   
-}
+  @media only screen and (max-width: 768px) {
+    .perguntas {
+      width: 100%;
+    }
+
+    main {
+      width: 90%;
+    }
+    .pet {
+      padding-left: 25%;
+    }
+    
+  }
