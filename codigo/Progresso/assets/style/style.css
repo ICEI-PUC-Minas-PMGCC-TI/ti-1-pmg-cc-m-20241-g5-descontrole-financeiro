@@ -18,12 +18,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10vh;
+  gap: 15vh;
 }
 
 .navbar img {
   width: 100%; /* Ensure the image width takes up the full width of its container */
-  max-width: 120px; /* Set a maximum width for the images */
+  max-width: 80px; /* Set a maximum width for the images */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Adjust margin as needed */
 }
