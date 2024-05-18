@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  html {
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #110e09;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .progresso {
+    width: 70%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+  
+  .progresso .bar {
+    width: 100%;
+    max-width: 100%;
+    background-color: #4e4736;
+    border-radius: 20px;
+    display: flex;
+  }
+  
+  .progresso .bar::before {
+    content: "";
+    width: 10%;
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0 0 5px rgb(255, 150, 0);
+    border-radius: 20px;
+  }
+  
+  main {
+    width: 70%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 7rem
+  }
+  
+
+  
+  .pet_perg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .pet img {
+    max-width: 90%;
+    max-height: auto;
+  }
+  
+  .pet_perg h3 {
+    border: 2px solid rgba(78, 71, 54, 0.5);
+    border-radius: 15px;
+    padding: 1rem;
+  }
+  
+  .perguntas {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 40%;
+    max-width: 100%;
+  }
+  
+  .perg {
+    display: flex;
+    text-decoration: none;
+    color: whitesmoke;
+    align-items: center;
+    border: 2px solid rgba(78, 71, 54, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 3px 0 rgba(78, 71, 54, 0.5);
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 1rem;
+    /* Added box-sizing */
+  }
+  
+  .perg img {
+    width: 100%;
+    /* Adjust this value as needed */
+    flex-shrink: 0;
+    /* Prevent image from shrinking */
+  }
+  
+  .perg p {
+    overflow: hidden;
+    flex-shrink: 1;
+    margin: 0;
+  }
