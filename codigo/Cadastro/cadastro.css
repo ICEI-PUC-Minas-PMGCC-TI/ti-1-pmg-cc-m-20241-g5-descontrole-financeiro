@@ -13,6 +13,12 @@ button{
 
 /*Configurações body*/
 
+img{
+    margin: 0 auto;
+    width: 40%;
+    margin: 15px;
+}
+
 .space{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
