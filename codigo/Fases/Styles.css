@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
 body {
+  font-size: 20px;
   min-height: 100%;
   min-width: 100%;
   display: flex;
@@ -7,7 +17,7 @@ body {
   align-items: center;
   background-color: #110e09;
   color: whitesmoke;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-optical-sizing: auto;
   font-weight:  400;
   font-style: normal;
@@ -18,44 +28,237 @@ body {
     max-width: 100%;
     gap: 2rem;
   }}
-.bg-azul-escuro {
-    background-color: #002366;
-    color: whitesmoke;
-    padding: 10px;
-    border-radius: 5px;
-    text-aling: center;
-    margin: 50px;
+.bg-azul-escuro {   /*Meu CSS*/
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 45px;
+  text-align: center;
+  margin: 50px;
 }
 #el {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .botoes {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    padding: 0 20px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .botao {
-    padding: 10px 20px;
-    background-color: orange;
-    color: aliceblue;
-    text-decoration: none;
-    border-radius: 5px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 5px;
 }
 .option.selected {
   background-color: orange;
   transform: scale(1.1);
+}
 .voltar {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .continuar {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .botao:hover {
-    background-color: darkorange;
-    transform: scale(1.05);
+  background-color: darkorange;
+  transform: scale(1.05);
 }
+.pergunta {
+  font-size: 20px;
+  background-color: #002366;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.option {
+  display: blcok;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.option:checked + label {
+  background-color: rgb(24, 77, 77);
+  padding: 3px;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: whitesmoke; 
+  background-color: orange;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  background-color: darkorange;
+}
+.open-bth, .close-bth {
+  position: fixed;
+  top: 50%;
+  left: 220px;
+  width: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.close-bth {
+  display: none;
+}  /*Fim do meu CSS*/
+.pet_perg {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pet img {
+  min-width: 83px;
+}
+
+.progresso {
+width: 70%;
+max-width: 100%;
+display: flex;
+flex-wrap: nowrap;
+gap: 1rem;
+padding-top: 2rem;
+}
+
+.progresso .bar {
+width: 100%;
+max-width: 100%;
+background-color: #4e4736;
+border-radius: 20px;
+display: flex;
+}
+
+.progresso .bar::before {
+content: "";
+width: 10%;
+background-color: rgb(255, 150, 0);
+box-shadow: 0 0 5px rgb(255, 150, 0);
+border-radius: 20px;
+}
+main {
+  width: 70%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  gap: 7rem
+}
+
+
+
+.pet_perg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pet img {
+  max-width: 100%;
+}
+
+.pet_perg h3 {
+  border: 2px solid rgba(78, 71, 54, 0.5);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.perguntas {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 40%;
+  min-width: 120px;
+  max-width: 100%;
+}
+
+.perg {
+  display: flex;
+  text-decoration: none;
+  color: whitesmoke;
+  align-items: center;
+  border: 2px solid rgba(78, 71, 54, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 3px 0 rgba(78, 71, 54, 0.5);
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.perg:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+
+.perg p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+  margin: 0;
+  text-align: center;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+  border-top: 1px solid #4e4736;
+}
+
+.btn_footer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 70%;
+  max-width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 900;
+  text-align: right;
+  color: rgb(37, 37, 37);
+  background-color: rgb(255, 150, 0);
+  box-shadow: 0 3px 0 rgba(255, 150, 0, 0.5);
+  padding: 1rem;
+  border-radius: 13px;
+}
+
+footer a:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
