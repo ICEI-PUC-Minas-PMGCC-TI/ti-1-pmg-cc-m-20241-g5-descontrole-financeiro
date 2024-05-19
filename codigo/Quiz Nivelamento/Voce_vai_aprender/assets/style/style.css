@@ -18,12 +18,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #110e09;
+    background-color: #131F24;
     color: whitesmoke;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight:  400;
     font-style: normal;
+  }
+
+  @media screen and (max-width: 360px){
+    main {
+      width: 100%;
+      max-width: 100%;
+      gap: 2rem;
+    }
+    .pet_perg {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .pet img {
+      min-width: 83px;
+    }
+    
   }
   
   .progresso {
@@ -98,21 +116,14 @@
     text-decoration: none;
     color: whitesmoke;
     align-items: center;
-    border: 2px solid rgba(78, 71, 54, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 3px 0 rgba(78, 71, 54, 0.5);
+    box-shadow: 0 2px 0 rgba(78, 71, 54, 0.5);
     padding: 1rem;
     width: 100%;
     max-width: 100%;
     gap: 1rem;
   }
 
-  .perg:active {
-    transform: translateY(3px);
-    box-shadow: none;
-  }
-  
-  
+
   .perg p {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -155,25 +166,14 @@
     transform: translateY(3px);
     box-shadow: none;
   }
-
   
-  @media screen and (max-width: 768px){
-    main {
-      width: 90%;
-      max-width: 100%;
-      gap: 2rem;
-    }
-    .pet_perg {
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .pet img {
-      min-width: 83px;
-    }
-    .progresso {
-      width: 90%;
-    }
-    
+  .frase {
+    box-shadow: 0 2px 0 rgba(78, 71, 54, 0.5);
+    text-decoration: none;
+    color: whitesmoke;
+    align-items: center;
+    border: 2px solid rgba(78, 71, 54, 0.5);
+    border-radius: 15px;
+    padding: 1rem;
+    max-width: 100%;
   }

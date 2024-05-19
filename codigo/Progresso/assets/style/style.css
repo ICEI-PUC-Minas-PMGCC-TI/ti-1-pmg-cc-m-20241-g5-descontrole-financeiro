@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+
+
+body {
+  margin: 0;
+  background-color: #110e09;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 17vh; /* Adjust width as needed */
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15vh;
+}
+
+.navbar img {
+  width: 100%; /* Ensure the image width takes up the full width of its container */
+  max-width: 8vh; /* Set a maximum width for the images */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.content {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 17vh; /* Match the width of the navbar */
+  padding: 20px;
+  max-width: 100%;
+}
+
+.content-board {
+  margin-top: 3%;
+  background-color: #333;
+  max-width: 90vh;
+  padding: 5vh;
+  padding-top: 1vh;
+  padding-bottom: 0vh;
+  border-radius: 20px;
+}
+
+.progress-img {
+  width: 100%;
+  max-width: 10vh; 
+  padding: 10px; 
+  padding-bottom: 0;
+}
+
+.progress-img img {
+  max-width: 100%;
+
+}
+
+.progress-content h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+.progress-content p {
+  color: whitesmoke;
+}
+
+.progress-content {
+  padding: 2%;
+
+}
+
+.progresso {
+  display:flex;
+  gap: 3vh;
+  border-bottom: 2px solid black;
+  align-items: center;
+}
+
+.progress-bar {
+  background-color: wheat;
+  height: 2vh;
+  margin-right: 5%;
+  border-radius: 20px;
+  display: flex;
+}
+
+.progress-bar::before {
+    content: "";
+    width: 80%;
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0 0 5px rgb(255, 150, 0);
+    border-radius: 20px;
+  
+}
+
+@media only screen and (max-width: 768px) {
+
+  .navbar{
+    width: 100%;
+    height: 17vh;
+    flex-direction: row;
+  } 
+  .content {
+    margin: 0;
+    margin-top:17vh;
+    width: 100%;
+    justify-content: center;
+    padding: 0px;
+  }
+  .content-board {
+    max-width:100%;
+    margin: 1vh;
+    margin-top:5vh;
+  }
+  .progress-content p {
+    color: whitesmoke;
+    display: none;
+  }
+
+  .progresso {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .navbar {
+    gap: 10%;
+  }
+  .navbar img {
+    width: 8vh;
+  }
+
+}
+

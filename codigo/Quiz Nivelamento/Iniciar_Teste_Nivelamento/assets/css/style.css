@@ -76,7 +76,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 2rem;
-    gap: 7rem
+    gap: 2rem;
   }
   
 
@@ -148,6 +148,7 @@
     width: 100%;
     padding: 1.5rem;
     border-top: 1px solid #4e4736;
+    background-color: #110e09;
   }
 
   .btn_footer {
@@ -216,5 +217,7 @@
     .pet {
       padding-left: 25%;
     }
-    
+    .progresso {
+      width: 90%;
+    }
   }
