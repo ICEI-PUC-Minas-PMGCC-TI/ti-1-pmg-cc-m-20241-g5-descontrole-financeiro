@@ -4,20 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="topicos.css">
-    <script src="topicos.js"></script>
     <title>Tópicos</title>
 </head>
 <body>
-    
-    <img src="leao.png" alt="icon" class="icon">
-    <h1 class="title">Qual tópico mais te interessa?</h1>
+    <div class="header">
+        <img src="leao.png" alt="icon" class="icon">
+        <h1 class="title">Qual tópico mais te interessa?</h1>
+    </div>
+  
+    <div class="container">
+        <button class="topics" id="open-modal">  Investimentos  </button>
 
-    <div class="space">
-        <button class="topics" id="I">Investimentos</button>
-        <button class="topics" id="R">Reserva de emergência</button>
-        <button class="topics" id="S">Saúde financeira</button>
-        <button class="topics" id="E">Economias</button>
-        <div class="description" id="description-box"></div>
-    </div>  
+        <button class="topics" id="open-modalR">  Reserva monetária  </button>
+
+        <button class="topics" id="open-modalS">  Saúde Financeira  </button>
+        
+        <button class="topics" id="open-modalE">  Economia  </button>
+    </div>
+
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>abc</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+        </div>
+    </div>
+
+    <div id="fadeR" class="hideR"></div>
+    <div id="modalR" class="hideR">
+        <div class="modal-headerR">
+            <h2>abc</h2>
+            <button id="close-modalR">Fechar</button>
+        </div>
+        <div class="modal-bodyR">
+            <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+        </div>
+    </div>
+
+    <div id="fadeS" class="hideS"></div>
+    <div id="modalS" class="hideS">
+        <div class="modal-headerS">
+            <h2>abc</h2>
+            <button id="close-modalS">Fechar</button>
+        </div>
+        <div class="modal-bodyS">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+        </div>
+    </div>
+
+    <div id="fadeE" class="hideE"></div>
+    <div id="modalE" class="hideE">
+        <div class="modal-headerE">
+            <h2>abc</h2>
+            <button id="close-modalE">Fechar</button>
+        </div>
+        <div class="modal-bodyE">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veniam accusamus reiciendis fugit reprehenderit. Architecto illum sit id nesciunt vero, ad, consectetur unde corporis molestiae explicabo harum at ea asperiores.</p>
+        </div>
+    </div>
+
+    <script src="topicos.js"></script>
 </body>
 </html>
