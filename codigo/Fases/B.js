@@ -1,3 +1,4 @@
+/*Desconsidere*/
 document.addEventListener('DOMContentLoaded', function() {
     const continuarBtn = document.querySelector('.btn_continuar');
     const options = document.querySelectorAll('.perg input[type="radio"]');
