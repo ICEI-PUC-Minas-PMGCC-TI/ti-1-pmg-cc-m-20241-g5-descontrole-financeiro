@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  html {
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #110e09;
+    color: whitesmoke;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:  400;
+    font-style: normal;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #110e09;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .title {
+    margin-top: 9rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .bg-azul-escuro {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-image: url(../img/icon_lista.png);
+    list-style-position: inside;
+  }
+
+  main p span {
+    color: rgb(255, 150, 0);
+  }
+
+  form {
+    margin-top: 2rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+  }
+
+  form span {
+    color: rgb(255, 150, 0);
+  }
+
+  form button {
+    padding: 1vh;
+    color: whitesmoke;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid rgb(255, 150, 0);
+    background-color: #4e4736;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  footer {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    border-top: 1px solid #4e4736;
+  }
+
+  .btn_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    max-width: 100%;
+  }
+
+  footer a {
+    text-decoration: none;
+    font-weight: 900;
+    text-align: right;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0 3px 0 rgba(255, 150, 0, 0.5);
+    padding: 1rem;
+    border-radius: 13px;
+  }
+
+  footer a:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
