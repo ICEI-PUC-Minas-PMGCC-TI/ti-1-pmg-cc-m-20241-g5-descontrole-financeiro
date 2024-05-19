@@ -1,3 +1,4 @@
+/*Obsoleto, não usar*/
 document.addEventListener('DOMContentLoaded', function() {
     const botaoContinuar = document.getElementById('continuar');
     botaoContinuar.addEventListener('click', function(event) {
