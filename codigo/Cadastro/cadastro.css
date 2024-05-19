@@ -64,6 +64,10 @@ main img{
     box-shadow: 0 1vh 0 rgb(223, 70, 23);
 }
 
+.btn a {
+    color: whitesmoke;
+}
+
 .btn:hover{
     background-color: rgb(169, 71, 14);
 }
