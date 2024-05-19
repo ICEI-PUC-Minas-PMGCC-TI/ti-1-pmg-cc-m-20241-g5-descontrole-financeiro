@@ -25,24 +25,6 @@
     font-weight:  400;
     font-style: normal;
   }
-
-  @media screen and (max-width: 360px){
-    main {
-      width: 100%;
-      max-width: 100%;
-      gap: 2rem;
-    }
-    .pet_perg {
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .pet img {
-      min-width: 83px;
-    }
-    
-  }
   
   .progresso {
     width: 70%;
@@ -76,7 +58,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 2rem;
-    gap: 2rem;
+    gap: 7rem
   }
   
 
@@ -148,7 +130,6 @@
     width: 100%;
     padding: 1.5rem;
     border-top: 1px solid #4e4736;
-    background-color: #110e09;
   }
 
   .btn_footer {
@@ -175,49 +156,24 @@
     box-shadow: none;
   }
 
-  .icon-perg {
-    width: auto;
-    height: 6rem
-  }
-
-  .icon-perg img {
-    max-height: 100%;
-  }
-
-  .pet {
-    width: auto;
-    height:10rem;
-  }
-
-  .pet img {
-    max-height: 100%;
-  }
-
-
-  .pet_perg p {
-    font-size: larger;
-    font-weight: bolder;
-  }
-
-
-  @media only screen and (max-width: 768px) {
-    .perguntas {
-      width: 100%;
-    }
-  }
   
-  @media only screen and (max-width: 768px) {
-    .perguntas {
-      width: 100%;
-    }
-
+  @media screen and (max-width: 768px){
     main {
       width: 90%;
+      max-width: 100%;
+      gap: 2rem;
     }
-    .pet {
-      padding-left: 25%;
+    .pet_perg {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .pet img {
+      min-width: 83px;
     }
     .progresso {
       width: 90%;
     }
+    
   }
