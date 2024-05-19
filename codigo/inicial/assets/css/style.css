@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+
+
+
+body {
+    background-color: aliceblue;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10vh;
+    width: 70%;
+}
+
+header h1 {
+    font-weight: bolder;
+}
+
+main {
+    display: flex;
+}
+
+.main-img {
+    width: 20%;
+}
+
+.main-img img {
+    max-width: 100%;
+}
+
+.disclosure h2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    text-decoration: none;
+    font-weight: 900;
+    text-align: right;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0 3px 0 rgba(255, 150, 0, 0.5);
+    padding: 1rem;
+    border-radius: 13px;
+}
