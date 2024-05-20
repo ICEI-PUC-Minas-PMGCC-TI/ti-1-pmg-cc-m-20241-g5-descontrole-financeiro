@@ -4,11 +4,14 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
+  }
+  
+  
   html {
     min-height: 100%;
     min-width: 100%;
   }
+  
   body {
     min-height: 100%;
     min-width: 100%;
@@ -17,115 +20,107 @@
     align-items: center;
     background-color: #110e09;
     color: whitesmoke;
-    font-family: "Georgia", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight:  400;
     font-style: normal;
   }
-  @media screen and (max-width: 360px){
-    main {
-      width: 100%;
-      max-width: 100%;
-      gap: 2rem;
-    }
-    .pet_perg {
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .pet img {
-      min-width: 83px;
-    }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #110e09;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
   }
-  .progresso {
-    width: 70%;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    padding-top: 2rem;
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
   }
-  .progresso .bar {
-    width: 100%;
-    max-width: 100%;
-    background-color: #4e4736;
-    border-radius: 20px;
-    display: flex;
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
   }
-  .progresso .bar::before {
-    content: "";
-    width: 10%;
-    background-color: rgb(255, 150, 0);
-    box-shadow: 0 0 5px rgb(255, 150, 0);
-    border-radius: 20px;
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    font-size: 36px;
+    margin-left: 50px;
   }
+
   main {
-    width: 70%;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 2rem;
-    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
   }
-  .pet_perg {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-  }
-  .pet img {
-    max-width: 100%;
-  }
-  .pet_perg h3 {
-    border: 2px solid rgba(78, 71, 54, 0.5);
-    border-radius: 15px;
+
+  .title {
+    margin-top: 9rem;
+    text-align: center;
     padding: 1rem;
   }
-  .perguntas {
+
+  .subtitle {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .bg-azul-escuro {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-image: url(../img/icon_lista.png);
+    list-style-position: inside;
+  }
+
+  main p span {
+    color: rgb(255, 150, 0);
+  }
+
+  form {
+    margin-top: 2rem;
     display: flex;
     align-self: center;
     flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1em;
+    gap: 2rem;
     width: 40%;
-    min-width: 120px;
-    max-width: 100%;
   }
-  .perg {
-    display: flex;
-    text-decoration: none;
+
+  form span {
+    color: rgb(255, 150, 0);
+  }
+
+  form button {
+    padding: 1vh;
     color: whitesmoke;
-    align-items: center;
-    border: 2px solid rgba(78, 71, 54, 0.5);
     border-radius: 15px;
-    box-shadow: 0 3px 0 rgba(78, 71, 54, 0.5);
-    padding: 1rem;
-    width: 100%;
-    max-width: 100%;
-    gap: 1rem;
+    border: none;
     cursor: pointer;
+    border: 2px solid #ff9600;
+    background-color: #4e4736;
+    font-family: "Josefin Sans", sans-serif;
   }
-  .perg:hover {
-    background-color:darkslategray;;
-  }
-  .perg:active {
-    transform: translateY(3px);
-    box-shadow: none;
-  }
-  .perg p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-shrink: 1;
-    margin: 0;
-    text-align: center;
-  }
-  .perg:focus {
-    outline: none;
-  }
+
   footer {
     bottom: 0;
     position: fixed;
@@ -135,16 +130,16 @@
     width: 100%;
     padding: 1.5rem;
     border-top: 1px solid #4e4736;
-    background-color: #110e09;
   }
+
   .btn_footer {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     width: 70%;
     max-width: 100%;
-    transition: background-color 0.3s;
   }
+
   footer a {
     text-decoration: none;
     font-weight: 900;
@@ -155,144 +150,13 @@
     padding: 1rem;
     border-radius: 13px;
   }
+
   footer a:active {
     transform: translateY(3px);
     box-shadow: none;
   }
-  .icon-perg {
-    width: auto;
-    height: 6rem
-  }
-  .icon-perg img {
-    max-height: 100%;
-  }
-  .pet {
-    width: auto;
-    height:10rem;
-  }
-  .pet img {
-    max-height: 100%;
-  }
-  .pet_perg p {
-    font-size: larger;
-    font-weight: bolder;
-  }
-  @media only screen and (max-width: 768px) {
-    .perguntas {
-      width: 100%;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .perguntas {
-      width: 100%;
-    }
-
-    main {
-      width: 90%;
-    }
-    .pet {
-      padding-left: 25%;
-    }
-    .progresso {
-      width: 90%;
-    }
-  }
-  .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  .sidebar a {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 20px;
-    color: whitesmoke; 
-    background-color: orange;
-    transition: 0.3s;
-    margin-bottom: 50px;
-    position: relative;
-    width: 100%;
-  }
-  .sidebar a:hover {
-    background-color: darkorange;
-  }
-  .open-bth {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    width: 20px;
-    cursor: pointer;
-    transform: translateY(-50%);
-  }
-  .close-bth {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 230px;
-    width: 20px;
-    cursor: pointer;
-    transform: translateY(-50%);
-  }
-  .menu-inicial {
-    background-image: url(/assets/imgs/menu.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .perfil {
-    background-image: url(/assets/imgs/perfil.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .progresso1 {
-    background-image: url(/assets/imgs/progresso.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .configurações {
-    background-image: url(/assets/imgs/configuracoes.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .sidebar a .icone {
-    width: 5px;
-    height: auto;
-    margin-left: 0;
-  }
-  .sidebar a span {
-    margin-left: 15px;
-    margin-left: 0;
-  }
-  @media screen and (max-width: 600px) {
-    .sidebar a{
-        padding: 8px 8px 8px 16px;
-        font-size: 15px;
-    }
-    .sidebar {
-      width: 30%;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-        padding: 8px 8px 8px 8px;
-        font-size: 12px;
-    }
-    .sidebar {
-      width: 20%;
-    }
-  }
-  .T {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-  .texto {
-    text-align: center;
-    font-size: 25px;
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }

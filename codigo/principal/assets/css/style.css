@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  html {
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #110e09;
+    color: whitesmoke;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:  400;
+    font-style: normal;
+  }
+
+.wrapper {
+    display: flex;
+}
+
+sidebar {
+    background-color: #110e09;
+    border-right: 2px solid #4e4736;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+sidebar ul {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    list-style: none;
+    padding: 10vh;
+    margin: 0;
+}
+
+sidebar ul li {
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    /* 4 colunas */
+    grid-template-rows: repeat(4, 50px);
+    /* 4 linhas */
+    grid-gap: 10vh;
+    /* Espaçamento entre as fases */
+    width: 100%;
+    /* Largura do labirinto */
+    margin: 100px auto;
+    /* Centralizar o labirinto */
+  }
+  
+  .phase {
+    cursor: pointer;
+    padding: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+  }
+
+  .phase a {
+    text-decoration: none;
+    color: whitesmoke;
+  }

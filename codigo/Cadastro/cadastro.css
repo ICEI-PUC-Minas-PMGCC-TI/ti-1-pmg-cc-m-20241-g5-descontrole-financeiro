@@ -1,30 +1,52 @@
-body, html{
-    background-color: #131F24;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
 
-button{
-    color: white;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  html {
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #110e09;
+    color: whitesmoke;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:  400;
+    font-style: normal;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 1rem;
 }
 
 
 /*Configurações body*/
 
-img{
+main img{
     margin: 0 auto;
     width: 40%;
-    margin: 15px;
 }
 
 .space{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    color: white;
+    color: whitesmoke;
     max-width: 500px;
-    height: 80%;
     text-align: center;
     align-content: end;
 }
@@ -34,12 +56,16 @@ img{
     padding: 20px;
     width: 100%;
     background-color: rgb(223, 100, 23);
-    color: white;
+    color: whitesmoke;
     font-size: 15px;
     font-weight: bolder;
     margin-bottom: 2vh;
     border-radius: 15px;
     box-shadow: 0 1vh 0 rgb(223, 70, 23);
+}
+
+.btn a {
+    color: whitesmoke;
 }
 
 .btn:hover{
@@ -48,6 +74,7 @@ img{
 
 
 /*Configurações do modal*/
+
 
 .modal-content {
     background-color: #131F24;

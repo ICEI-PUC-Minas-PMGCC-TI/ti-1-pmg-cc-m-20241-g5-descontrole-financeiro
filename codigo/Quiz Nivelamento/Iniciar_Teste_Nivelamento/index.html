@@ -9,6 +9,17 @@
 </head>
 
 <body>
+  <nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Início</a>
+        <a href="#">Aprender</a>
+        <a href="#">Sobre</a>
+        <a href="#">Equipe</a>
+        <a href="#">Contato</a>
+      </div>
+</nav>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
   <div class="progresso">
     <div class="voltar">
       <img src="./assets/imgs/seta.png">
@@ -25,13 +36,13 @@
     </div>
 
     <div class="perguntas">
-      <a class="perg">
+      <a class="perg" href="/codigo/Cadastro/cadastro.html">
         <div class="icon-perg">
           <img src="./assets/imgs/livros.png">
         </div>
         <p>Quero começar do Zero</p>
       </a>
-      <a class="perg">
+      <a class="perg" href="/codigo/Quiz Nivelamento/fim_análise_de_perfil/index.html">
         <div class="icon-perg">
           <img src="./assets/imgs/quadro-negro.png">
         </div>
@@ -40,16 +51,23 @@
     </div>
   </main>
 
-  <footer>   
-    <div class="btn_footer">
-      <a class="btn_continuar" href="#">
-        Continuar
-      </a>    
-    </div> 
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      let elements = document.getElementsByClassName("sidenav");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.borderRight = "1px solid #4e4736";
+        }
+    }
     
-  </footer>
-
-  <script src="script.js"></script>
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      let elements = document.getElementsByClassName("sidenav");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.border = "none";
+        }
+    }
+    </script>
 </body>
 
 </html>
