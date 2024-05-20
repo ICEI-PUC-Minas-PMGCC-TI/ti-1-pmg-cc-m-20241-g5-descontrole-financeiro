@@ -63,47 +63,38 @@ sidebar ul li a {
 }
 
 main {
-    flex: 1;
-    padding: 20px;
-    margin-left: 250px; /* Para compensar a largura da barra lateral */
-}
-
-.treasure-map {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
-.location {
+.maze {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    /* 4 colunas */
+    grid-template-rows: repeat(4, 50px);
+    /* 4 linhas */
+    grid-gap: 10vh;
+    /* Espaçamento entre as fases */
+    width: 100%;
+    /* Largura do labirinto */
+    margin: 100px auto;
+    /* Centralizar o labirinto */
+  }
+  
+  .phase {
+    cursor: pointer;
+    padding: 2rem;
     width: 50px;
     height: 50px;
-    background-color: gold;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-}
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+  }
 
-.line {
-    width: 100px;
-    height: 3px;
-    background-color: gold;
-    position: relative;
-    z-index: 0;
-}
-
-.line::after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background-color: gold;
-    position: absolute;
-    left: 100%;
-    top: -14px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.location + .line {
-    margin-left: 40px;
-}
+  .phase a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
