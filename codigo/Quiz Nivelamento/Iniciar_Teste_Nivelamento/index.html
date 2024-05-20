@@ -9,6 +9,17 @@
 </head>
 
 <body>
+  <nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Início</a>
+        <a href="#">Aprender</a>
+        <a href="#">Sobre</a>
+        <a href="#">Equipe</a>
+        <a href="#">Contato</a>
+      </div>
+</nav>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
   <div class="progresso">
     <div class="voltar">
       <img src="./assets/imgs/seta.png">
@@ -49,7 +60,23 @@
     
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      let elements = document.getElementsByClassName("sidenav");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.borderRight = "1px solid #4e4736";
+        }
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      let elements = document.getElementsByClassName("sidenav");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.border = "none";
+        }
+    }
+    </script>
 </body>
 
 </html>
