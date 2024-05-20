@@ -21,7 +21,7 @@ function loginUser() {
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
 
             // Redireciona para a página inicial ou outra página após login bem-sucedido
-            window.location.href = "../inicial/index.html"; // substitua pelo URL da página desejada
+            window.location.href = "../principal/src/index.html"; // substitua pelo URL da página desejada
             return;
         }
     }
