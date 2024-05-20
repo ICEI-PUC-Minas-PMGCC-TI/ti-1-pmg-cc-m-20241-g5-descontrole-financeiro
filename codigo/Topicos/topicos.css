@@ -34,13 +34,13 @@ body {
 }
 
 .topics:hover{
-    background-color: rgb(162, 72, 15) ;
+    background-color: #a2480f ;
     transition: 0.4s;
 }
 
-.topics {
-    color: #ffff;
-    background-color:   rgb(223, 100, 23);
+.topics{
+    text-decoration-color: black;
+    background-color:   rgb(255, 150, 0);
     box-shadow: 0 1vh 0 rgb(223, 70, 23);
     border: none; 
     width: 150px; 
