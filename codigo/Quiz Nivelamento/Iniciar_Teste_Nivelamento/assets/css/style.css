@@ -63,7 +63,8 @@
   
   .progresso .bar::before {
     content: "";
-    width: 10%;
+    width: 30%;
+    transition: all ease 1s;
     background-color: rgb(255, 150, 0);
     box-shadow: 0 0 5px rgb(255, 150, 0);
     border-radius: 20px;
@@ -137,42 +138,6 @@
     flex-shrink: 1;
     margin: 0;
     text-align: center;
-  }
-
-  footer {
-    bottom: 0;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem;
-    border-top: 1px solid #4e4736;
-    background-color: #110e09;
-  }
-
-  .btn_footer {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 70%;
-    max-width: 100%;
-  }
-
-  footer a {
-    text-decoration: none;
-    font-weight: 900;
-    text-align: right;
-    color: rgb(37, 37, 37);
-    background-color: rgb(255, 150, 0);
-    box-shadow: 0 3px 0 rgba(255, 150, 0, 0.5);
-    padding: 1rem;
-    border-radius: 13px;
-  }
-
-  footer a:active {
-    transform: translateY(3px);
-    box-shadow: none;
   }
 
   .icon-perg {
