@@ -53,3 +53,70 @@ const toggleModalE = () => {
 
 openModalButtonE.addEventListener("click", toggleModalE);
 closeModalButtonE.addEventListener("click", toggleModalE);
+
+
+
+/*Aplicação da funcionalidade CRUD*/
+
+var dbmock = { topicos: [
+  {
+    id: "Inv",
+    conceito: "Mover recursos para retorno",
+    tipos: ["Ações", "Renda Fixa", "Fundos de investimentos"]
+  },
+  {
+    id: "Res",
+    conceito: "Montante guardado para emergências",
+    tipos: ["poupança", "cofrinho"]
+  },
+  {
+    id: "Sau",
+    conceito: "Estado mental devido às finanças",
+    tipos: ["Saudavel", "Doente"]
+  },
+  {
+    id: "Eco",
+    conceito: "Estudo da utilização de recursos",
+    tipos: ["Macro", "Micro"]
+  }
+] }
+
+function leDados() {
+  let strDados = localStorage.getItem('dbmock');
+  let objdados = {};
+
+  if (strDados) {
+      objdados = JSON.parse(strDados);
+  } else {
+      objdados = dbmock;
+  }
+
+  return objdados;
+}
+
+
+function SalvaDados (dados){
+
+    localStorage.setItem('dbmock', JSON.stringify(dados));
+}
+
+
+//configurar botoes
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('btn-selecionar').addEventListener('click', function() {
+      SalvaDados(dbmock.topicos[0]);
+  });
+
+  document.getElementById('btn-selecionarR').addEventListener('click', function() {
+      SalvaDados(dbmock.topicos[1]);
+  });
+
+  document.getElementById('btn-selecionarS').addEventListener('click', function() {
+      SalvaDados(dbmock.topicos[2]);
+  });
+
+  document.getElementById('btn-selecionarE').addEventListener('click', function() {
+      SalvaDados(dbmock.topicos[3]);
+  });
+});

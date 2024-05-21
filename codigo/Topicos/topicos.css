@@ -1,10 +1,19 @@
-body, html{
+body{
     width: 100%;
     height: 100%;
     padding: 0px;
     margin: 0px;
     background-color: #131F24;
     box-sizing: border-box;
+}
+
+ul li{
+    
+    color: whit;
+}
+
+h2{
+    color: white;
 }
 
 /*Configurações do body*/
@@ -34,13 +43,13 @@ body {
 }
 
 .topics:hover{
-    background-color: #a2480f ;
+    background-color: rgb(162, 72, 15) ;
     transition: 0.4s;
 }
 
-.topics{
-    text-decoration-color: black;
-    background-color:   rgb(255, 150, 0);
+.topics {
+    color: black;
+    background-color:   rgb(223, 100, 23);
     box-shadow: 0 1vh 0 rgb(223, 70, 23);
     border: none; 
     width: 150px; 
@@ -89,7 +98,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    background-color: white;
+    background-color: rgb(223, 100, 23);
     width: 500px;
     max-width: 90%;
     padding: 1.2rem;
@@ -114,6 +123,24 @@ body {
 
 #modal.hide {
   top: 0;
+}
+
+.modal-footer{
+    float: right;
+}
+
+#btn-selecionar{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionar:hover{
+    background-color: rgb(27, 82, 114);
 }
 
 /*Topico 2*/
@@ -143,7 +170,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    background-color: white;
+    background-color:rgb(223, 100, 23);
     width: 500px;
     max-width: 90%;
     padding: 1.2rem;
@@ -168,6 +195,20 @@ body {
 
 #modalR.hideR {
   top: 0;
+}
+
+#btn-selecionarR{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionarR:hover{
+    background-color: rgb(27, 82, 114);
 }
 
 /*Topico 3*/
@@ -197,7 +238,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    background-color: white;
+    background-color: rgb(223, 100, 23);
     width: 500px;
     max-width: 90%;
     padding: 1.2rem;
@@ -222,6 +263,20 @@ body {
 
 #modalS.hideS {
   top: 0;
+}
+
+#btn-selecionarS{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionarS:hover{
+    background-color: rgb(27, 82, 114);
 }
 
 /*Topico 4*/
@@ -251,7 +306,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    background-color: white;
+    background-color: rgb(223, 100, 23);
     width: 500px;
     max-width: 90%;
     padding: 1.2rem;
@@ -276,4 +331,18 @@ body {
 
 #modalE.hideE {
   top: 0;
+}
+
+#btn-selecionarE{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionarE:hover{
+    background-color: rgb(27, 82, 114);
 }
