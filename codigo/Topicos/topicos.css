@@ -130,7 +130,6 @@ body {
 }
 
 #btn-selecionar{
-    color: white;
     border: none;
     border-radius: 5px;
     background-color: rgb(40, 115, 149);
@@ -198,7 +197,6 @@ body {
 }
 
 #btn-selecionarR{
-    color: white;
     border: none;
     border-radius: 5px;
     background-color: rgb(40, 115, 149);
@@ -266,7 +264,6 @@ body {
 }
 
 #btn-selecionarS{
-    color: white;
     border: none;
     border-radius: 5px;
     background-color: rgb(40, 115, 149);
@@ -334,7 +331,6 @@ body {
 }
 
 #btn-selecionarE{
-    color: white;
     border: none;
     border-radius: 5px;
     background-color: rgb(40, 115, 149);
@@ -345,4 +341,9 @@ body {
 
 #btn-selecionarE:hover{
     background-color: rgb(27, 82, 114);
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
