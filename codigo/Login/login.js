@@ -1,58 +1,39 @@
-// URL da página de cadastro
-const CADASTRO_URL = "../Cadastro/cadastro.html";
+document.addEventListener('DOMContentLoaded', function() {
+    // Adiciona o evento de submit ao formulário de login
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do formulário
 
-// Inicializa o banco de dados de usuários
-var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { usuarios: [] };
-var usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente')) || {};
+        // Obtém os valores dos campos de login e senha
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
 
-// Função para validar o login do usuário
-function loginUser() {
-    // Captura os valores dos campos do formulário de login
-    var login = document.getElementById('login').value;
-    var senha = document.getElementById('senha').value;
+        // Verifica as credenciais do usuário
+        var usuarioValido = validarLogin(login, senha);
 
-    // Verifica todos os usuários no banco de dados
-    for (var i = 0; i < db_usuarios.usuarios.length; i++) {
-        var usuario = db_usuarios.usuarios[i];
+        if (usuarioValido) {
+            // Armazena os dados do usuário corrente no sessionStorage
+            sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioValido));
+            alert('Login realizado com sucesso!');
+            window.location.href = '../perfil/src/index.html'; // Redireciona para a página de perfil
+        } else {
+            alert('Login ou senha inválidos!');
+        }
+    });
+});
 
-        // Se o login e senha conferem, salva os dados do usuário corrente e redireciona
-        if (login === usuario.login && senha === usuario.senha) {
-            usuarioCorrente = usuario;
-            sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+// Função para validar as credenciais de login
+function validarLogin(login, senha) {
+    // Obtém o banco de dados de usuários do localStorage
+    var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));
 
-            // Redireciona para a página inicial ou outra página após login bem-sucedido
-            window.location.href = "../principal/src/index.html"; // substitua pelo URL da página desejada
-            return;
+    if (db_usuarios && db_usuarios.usuarios) {
+        var usuarios = db_usuarios.usuarios;
+        for (var i = 0; i < usuarios.length; i++) {
+            if (usuarios[i].login === login && usuarios[i].senha === senha) {
+                return usuarios[i]; // Retorna o usuário válido
+            }
         }
     }
 
-    // Se o login ou senha estiverem incorretos, exibe uma mensagem de erro
-    alert('Login ou senha incorretos. Tente novamente.');
+    return null; // Retorna null se o login falhar
 }
-
-// Função para deslogar o usuário
-function logoutUser() {
-    usuarioCorrente = {};
-    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
-    window.location.href = CADASTRO_URL; // Redireciona para a página de cadastro ou login
-}
-
-// Inicializa a aplicação de login
-function initLoginApp() {
-    // Carrega o banco de dados de usuários a partir do localStorage
-    var usuariosJSON = localStorage.getItem('db_usuarios');
-    if (!usuariosJSON) {
-        db_usuarios = { usuarios: [] };
-    } else {
-        db_usuarios = JSON.parse(usuariosJSON);
-    }
-
-    // Carrega o usuário corrente a partir do sessionStorage
-    var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-    if (usuarioCorrenteJSON) {
-        usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
-    }
-}
-
-// Inicializa a aplicação de login ao carregar o script
-initLoginApp();
