@@ -26,17 +26,17 @@
                 <h2>Escolha uma opção:</h2>
                 <label>
                     <input id="resposta" type="radio" name="option" value="1" required>
-                    <span>A)</span> Alternativa
+                    <span>A)</span> Alternativa 1
                 </label>
                 <label>
                     <input id="resposta" type="radio" name="option" value="2" required>
-                    <span>B)</span> Alternativa
+                    <span>B)</span> Alternativa 2
                 </label>
                 <label>
                     <input id="resposta" type="radio" name="option" value="3" required>
-                    <span>C)</span> Alternativa
+                    <span>C)</span> Alternativa 3
                 </label>
-                <button type="submit">Enviar</button>
+                <button type="submit" onclick="submitQuiz()">Enviar</button>
                 <p class="bg-azul-escuro" id="resultMessage"></p>
             </form>
         </main>
@@ -46,7 +46,7 @@
             </div>
         </footer>
 
-
+        <script src="/assets/js/a.js"></script>
         <script>
             function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
