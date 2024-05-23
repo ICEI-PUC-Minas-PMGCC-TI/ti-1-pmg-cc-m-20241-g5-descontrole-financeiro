@@ -80,7 +80,7 @@ var dbmock = { topicos: [
     tipos: ["Macro", "Micro"]
   }
 ] }
-
+// Função para ler os dados do localStorage
 function leDados() {
   let strDados = localStorage.getItem('dbmock');
   let objdados = {};
@@ -94,10 +94,40 @@ function leDados() {
   return objdados;
 }
 
-
-function SalvaDados (dados){
-
+// Função para salvar os dados no localStorage
+function SalvaDados(dados){
     localStorage.setItem('dbmock', JSON.stringify(dados));
+}
+
+// Função para adicionar um novo tópico
+function adicionarTopico(topico) {
+    const dados = leDados();
+    dados.topicos.push(topico);
+    SalvaDados(dados);
+}
+
+// Função para atualizar um tópico existente
+function atualizarTopico(id, novoTopico) {
+    const dados = leDados();
+    const indice = dados.topicos.findIndex(topico => topico.id === id);
+    if (indice !== -1) {
+        dados.topicos[indice] = novoTopico;
+        SalvaDados(dados);
+    } else {
+        console.error('O tópico com o ID fornecido não foi encontrado.');
+    }
+}
+
+// Função para excluir um tópico existente
+function excluirTopico(id) {
+    const dados = leDados();
+    const indice = dados.topicos.findIndex(topico => topico.id === id);
+    if (indice !== -1) {
+        dados.topicos.splice(indice, 1);
+        SalvaDados(dados);
+    } else {
+        console.error('O tópico com o ID fornecido não foi encontrado.');
+    }
 }
 
 

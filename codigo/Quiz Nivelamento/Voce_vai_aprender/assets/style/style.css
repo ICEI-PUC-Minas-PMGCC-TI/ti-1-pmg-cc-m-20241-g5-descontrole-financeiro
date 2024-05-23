@@ -99,7 +99,7 @@
     padding: 1rem;
   }
   
-  .perguntas {
+  .perguntasI, .perguntasS,  .perguntasR, .perguntasE {
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -177,3 +177,5 @@
     padding: 1rem;
     max-width: 100%;
   }
+
+  
