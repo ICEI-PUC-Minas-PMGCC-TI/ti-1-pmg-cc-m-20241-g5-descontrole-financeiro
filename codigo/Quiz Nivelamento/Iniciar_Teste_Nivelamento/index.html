@@ -9,17 +9,6 @@
 </head>
 
 <body>
-  <nav>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Início</a>
-        <a href="#">Aprender</a>
-        <a href="#">Sobre</a>
-        <a href="#">Equipe</a>
-        <a href="#">Contato</a>
-      </div>
-</nav>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
   <div class="progresso">
     <div class="voltar">
       <img src="./assets/imgs/seta.png">
@@ -34,48 +23,26 @@
       </div>
       <p>Como você quer começar sua jornada no GuardaGrana?</p>
     </div>
-
+    <form>
     <div class="perguntas">
-      <a class="perg" href="/codigo/Cadastro/cadastro.html">
+      <a class="perg" href="#" id="opt1">
         <div class="icon-perg">
           <img src="./assets/imgs/livros.png">
         </div>
         <p>Quero começar do Zero</p>
       </a>
-      <a class="perg" href="/codigo/Quiz Nivelamento/fim_análise_de_perfil/index.html">
+      <a class="perg" href="#" id="opt2">
         <div class="icon-perg">
           <img src="./assets/imgs/quadro-negro.png">
         </div>
         <p>Quero fazer uma teste de nivelamento.</p>
       </a>
     </div>
+    </form>
   </main>
 
-  <footer>   
-    <div class="btn_footer">
-      <a class="btn_continuar" href="#">
-        Continuar
-      </a>    
-    </div> 
-    
-  </footer>
+  <script src="/ti-1-pmg-cc-m-20241-g5-descontrole-financeiro/codigo/Quiz Nivelamento/Iniciar_Teste_Nivelamento/script.js">
 
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      let elements = document.getElementsByClassName("sidenav");
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].style.borderRight = "1px solid #4e4736";
-        }
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      let elements = document.getElementsByClassName("sidenav");
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].style.border = "none";
-        }
-    }
     </script>
 </body>
 
