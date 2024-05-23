@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  html {
+    min-height: 100%;
+    min-width: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #110e09;
+    color: whitesmoke;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:  400;
+    font-style: normal;
+  }
+
+
+
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .title {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .bg-azul-escuro {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-image: url(../img/icon_lista.png);
+    list-style-position: inside;
+  }
+
+  main p span {
+    color: rgb(255, 150, 0);
+  }
+
+  .form {
+    margin-top: 2rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 30%;
+  }
+
+  .form span {
+    color: rgb(255, 150, 0);
+  }
+
+  .continuar {
+    padding: 1vh;
+    color: whitesmoke;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #ff9600;
+    background-color: #4e4736;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 17px;
+  }
+  .anw-btn {
+    display: flex;
+    text-decoration: none;
+    color: whitesmoke;
+    align-items: center;
+    border: 2px solid rgba(78, 71, 54, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 3px 0 rgba(78, 71, 54, 0.5);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    background-color: #1a1712;
+    gap: 1rem;
+  }
+
+  footer {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    border-top: 1px solid #4e4736;
+  }
+
+  .btn_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    max-width: 100%;
+  }
+
+  footer a {
+    text-decoration: none;
+    font-weight: 900;
+    text-align: right;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0 3px 0 rgba(255, 150, 0, 0.5);
+    padding: 1rem;
+    border-radius: 13px;
+  }
+
+  footer a:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  .continuar {
+    display: none;
+  }
+
+  @media screen and (max-width: 780px) {
+    .subtitle {
+        margin-bottom: 2rem;
+    }
+    .form {
+        width: 60%;
+    }
+  }
+  
+  .anw-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px solid rgba(78, 71, 54, 0.5);
+  }
+
+  .correct {
+    background: #9aeabc;
+  }
+
+  .incorrect {
+    background: #ff9393;
+  }
