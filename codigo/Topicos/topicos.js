@@ -87,8 +87,9 @@ function leDados() {
 
   if (strDados) {
       objdados = JSON.parse(strDados);
+      console.log("Tópico armazenado com sucesso");
   } else {
-      objdados = dbmock;
+      objdados = null;
   }
 
   return objdados;
@@ -98,38 +99,6 @@ function leDados() {
 function SalvaDados(dados){
     localStorage.setItem('dbmock', JSON.stringify(dados));
 }
-
-// Função para adicionar um novo tópico
-function adicionarTopico(topico) {
-    const dados = leDados();
-    dados.topicos.push(topico);
-    SalvaDados(dados);
-}
-
-// Função para atualizar um tópico existente
-function atualizarTopico(id, novoTopico) {
-    const dados = leDados();
-    const indice = dados.topicos.findIndex(topico => topico.id === id);
-    if (indice !== -1) {
-        dados.topicos[indice] = novoTopico;
-        SalvaDados(dados);
-    } else {
-        console.error('O tópico com o ID fornecido não foi encontrado.');
-    }
-}
-
-// Função para excluir um tópico existente
-function excluirTopico(id) {
-    const dados = leDados();
-    const indice = dados.topicos.findIndex(topico => topico.id === id);
-    if (indice !== -1) {
-        dados.topicos.splice(indice, 1);
-        SalvaDados(dados);
-    } else {
-        console.error('O tópico com o ID fornecido não foi encontrado.');
-    }
-}
-
 
 //configurar botoes
 
