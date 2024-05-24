@@ -146,8 +146,8 @@
     box-shadow: none;
   }
 
-  .continuar {
-    display: none;
+  #next-btn {
+    display: block;
   }
 
   @media screen and (max-width: 780px) {
