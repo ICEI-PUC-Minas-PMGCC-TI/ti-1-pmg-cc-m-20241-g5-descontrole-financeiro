@@ -1,34 +1,34 @@
 const questions = [
     {
-        question: "Esse é o texto de uma pergunta de numero X",
+        question: "O que é um investimento de renda fixa?",
         answers: [
-            {text: "Essa é uma resposta", correct: false},
-            {text: "Essa é uma outra resposta", correct: true},
-            {text: "Essa é mais uma outra resposta", correct: false}
+            {text: "Um investimento com rendimento previsível", correct: true},
+            {text: "Um investimento com rendimento variável", correct: false},
+            {text: "Um investimento em ações", correct: false}
         ]
     },
     {
-        question: "Esse é o texto de mais uma pergunta de numero X",
+        question: "Por que é importante ter uma reserva de emergência?",
         answers: [
-            {text: "Essa é uma resposta diferente", correct: true},
-            {text: "Essa é uma outra resposta", correct: false},
-            {text: "Essa é mais uma outra resposta", correct: false}
+            {text: "Para cobrir despesas inesperadas", correct: true},
+            {text: "Para investir em ações de alto risco", correct: false},
+            {text: "Para fazer compras não planejadas", correct: false}
         ]
     },
     {
-        question: "Esse é o texto de mais uma pergunta de numero X",
+        question: "Qual é a melhor prática para controlar os gastos mensais?",
         answers: [
-            {text: "Essa é uma resposta diferente", correct: true},
-            {text: "Essa é uma outra resposta", correct: false},
-            {text: "Essa é mais uma outra resposta", correct: false}
+            {text: "Elaborar um orçamento e segui-lo", correct: true},
+            {text: "Gastar mais do que ganha", correct: false},
+            {text: "Evitar anotar despesas", correct: false}
         ]
     },
     {
-        question: "Esse é o texto de mais uma pergunta de numero X",
+        question: "Qual é a principal diferença entre renda fixa e renda variável?",
         answers: [
-            {text: "Essa é uma resposta diferente", correct: false},
-            {text: "Essa é uma outra resposta", correct: true},
-            {text: "Essa é mais uma outra resposta", correct: false}
+            {text: "Renda fixa tem retorno previsível, renda variável não", correct: true},
+            {text: "Renda variável é sempre mais segura", correct: false},
+            {text: "Renda fixa nunca gera lucro", correct: false}
         ]
     }
 ];
