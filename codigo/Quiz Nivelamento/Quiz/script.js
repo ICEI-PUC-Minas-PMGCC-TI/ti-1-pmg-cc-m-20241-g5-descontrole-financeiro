@@ -44,7 +44,7 @@ let score = 0;
 function startQuiz () {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Continuar";
+    nextButton.innerHTML = "Próximo";
     showQuestion();
 }
 
@@ -67,7 +67,7 @@ function showQuestion() {
 }
 
 function resetState() {
-    //nextButton.style.display = "none";
+    nextButton.style.display = "none";
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -89,6 +89,6 @@ function selectAnswer(e) {
         }
         button.disabled = true;
     });
-   // nextButton.style.display = "block";
+   nextButton.style.display = "block";
 }
 startQuiz();
