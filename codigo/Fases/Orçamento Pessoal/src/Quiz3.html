@@ -21,24 +21,24 @@
         <main>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
             <h1 class="title">Orçamento Pessoal</h1>
-            <h2 class="subtitle">Title</h2>
+            <h2 class="subtitle">Qual o primeiro passo para criar um orçamento pessoal?</h2>
             <form id="quizForm">
                 <h2>Escolha uma opção:</h2>
                 <label>
                     <input id="resposta" type="radio" name="option" value="1" required>
-                    <span>A)</span> 
+                    <span>A)</span> Definir metas financeiras
                 </label>
                 <label>
                     <input id="resposta" type="radio" name="option" value="2" required>
-                    <span>B)</span> Alternativa 2
+                    <span>B)</span> Anotar todas as fontes de renda <!--Resposta Correta-->
                 </label>
                 <label>
                     <input id="resposta" type="radio" name="option" value="3" required>
-                    <span>C)</span> Alternativa 3
+                    <span>C)</span> Anotar todas as fontes de despesas
                 </label>
                 <label>
                     <input id="resposta" type="radio" name="option" value="4" required>
-                    <span>C)</span> Alternativa 4
+                    <span>D)</span> Analisar seus hábitos de consumo
                 </label>
                 <button type="submit" onclick="submitQuiz()">Enviar</button>
                 <p class="bg-azul-escuro" id="resultMessage"></p>
@@ -46,7 +46,7 @@
         </main>
         <footer>
             <div class="btn_footer">
-                <a href="Licao1.html">Voltar</a>
+                <a href="/src/Licao3.html">Voltar</a>
             </div>
         </footer>
 
@@ -81,7 +81,7 @@
                 }
 
                 const resultMessage = document.getElementById('resultMessage');
-                if (selectedValue === '1') {
+                if (selectedValue === '2') {
                     resultMessage.textContent = 'Resposta Certa! Parabéns';
                     resultMessage.style.color = 'green';
                 } else {
