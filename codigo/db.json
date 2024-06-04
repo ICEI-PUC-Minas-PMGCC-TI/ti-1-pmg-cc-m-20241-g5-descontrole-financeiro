@@ -127,7 +127,7 @@
       "cap3" : {
         "questoes": [
           {
-            "Idquest" : 11,
+            "Idquest" : 31,
             "text" : "Essa é uma pergunta. Qual a resposta certa?",
             "respostas" : [
               {
@@ -141,7 +141,7 @@
             ]
           },
           {
-            "Idquest" : 12,
+            "Idquest" : 32,
             "text" : "Essa é uma pergunta. Qual a resposta certa?",
             "respostas" : [
               {
@@ -155,7 +155,7 @@
             ]
           },
           {
-            "Idquest" : 13,
+            "Idquest" : 33,
             "text" : "Essa é uma pergunta. Qual a resposta certa?",
             "respostas" : [
               {
@@ -169,7 +169,7 @@
             ]
           },
           {
-            "Idquest" : 14,
+            "Idquest" : 34,
             "text" : "Essa é uma pergunta. Qual a resposta certa?",
             "respostas" : [
               {
