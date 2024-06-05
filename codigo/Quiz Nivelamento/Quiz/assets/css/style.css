@@ -171,11 +171,15 @@
   }
 
   .correct {
-    background: #9aeabc;
+    background: #00ff6e85;
+    box-shadow: 0 3px 0 rgba(255, 255, 255, 0.549);
+    border: 2px solid whitesmoke;
   }
 
   .incorrect {
-    background: #ff9393;
+    background: #ff000085;
+    box-shadow: 0 3px 0 rgba(255, 255, 255, 0.549);
+    border: 2px solid whitesmoke;
   }
 
  
