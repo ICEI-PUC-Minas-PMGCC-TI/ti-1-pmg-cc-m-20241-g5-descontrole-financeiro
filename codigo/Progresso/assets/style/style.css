@@ -1,10 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&family=Red+Rose:wght@300..700&display=swap');
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
 
 body {
-  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #110e09;
+  color: whitesmoke;
   font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:  400;
+  font-style: normal;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 sidebar {
@@ -42,8 +66,8 @@ sidebar ul li a {
 }
 
 sidebar ul li a:hover {
-transition: all ease 0.7s;
-color: rgba(245, 245, 245, 0.5);
+  transition: all ease 0.7s;
+  color: rgba(245, 245, 245, 0.5);
 }
 
 .content {
@@ -85,6 +109,7 @@ color: rgba(245, 245, 245, 0.5);
 }
 
 .progress-content p {
+  margin: 10px;
   color: whitesmoke;
 }
 
