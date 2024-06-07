@@ -26,11 +26,13 @@
     font-style: normal;
   }
 
-.wrapper {
-    display: flex;
-}
 
-sidebar {
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  } 
+
+  sidebar {
     background-color: #110e09;
     border-right: 2px solid #4e4736;
     color: #fff;
@@ -42,51 +44,51 @@ sidebar {
     position: fixed;
     left: 0;
     top: 0;
-}
+  }
 
-sidebar ul {
+  sidebar ul {
     display: flex;
     flex-direction: column;
     height: 70%;
     list-style: none;
     padding: 10vh;
     margin: 0;
-}
+  }
 
-sidebar ul li {
+  sidebar ul li {
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
-}
+  }
 
-sidebar ul li a {
+  sidebar ul li a {
     color: #fff;
     text-decoration: none;
-}
+  }
 
-sidebar ul li a:hover {
-  transition: all ease 0.7s;
-  color: rgba(245, 245, 245, 0.5);
-}
+  sidebar ul li a:hover {
+    transition: all ease 0.7s;
+    color: rgba(245, 245, 245, 0.5);
+  }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-.maze {
-    display: grid;
-    grid-template-columns: repeat(9, 50px);
-    /* 4 colunas */
-    grid-template-rows: repeat(4, 50px);
-    /* 4 linhas */
-    grid-gap: 10vh;
-    /* Espaçamento entre as fases */
-    width: 100%;
-    /* Largura do labirinto */
-    margin: 100px auto;
-    /* Centralizar o labirinto */
+  .maze {
+      display: grid;
+      grid-template-columns: repeat(9, 50px);
+      /* 4 colunas */
+      grid-template-rows: repeat(4, 50px);
+      /* 4 linhas */
+      grid-gap: 10vh;
+      /* Espaçamento entre as fases */
+      width: 100%;
+      /* Largura do labirinto */
+      margin: 100px auto;
+      /* Centralizar o labirinto */
   }
   
   .phase {

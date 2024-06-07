@@ -26,7 +26,7 @@ body {
 }
 
 /* Estilo para a barra lateral */
-aside  {
+sidebar {
     background-color: #110e09;
     border-right: 2px solid #4e4736;
     color: #fff;
@@ -40,7 +40,7 @@ aside  {
     top: 0;
 }
 
-aside ul {
+sidebar ul {
     display: flex;
     flex-direction: column;
     height: 70%;
@@ -49,18 +49,18 @@ aside ul {
     margin: 0;
 }
 
-aside ul li {
+sidebar ul li {
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
 }
 
-aside ul li a {
+sidebar ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-aside ul li a:hover {
+sidebar ul li a:hover {
   transition: all ease 0.7s;
   color: rgba(245, 245, 245, 0.5);
 }
