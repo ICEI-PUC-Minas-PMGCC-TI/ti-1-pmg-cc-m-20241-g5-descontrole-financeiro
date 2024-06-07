@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Armazena os dados do usuário corrente no sessionStorage
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioValido));
             alert('Login realizado com sucesso!');
-            window.location.href = '../perfil/src/index.html'; // Redireciona para a página de perfil
+            window.location.href = '../perfil/src/perfil.html'; // Redireciona para a página de perfil
         } else {
             alert('Login ou senha inválidos!');
         }
