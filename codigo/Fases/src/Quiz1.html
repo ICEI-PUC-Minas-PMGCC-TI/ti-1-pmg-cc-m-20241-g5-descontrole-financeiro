@@ -28,15 +28,15 @@
         <form id="quizForm">
             <h2>Escolha uma opção:</h2>
             <label>
-                <input id="resposta" type="radio" name="option" value="1" required>
+                <input id="resposta1" type="radio" name="option" value="1" required>
                 <span>A)</span> Alternativa 1
             </label>
             <label>
-                <input id="resposta" type="radio" name="option" value="2" required>
+                <input id="resposta2" type="radio" name="option" value="2" required>
                 <span>B)</span> Alternativa 2
             </label>
             <label>
-                <input id="resposta" type="radio" name="option" value="3" required>
+                <input id="resposta3" type="radio" name="option" value="3" required>
                 <span>C)</span> Alternativa 3
             </label>
             <button type="submit">Enviar</button>
@@ -88,10 +88,9 @@
             // Incrementar o número de acertos do usuário
             usuario.acertos++;
 
-            // Atualizar a variável de usuários no localStorage
+            // Atualizar a variável de usuários no session
             localStorage.setItem('db_usuarios', JSON.stringify({ usuarios: usuarios }));
         }
-
 
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
