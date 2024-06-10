@@ -75,3 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         reader.readAsDataURL(event.target.files[0]);
     });
 });
+
+
+
+var dbmock_acertos = acertos
