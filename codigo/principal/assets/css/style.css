@@ -75,35 +75,98 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 5vh 0;
   }
 
-  .maze {
-      display: grid;
-      grid-template-columns: repeat(9, 50px);
-      /* 4 colunas */
-      grid-template-rows: repeat(4, 50px);
-      /* 4 linhas */
-      grid-gap: 10vh;
-      /* Espaçamento entre as fases */
-      width: 100%;
-      /* Largura do labirinto */
-      margin: 100px auto;
-      /* Centralizar o labirinto */
+  .main_fases_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+
+  .header_cap {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+  }
+
+  .header_cap h1 {
+    background-color: #ff6b35;
+    white-space: pre-line;
+    max-width: 650px;
+    width: 100%;
+    padding: 7vh 20vh;
+    border-radius: 30px;
+    box-shadow: 1vh 2vh 0 #5a210c;
   }
   
-  .phase {
+.header_cap:nth-of-type(odd) .fase1 {
+    margin-right: 5vh;
+}
+  .header_cap:nth-of-type(odd) .fase2 {
+    margin-right: 15vh;
+}
+
+.header_cap:nth-of-type(odd) .fase3 {
+    margin-right: 20vh;
+}
+
+.header_cap:nth-of-type(odd) .fase4 {
+    margin-right: 5vh;
+}
+.header_cap:nth-of-type(odd) .fase1 {
+  margin-right: -5vh;
+}
+
+.header_cap:nth-of-type(even) .fase2 {
+    margin-right: -15vh;
+}
+
+.header_cap:nth-of-type(even) .fase3 {
+    margin-right: -20vh;
+}
+
+.header_cap:nth-of-type(even) .fase4 {
+    margin-right: -5vh;
+}
+
+.fim_cap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Ajuste o espaço entre o texto e as linhas */
+}
+
+.line-fim {
+  flex-grow: 1;
+  width: 30vh;
+  height: 2px; /* Ajuste a altura da linha conforme necessário */
+  background-color: #ffffff; /* Ajuste a cor da linha conforme necessário */
+}
+
+.fim_cap h3 {
+  margin: 0;
+  padding: 0 10px; /* Ajuste o espaço ao redor do texto conforme necessário */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+  .fase {
     cursor: pointer;
     padding: 2rem;
     width: 50px;
     height: 50px;
     border: 2px solid whitesmoke;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
   }
 
-  .phase a {
+  .fase a {
     text-decoration: none;
     color: whitesmoke;
   }
