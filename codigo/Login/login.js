@@ -37,3 +37,4 @@ function validarLogin(login, senha) {
 
     return null; // Retorna null se o login falhar
 }
+

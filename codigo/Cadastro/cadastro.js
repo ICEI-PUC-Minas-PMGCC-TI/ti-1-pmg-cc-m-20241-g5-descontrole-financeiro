@@ -15,12 +15,13 @@ function generateUUID() { // Public Domain/MIT
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
+  var acertos = 0;
 
 // Dados iniciais de usuários
 const dadosIniciais = {
     usuarios: [
-        { "id": generateUUID(), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com" },
-        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com" }
+        { "id": generateUUID(), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com", "acertos": acertos },
+        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com", "acertos": acertos }
     ]
 };
 
@@ -37,6 +38,7 @@ function salvarCadastro() {
     var senha = document.getElementById('txt_senha').value;
     var senha2 = document.getElementById('txt_senha2').value;
 
+
     // Verifica se a senha e a confirmação de senha são iguais
     if (senha !== senha2) {
         alert('As senhas não coincidem.');
@@ -50,7 +52,7 @@ function salvarCadastro() {
     }
 
     // Adiciona o novo usuário ao banco de dados
-    addUser(nome, login, senha, email);
+    addUser(nome, login, senha, email, acertos);
 
     // Limpa o formulário
     document.getElementById('login-form').reset();
@@ -62,11 +64,12 @@ function salvarCadastro() {
 }
 
 // Função para adicionar usuário
-function addUser(nome, login, senha, email) {
+function addUser(nome, login, senha, email, acertos) {
     let newId = generateUUID();
-    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email };
+    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, "acertos": acertos };
     db_usuarios.usuarios.push(usuario);
     localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+    
 }
 
 // Inicializa a aplicação
