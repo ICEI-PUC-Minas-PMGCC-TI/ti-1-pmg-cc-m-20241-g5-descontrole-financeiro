@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Preenche o formulário com os dados do usuário
         document.getElementById('nome').value = usuarioCorrente.nome;
         document.getElementById('login').value = usuarioCorrente.login;
-        document.getElementById('email').value = usuarioCorrente.email;
+        document.getElementById('e-mail').value = usuarioCorrente.email;
 
         // Carrega a imagem do perfil, se houver
         if (usuarioCorrente.profileImg) {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Obtém os valores dos campos do formulário
         var nome = document.getElementById('nome').value;
         var login = document.getElementById('login').value;
-        var email = document.getElementById('email').value;
+        var email = document.getElementById('e-mail').value;
         var senha = document.getElementById('senha').value;
         var senha2 = document.getElementById('senha2').value;
 

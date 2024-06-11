@@ -87,10 +87,12 @@
 
             // Incrementar o número de acertos do usuário
             usuario.acertos++;
+            console.log("Certo")
 
             // Atualizar a variável de usuários no session
             localStorage.setItem('db_usuarios', JSON.stringify({ usuarios: usuarios }));
         }
+
 
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -131,6 +133,7 @@
             }
         });
 
+    
 
     </script>
 </body>
