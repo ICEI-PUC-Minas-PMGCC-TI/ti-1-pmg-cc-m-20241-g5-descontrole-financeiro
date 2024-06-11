@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/codigo/Metas/metas.css">
+    <title>GG-Metas</title>
+</head>
+<body>
+    <sidebar>
+        <h1>GuardaGrana</h1>
+        <ul>
+            <li><a href="#">Aprender</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Equipe</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Progresso</a></li>
+        </ul>
+    </sidebar>
+    <div class="main-content">
+        <div class="header">
+            <h1>Editar Meta Diária</h1>
+            <p>Selecionar uma meta diária irá ajudá-lo a se manter motivado enquanto aprende sobre a disciplina. Você pode mudar sua meta a qualquer momento.</p>
+        </div>
+        <div class="content-board">
+            <table class="goal-table">
+                <tr>
+                    <th>Meta</th>
+                    <th>Questões por dia</th>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="goal" value="basic"> Básico</label></td>
+                    <td>2 Questões</td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="goal" value="casual"> Casual</label></td>
+                    <td>4 Questões</td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="goal" value="regular"> Regular</label></td>
+                    <td>6 Questões</td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="goal" value="serious"> Sério</label></td>
+                    <td>8 Questões</td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="goal" value="intense"> Intenso</label></td>
+                    <td>10 Questões</td>
+                </tr>
+            </table>
+            <button class="save-button" onclick="saveGoal()">Salvar Alterações</button>
+        </div>
+    </div>
+    <script src="/codigo/metas/js/javascript.js"></script>
+</body>
+</html>

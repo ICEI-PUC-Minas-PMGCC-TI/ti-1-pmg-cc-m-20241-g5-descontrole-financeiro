@@ -6,123 +6,173 @@
   margin: 0;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   background-color: #110e09;
   color: whitesmoke;
   font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:  400;
+  font-style: normal;
 }
 
-sidebar {
-    background-color: #110e09;
-    border-right: 2px solid #4e4736;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
-  
-  sidebar ul {
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    list-style: none;
-    padding: 10vh;
-    margin: 0;
-  }
-  
-  sidebar ul li {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  sidebar ul li a:hover {
-    transition: all ease 0.7s;
-    color: rgba(245, 245, 245, 0.5);
-  }
-
-.main-content {
-  margin-left: 200px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.header {
+h1{
   text-align: center;
   margin-bottom: 20px;
 }
 
-.header h1 {
-  margin-bottom: 10px;
+sidebar {
+  background-color: #110e09;
+  border-right: 2px solid #4e4736;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+sidebar ul {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  list-style: none;
+  padding: 10vh;
+  margin: 0;
+}
+
+sidebar ul li {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+sidebar ul li a:hover {
+  transition: all ease 0.7s;
+  color: rgba(245, 245, 245, 0.5);
+}
+
+.content {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 17vh; /* Match the width of the navbar */
+  padding: 20px;
+  max-width: 100%;
 }
 
 .content-board {
-  margin: 0 35%;
+  margin-top: 3%;
   background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
+  max-width: 90vh;
+  padding: 5vh;
+  padding-top: 1vh;
+  padding-bottom: 0vh;
+  border-radius: 20px;
 }
 
-.goal-table {
+.progress-img {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+  max-width: 10vh; 
+  padding: 10px; 
+  padding-bottom: 0;
 }
 
-.goal-table th, .goal-table td {
-  border: 1px solid #555;
-  padding: 10px;
-  text-align: left;
+.progress-img img {
+  max-width: 100%;
+
 }
 
-.goal-table th {
-  background-color: #444;
+.progress-content h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+  font-size: 24px;
 }
 
-.goal-option input {
-  margin-right: 10px;
+.progress-content p {
+  margin: 10px;
+  color: whitesmoke;
 }
 
-.save-button {
-  background-color: #ff9600;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+.progress-content {
+  padding: 2%;
+
 }
 
-.save-button:hover {
-  background-color: #ff7800;
+.progresso {
+  display:flex;
+  gap: 3vh;
+  align-items: center;
 }
 
 .progress-bar {
+  background-color: #fff;
   width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 25px;
-  overflow: hidden;
+  height: 20px;
+  border-radius: 20px;
 }
 
 .progress-bar-fill {
+  width: 0px;
+  background-color: orange;
   height: 20px;
-  background-color: #76c7c0;
-  width: 0%; /* Inicialmente zero */
-  transition: width 0.5s;
+  border-radius: 20px;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  .navbar{
+    width: 100%;
+    height: 17vh;
+    flex-direction: row;
+  } 
+  .content {
+    margin: 0;
+    margin-top:17vh;
+    width: 100%;
+    justify-content: center;
+    padding: 0px;
+  }
+  .content-board {
+    max-width:100%;
+    margin: 1vh;
+    margin-top:5vh;
+  }
+  .progress-content p {
+    color: whitesmoke;
+    display: none;
+  }
+
+  .progresso {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .navbar {
+    gap: 10%;
+  }
+  .navbar img {
+    width: 8vh;
+  }
+
+}
+
