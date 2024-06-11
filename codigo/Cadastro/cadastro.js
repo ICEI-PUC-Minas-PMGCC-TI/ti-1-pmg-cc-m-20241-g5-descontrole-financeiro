@@ -20,8 +20,8 @@ function generateUUID() { // Public Domain/MIT
 // Dados iniciais de usuários
 const dadosIniciais = {
     usuarios: [
-        { "id": generateUUID(), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com", "acertos": acertos },
-        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com", "acertos": acertos }
+        { "id": generateUUID(), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com", "acertos": acertos, "metas": 0 },
+        { "id": generateUUID(), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com", "acertos": acertos, "metas": 0 }
     ]
 };
 
@@ -66,7 +66,7 @@ function salvarCadastro() {
 // Função para adicionar usuário
 function addUser(nome, login, senha, email, acertos) {
     let newId = generateUUID();
-    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, "acertos": acertos };
+    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, "acertos": acertos, "metas": 0};
     db_usuarios.usuarios.push(usuario);
     localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
     

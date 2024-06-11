@@ -1,23 +1,24 @@
-// Função para salvar a meta escolhida em um arquivo JSON
-function saveGoal() {
-    const selectedGoal = document.querySelector('input[name="goal"]:checked').value;
-    const goalData = { goal: selectedGoal };
+// Adiciona um evento de escuta ao botão "Salvar Alterações"
+document.querySelector('.save-button').addEventListener('click', function () {
+    // Acessa o localStorage para obter os dados do usuário
+    var usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
 
-    // Salvar no Local Storage
-    localStorage.setItem('userGoal', JSON.stringify(goalData));
-    alert('Meta salva com sucesso!');
-}
+    // Captura o valor do radio button selecionado
+    var metaSelecionada = document.querySelector('input[name="goal"]:checked');
 
+    if (metaSelecionada) {
+        // Atualiza a variável metas do usuário com base no id selecionado
+        usuarioCorrente.metas = metaSelecionada.id;
 
+        // Armazena os dados atualizados do usuário no sessionStorage
+        sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
 
-// Função para carregar a meta salva ao carregar a página
-function loadGoal() {
-    const savedGoal = localStorage.getItem('userGoal');
-    if (savedGoal) {
-        const goalData = JSON.parse(savedGoal);
-        document.querySelector(input[name="goal"][value="${goalData.goal}"]).checked = true;
+        // Atualiza os dados no localStorage também
+        localStorage.setItem('db_usuarios', JSON.stringify(usuarioCorrente));
+        alert('Meta atualizada com sucesso!');
+    } else {
+        alert('Por favor, selecione uma meta.');
     }
-}
+});
 
-// Carregar a meta salva ao carregar a página
-document.addEventListener('DOMContentLoaded', loadGoal);
+
