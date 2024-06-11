@@ -1,22 +1,24 @@
 // Função para atualizar a barra de progresso com base nos acertos do usuário
 function atualizarBarraDeProgresso() {
     // Recuperar o banco de dados de usuários do localStorage
-    let db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));
+    var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));
 
     // Verificar se o banco de dados de usuários existe e se contém usuários
     if (db_usuarios && db_usuarios.usuarios.length > 0) {
-        // Suponha que você queira ler os acertos do usuário atual usando o login
-        let loginUsuario = 'vi'; 
+        // Suponha que você queira ler os acertos do usuário atual usando o log
 
         // Encontrar o usuário com o login especificado
-        let usuario = db_usuarios.usuarios.find(user => user.login === loginUsuario);
+        let usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+
+
+        console.log(usuarioCorrente);
 
         // Verificar se o usuário foi encontrado
-        if (usuario) {
-            let acertos = usuario.acertos;
+        if (usuarioCorrente) {
+            let acertos = usuarioCorrente.acertos;
 
             // Verificar se os acertos são maiores que zero antes de atualizar a barra de progresso
-            if (acertos > 0) {
+            if (acertos >= 0) {
                 // Define o valor máximo da barra de progresso (por exemplo, 100)
                 let maxAcertos = 25;
 
