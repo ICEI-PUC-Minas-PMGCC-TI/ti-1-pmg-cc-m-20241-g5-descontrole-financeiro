@@ -551,67 +551,6 @@
               ]
             }
           ]
-        },
-        "cap10": {
-          "titulo": "Capitulo 10...",
-          "questoes": [
-            {
-              "Idquest": 5,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 6,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 7,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 8,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            }
-          ]
         }
       }
     }
