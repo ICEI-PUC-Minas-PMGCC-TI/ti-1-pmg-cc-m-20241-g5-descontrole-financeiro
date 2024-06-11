@@ -137,23 +137,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Ajuste o espaço entre o texto e as linhas */
+  gap: 10px;
 }
 
 .line-fim {
   flex-grow: 1;
   width: 30vh;
-  height: 2px; /* Ajuste a altura da linha conforme necessário */
-  background-color: #ffffff; /* Ajuste a cor da linha conforme necessário */
+  height: 2px;
+  background-color: #ffffff;
 }
 
 .fim_cap h3 {
   margin: 0;
-  padding: 0 10px; /* Ajuste o espaço ao redor do texto conforme necessário */
-  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  padding: 0 10px;
+  white-space: nowrap;
 }
 
-  .fase {
+  .fase a{
     cursor: pointer;
     padding: 2rem;
     width: 50px;
@@ -164,9 +164,6 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-  }
-
-  .fase a {
     text-decoration: none;
     color: whitesmoke;
   }
