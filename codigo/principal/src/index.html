@@ -27,7 +27,7 @@
 
 <script>
     function carregarDados() {
-        fetch('/ti-1-pmg-cc-m-20241-g5-descontrole-financeiro/codigo/db.json')
+        fetch('/codigo/db.json')
         .then(response => response.json())
         .then(data => {
             const fases = data.fases[0].capitulos;
