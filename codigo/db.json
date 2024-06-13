@@ -1,313 +1,1333 @@
 {
-  "fases": [
-    {
-      "idTopico": 1,
-      "capitulos": {
-        "cap1": {
-          "titulo": "Introdução ao Crédito",
-          "descricao" : "Tenha uma compreensão básica do que é crédito, seus tipos e como ele funciona",
-          "questoes": [
-            {
-              "Idquest": 1,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
+    "fases": [
+      {
+        "idTopico": 1,
+        "capitulos": {
+          "cap1": {
+            "titulo": "Introdução ao Crédito",
+            "descricao": "Tenha uma compreensão básica do que é crédito, seus tipos e como ele funciona",
+            "fases": [
+              {
+                "titulo": "O que é Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 1,
+                    "text": "O que é crédito?",
+                    "respostas": [
+                      {
+                        "text": "Ato de fornecer recursos a alguém, sob a promessa de reembolso futuro.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um tipo de imposto.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma conta bancária especial.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma doação sem necessidade de reembolso.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 2,
+                    "text": "Qual é um exemplo de crédito ao consumidor?",
+                    "respostas": [
+                      {
+                        "text": "Um empréstimo para compra de um carro.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um investimento em ações.",
+                        "correta": false
+                      },
+                      {
+                        "text": "A abertura de uma conta poupança.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma doação caritativa.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 3,
+                    "text": "Qual a principal vantagem do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Permitir que você compre algo agora e pague depois.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Impedir o endividamento.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Garantir que você não pague juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumentar automaticamente sua renda.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "Tipos de Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 4,
+                    "text": "O que é crédito rotativo?",
+                    "respostas": [
+                      {
+                        "text": "Um tipo de empréstimo que pode ser utilizado repetidamente até um certo limite.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um crédito que só pode ser utilizado uma vez.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Um empréstimo que nunca precisa ser pago.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma forma de crédito sem juros.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 5,
+                    "text": "Qual é a diferença entre crédito pessoal e crédito consignado?",
+                    "respostas": [
+                      {
+                        "text": "Crédito pessoal não é descontado diretamente do salário, enquanto crédito consignado é.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Crédito consignado não tem juros, enquanto crédito pessoal tem.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Crédito pessoal só pode ser usado para compras específicas.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Não há diferença, são sinônimos.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 6,
+                    "text": "O que é um empréstimo hipotecário?",
+                    "respostas": [
+                      {
+                        "text": "Empréstimo garantido por um imóvel.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Empréstimo sem garantias.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Crédito rotativo.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Crédito pessoal.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "Funcionamento do Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 7,
+                    "text": "Como funciona a taxa de juros?",
+                    "respostas": [
+                      {
+                        "text": "É o custo de tomar dinheiro emprestado, expresso como uma porcentagem do valor emprestado.",
+                        "correta": true
+                      },
+                      {
+                        "text": "É um desconto oferecido por pagar antecipadamente.",
+                        "correta": false
+                      },
+                      {
+                        "text": "É uma taxa fixa cobrada por bancos.",
+                        "correta": false
+                      },
+                      {
+                        "text": "É um bônus dado pelo banco.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 8,
+                    "text": "O que significa amortização?",
+                    "respostas": [
+                      {
+                        "text": "Pagamento gradual de uma dívida em parcelas regulares.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Aumento do valor do empréstimo.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Redução das taxas de juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Processo de renegociação da dívida.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 9,
+                    "text": "Qual é o papel da pontuação de crédito?",
+                    "respostas": [
+                      {
+                        "text": "Avaliar a capacidade e a probabilidade de uma pessoa pagar suas dívidas.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Determinar o saldo da conta bancária.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Calcular os juros do empréstimo.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Definir o limite de crédito automaticamente.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "O que é Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 10,
+                    "text": "O que é crédito?",
+                    "respostas": [
+                      {
+                        "text": "Ato de fornecer recursos a alguém, sob a promessa de reembolso futuro.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um tipo de imposto.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma conta bancária especial.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma doação sem necessidade de reembolso.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 11,
+                    "text": "Qual é um exemplo de crédito ao consumidor?",
+                    "respostas": [
+                      {
+                        "text": "Um empréstimo para compra de um carro.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um investimento em ações.",
+                        "correta": false
+                      },
+                      {
+                        "text": "A abertura de uma conta poupança.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma doação caritativa.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 12,
+                    "text": "Qual a principal vantagem do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Permitir que você compre algo agora e pague depois.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Impedir o endividamento.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Garantir que você não pague juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumentar automaticamente sua renda.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "cap2": {
+            "titulo": "Uso Responsável do Crédito",
+            "descricao": "Aprenda como utilizar o crédito de forma responsável e evitar armadilhas comuns.",
+            "fases": [
+              {
+                "titulo": "Planejamento de Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 13,
+                    "text": "Por que é importante planejar o uso do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Para evitar endividamento excessivo e manter uma boa pontuação de crédito.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Para garantir que você nunca pague juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Para obter mais crédito no futuro.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Para conseguir descontos em compras.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 14,
+                    "text": "Qual é a principal vantagem de manter um bom histórico de crédito?",
+                    "respostas": [
+                      {
+                        "text": "Acesso a melhores condições de empréstimos e financiamentos.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Garantia de nunca pagar juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumento ilimitado de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Descontos automáticos em todas as compras.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 15,
+                    "text": "Como deve ser o uso do crédito no dia a dia?",
+                    "respostas": [
+                      {
+                        "text": "Deve ser utilizado de forma planejada e controlada.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Deve ser utilizado para todas as compras.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Deve ser evitado a todo custo.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Deve ser utilizado apenas em emergências.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "Controle de Dívidas",
+                "questoes": [
+                  {
+                    "Idquest": 16,
+                    "text": "O que é um plano de pagamento de dívida?",
+                    "respostas": [
+                      {
+                        "text": "Uma estratégia para pagar dívidas de forma organizada.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Uma forma de obter mais crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Um método para evitar o pagamento de dívidas.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Um desconto oferecido por bancos.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 17,
+                    "text": "Qual é a principal consequência de não pagar suas dívidas?",
+                    "respostas": [
+                      {
+                        "text": "Deterioração da sua pontuação de crédito.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Aumento automático do limite de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Redução das taxas de juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Recebimento de bônus financeiros.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 18,
+                    "text": "Como evitar o acúmulo de dívidas?",
+                    "respostas": [
+                      {
+                        "text": "Controlando seus gastos e pagando as contas em dia.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Fazendo novos empréstimos constantemente.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Ignorando as faturas mensais.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Gastando todo o limite de crédito disponível.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "Práticas Saudáveis de Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 19,
+                    "text": "Qual é uma prática saudável ao usar crédito?",
+                    "respostas": [
+                      {
+                        "text": "Utilizar apenas uma pequena parte do seu limite de crédito.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Pagar sempre o valor mínimo da fatura do cartão de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Nunca verificar seu extrato bancário.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Fazer o máximo de empréstimos possíveis.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 20,
+                    "text": "O que deve ser evitado ao usar um cartão de crédito?",
+                    "respostas": [
+                      {
+                        "text": "Gastar mais do que pode pagar no final do mês.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Utilizar recompensas e pontos.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Pagar a fatura integralmente a cada mês.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Verificar o extrato regularmente.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 21,
+                    "text": "Como evitar armadilhas comuns do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Conhecendo os termos e condições do crédito antes de aceitá-lo.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Ignorando os contratos de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aceitando todas as ofertas de crédito disponíveis.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Usando crédito para todas as compras.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "O que é Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 22,
+                    "text": "O que é crédito?",
+                    "respostas": [
+                      {
+                        "text": "Ato de fornecer recursos a alguém, sob a promessa de reembolso futuro.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um tipo de imposto.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma conta bancária especial.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma doação sem necessidade de reembolso.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 23,
+                    "text": "Qual é um exemplo de crédito ao consumidor?",
+                    "respostas": [
+                      {
+                        "text": "Um empréstimo para compra de um carro.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Um investimento em ações.",
+                        "correta": false
+                      },
+                      {
+                        "text": "A abertura de uma conta poupança.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Uma doação caritativa.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 24,
+                    "text": "Qual a principal vantagem do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Permitir que você compre algo agora e pague depois.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Impedir o endividamento.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Garantir que você não pague juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumentar automaticamente sua renda.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "cap3": {
+            "titulo": "Maximização dos Benefícios do Crédito",
+            "descricao": "Aprenda a usar o crédito de forma estratégica para maximizar seus benefícios",
+            "fases": [
+              {
+                "titulo": "Benefícios do Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 25,
+                    "text": "Como o uso de crédito pode beneficiar sua vida financeira?",
+                    "respostas": [
+                      {
+                        "text": "Permite o acesso a bens e serviços antes de ter o dinheiro disponível.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Garante que você nunca pague juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumenta automaticamente seu limite de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Evita qualquer tipo de endividamento.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 26,
+                    "text": "Qual é uma forma de maximizar os benefícios do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Pagando a fatura do cartão de crédito integralmente a cada mês.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Utilizando o crédito para todas as suas compras.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Ignorando as taxas de juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Fazendo o mínimo de pagamentos possíveis.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 27,
+                    "text": "Qual é a vantagem dos programas de recompensas de cartões de crédito?",
+                    "respostas": [
+                      {
+                        "text": "Acumular pontos que podem ser trocados por produtos e serviços.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Reduzir automaticamente o valor da fatura.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Garantir que você nunca pague juros.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumentar seu limite de crédito sem controle.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "Uso Estratégico do Crédito",
+                "questoes": [
+                  {
+                    "Idquest": 28,
+                    "text": "Como utilizar o crédito de forma estratégica?",
+                    "respostas": [
+                      {
+                        "text": "Planejando as compras e utilizando o crédito para itens que podem ser pagos em um prazo conveniente.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Utilizando o crédito para todas as compras.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Evitando totalmente o uso de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Aumentando o limite de crédito sempre que possível.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 29,
+                    "text": "Qual é um exemplo de uso estratégico do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Utilizar um empréstimo com juros baixos para consolidar dívidas mais caras.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Pagar apenas o valor mínimo da fatura do cartão de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Fazer compras impulsivas com cartão de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Utilizar o crédito para todas as despesas diárias.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 30,
+                    "text": "Como os juros compostos afetam o uso do crédito?",
+                    "respostas": [
+                      {
+                        "text": "Aumentam o valor total a ser pago se as dívidas não forem liquidadas rapidamente.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Reduzem automaticamente o saldo devedor.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Não têm efeito sobre o valor total da dívida.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Garantem que você nunca pague mais do que o valor emprestado.",
+                        "correta": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "titulo": "Melhoria da Saúde Financeira",
+                "questoes": [
+                  {
+                    "Idquest": 31,
+                    "text": "Como o uso responsável do crédito pode melhorar sua saúde financeira?",
+                    "respostas": [
+                      {
+                        "text": "Aumentando sua capacidade de investir e economizar.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Garantindo que você nunca terá dívidas.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Impedindo qualquer tipo de gasto.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Reduzindo automaticamente todas as taxas de juros.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 32,
+                    "text": "Qual é uma prática recomendada para manter uma boa saúde financeira?",
+                    "respostas": [
+                      {
+                        "text": "Manter um orçamento e evitar gastos desnecessários.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Utilizar todo o limite de crédito disponível.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Ignorar todas as ofertas de crédito.",
+                        "correta": false
+                      },
+                      {
+                        "text": "Nunca usar cartões de crédito.",
+                        "correta": false
+                      }
+                    ]
+                  },
+                  {
+                    "Idquest": 33,
+                    "text": "O que é aconselhável ao lidar com múltiplas dívidas?",
+                    "respostas": [
+                      {
+                        "text": "Consolidar dívidas em um único empréstimo com juros mais baixos.",
+                        "correta": true
+                      },
+                      {
+                        "text": "Ignorar as dívidas e gastar como se não houvesse amanhã.",
+                        "correta" : false
+                      },
+                      {
+                        "text": "Ignorar as dívidas e gastar como se não houvesse amanhã.",
+                        "correta" : false
+                      },
+                      {
+                        "text": "Ignorar as dívidas e gastar como se não houvesse amanhã.",
+                        "correta" : false
+                      }
+                    ]
                 },
                 {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
+                "Idquest": 34,
+                "text": "O que é aconselhável ao lidar com múltiplas dívidas?",
+                "respostas": [
+                  {
+                    "text": "Consolidar dívidas em um único empréstimo com juros mais baixos.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Ignorar as dívidas e esperar que desapareçam.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Pagar cada dívida separadamente, independentemente das taxas de juros.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Aumentar o limite de crédito para pagar todas as dívidas de uma vez.",
+                    "correta": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "titulo": "O que é Crédito",
+            "questoes": [
+              {
+                "Idquest": 35,
+                "text": "O que é crédito?",
+                "respostas": [
+                  {
+                    "text": "Ato de fornecer recursos a alguém, sob a promessa de reembolso futuro.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Um tipo de imposto.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Uma conta bancária especial.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Uma doação sem necessidade de reembolso.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 36,
+                "text": "Qual é um exemplo de crédito ao consumidor?",
+                "respostas": [
+                  {
+                    "text": "Um empréstimo para compra de um carro.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Um investimento em ações.",
+                    "correta": false
+                  },
+                  {
+                    "text": "A abertura de uma conta poupança.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Uma doação caritativa.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 37,
+                "text": "Qual a principal vantagem do crédito?",
+                "respostas": [
+                  {
+                    "text": "Permitir que você compre algo agora e pague depois.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Impedir o endividamento.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Garantir que você não pague juros.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Aumentar automaticamente sua renda.",
+                    "correta": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "cap4": {
+        "titulo": "Gestão de Crédito a Longo Prazo",
+        "descricao": "Aprenda estratégias para gerenciar seu crédito ao longo do tempo e alcançar metas financeiras.",
+        "fases": [
+          {
+            "titulo": "Planejamento Financeiro",
+            "questoes": [
+              {
+                "Idquest": 38,
+                "text": "Qual é a importância do planejamento financeiro ao longo prazo?",
+                "respostas": [
+                  {
+                    "text": "Ajuda a alcançar metas financeiras e a evitar dívidas desnecessárias.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Garante que você nunca precise usar crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Aumenta automaticamente seu limite de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Evita qualquer tipo de gasto.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 39,
+                "text": "O que é um orçamento financeiro?",
+                "respostas": [
+                  {
+                    "text": "Um plano que estabelece receitas e despesas esperadas durante um período.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Um valor fixo que pode ser gasto a qualquer momento.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Um tipo de crédito oferecido por bancos.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Um método para evitar qualquer tipo de gasto.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 40,
+                "text": "Por que é importante revisar regularmente seu orçamento financeiro?",
+                "respostas": [
+                  {
+                    "text": "Para garantir que você esteja no caminho certo para alcançar suas metas financeiras.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Para aumentar automaticamente seu limite de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Para garantir que você nunca precise usar crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Para ignorar completamente suas despesas mensais.",
+                    "correta": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "titulo": "Investimento e Crescimento Financeiro",
+            "questoes": [
+              {
+                "Idquest": 41,
+                "text": "Qual é a relação entre crédito e investimento?",
+                "respostas": [
+                  {
+                    "text": "Crédito pode ser usado para financiar investimentos que podem gerar retorno financeiro.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Crédito impede qualquer tipo de investimento.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Investimento pode pagar todas as dívidas automaticamente.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Investimento reduz automaticamente todas as taxas de juros.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 42,
+                "text": "Como o crédito pode ser usado para promover o crescimento financeiro pessoal?",
+                "respostas": [
+                  {
+                    "text": "Facilitando a aquisição de ativos que podem aumentar sua riqueza ao longo do tempo.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Impedindo a capacidade de poupar ou investir.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Reduzindo automaticamente todas as despesas.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Ignorando completamente qualquer tipo de investimento.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 43,
+                "text": "Por que é importante diversificar seus investimentos?",
+                "respostas": [
+                  {
+                    "text": "Para reduzir o risco e aumentar as chances de retorno positivo sobre o investimento.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Para aumentar automaticamente seu limite de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Para garantir que você nunca precise usar crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Para garantir que todos os investimentos falhem.",
+                    "correta": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "titulo": "Manutenção de um Bom Crédito",
+            "questoes": [
+              {
+                "Idquest": 44,
+                "text": "Quais são as práticas recomendadas para manter um bom crédito ao longo do tempo?",
+                "respostas": [
+                  {
+                    "text": "Pagar contas em dia, manter baixos saldos de crédito e não abrir crédito desnecessário.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Ignorar todas as faturas e avisos de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Aumentar o limite de crédito o máximo possível.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Utilizar crédito para todas as compras, independentemente do saldo disponível.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 45,
+                "text": "Qual é a importância de verificar seu relatório de crédito regularmente?",
+                "respostas": [
+                  {
+                    "text": "Para garantir que não haja erros ou atividades fraudulentas.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Para aumentar automaticamente seu limite de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Para garantir que você nunca precise usar crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Para evitar completamente qualquer tipo de gasto.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                "Idquest": 46,
+                "text": "O que deve ser feito se houver um erro em seu relatório de crédito?",
+                "respostas": [
+                  {
+                    "text": "Disputar o erro com a agência de crédito para que ele seja corrigido.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Ignorar o erro e esperar que desapareça.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Aumentar automaticamente seu limite de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Não fazer nada, pois não afetará sua pontuação de crédito.",
+                    "correta": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "cap5": {
+        "titulo": "Aspectos Avançados de Crédito",
+        "descricao": "Explore conceitos e estratégias avançadas para maximizar seu potencial de crédito.",
+        "fases": [
+          {
+            "titulo": "Gestão Avançada de Crédito",
+            "questoes": [
+              {
+                "Idquest": 47,
+                "text": "O que é alavancagem financeira?",
+                "respostas": [
+                  {
+                    "text": "Uso de crédito e dívida para financiar o crescimento de um investimento ou empresa.",
+                    "correta": true
+                  },
+                  {
+                    "text": "Redução automática do limite de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Ignorar completamente qualquer tipo de crédito.",
+                    "correta": false
+                  },
+                  {
+                    "text": "Aumento automático das taxas de juros.",
+                    "correta": false
+                  }
+                ]
+              },
+              {
+                 "Idquest": 48,
+                  "text": "Como a alavancagem financeira pode ser vantajosa?",
+                  "respostas": [
+                    {
+                      "text": "Permite ampliar os retornos sobre o investimento usando recursos financeiros adicionais.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Garante que você nunca precise usar crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Reduz automaticamente todas as despesas.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Impede completamente qualquer tipo de investimento.",
+                      "correta": false
+                    }
+                  ]
+                },
+                {
+                  "Idquest": 49,
+                  "text": "Quais são os riscos associados à alavancagem financeira?",
+                  "respostas": [
+                    {
+                      "text": "Aumento do risco financeiro e potencial perda ampliada em caso de resultados adversos.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Redução automática do limite de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Ignorar completamente qualquer tipo de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Aumento automático das taxas de juros.",
+                      "correta": false
+                    }
+                  ]
                 }
               ]
             },
             {
-              "Idquest": 2,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
+              "titulo": "Estratégias de Crédito Avançadas",
+              "questoes": [
                 {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
+                  "Idquest": 50,
+                  "text": "O que é refinanciamento?",
+                  "respostas": [
+                    {
+                      "text": "Substituição de um empréstimo existente por um novo empréstimo com melhores termos.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Redução automática do limite de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Ignorar completamente qualquer tipo de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Aumento automático das taxas de juros.",
+                      "correta": false
+                    }
+                  ]
                 },
                 {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
+                  "Idquest": 51,
+                  "text": "Quais são potenciais benefícios do refinanciamento?",
+                  "respostas": [
+                    {
+                      "text": "Redução das taxas de juros e economia de custos ao longo do tempo.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Aumento automático do limite de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Ignorar completamente qualquer tipo de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Redução automática das taxas de juros.",
+                      "correta": false
+                    }
+                  ]
+                },
+                {
+                  "Idquest": 52,
+                  "text": "Quais são considerações importantes ao considerar o refinanciamento?",
+                  "respostas": [
+                    {
+                      "text": "Comparar cuidadosamente os termos e custos envolvidos antes de decidir.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Aceitar qualquer oferta sem revisão detalhada.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Ignorar completamente qualquer tipo de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Tomar a decisão com base apenas na redução das taxas de juros.",
+                      "correta": false
+                    }
+                  ]
                 }
               ]
             },
             {
-              "Idquest": 3,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
+              "titulo": "Planejamento de Aposentadoria e Crédito",
+              "questoes": [
                 {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
+                  "Idquest": 53,
+                  "text": "Qual é a relação entre crédito e planejamento de aposentadoria?",
+                  "respostas": [
+                    {
+                      "text": "Crédito pode ser usado para financiar a construção de um fundo de aposentadoria.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Crédito impede qualquer tipo de planejamento de aposentadoria.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Planejamento de aposentadoria garante que você nunca precise usar crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Planejamento de aposentadoria reduz automaticamente todas as taxas de juros.",
+                      "correta": false
+                    }
+                  ]
                 },
                 {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 4,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
+                  "Idquest": 54,
+                  "text": "Como o crédito pode ser usado de forma estratégica no planejamento de aposentadoria?",
+                  "respostas": [
+                    {
+                      "text": "Para investir em veículos de poupança que proporcionem renda durante a aposentadoria.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Para evitar completamente qualquer tipo de planejamento de aposentadoria.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Para aumentar automaticamente seu limite de crédito.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Para garantir que você nunca precise usar crédito.",
+                      "correta": false
+                    }
+                  ]
                 },
                 {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            }
-          ]
-        },
-        "cap2": {
-          "titulo": "Uso Responsável do Crédito",
-          "descricao" : "Aprenda como utilizar o crédito de forma responsável e evitar armadilhas comuns.",
-          "questoes": [
-            {
-              "Idquest": 5,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 6,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 7,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 8,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            }
-          ]
-        },
-        "cap3": {
-          "titulo": "Maximização dos Benefícios do Crédito",
-          "descricao" : "Aprenda a usar o crédito de forma estratégica para maximizar seus benefícios",
-          "questoes": [
-            {
-              "Idquest": 5,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 6,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 7,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 8,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            }
-          ]
-        },        
-        "cap4": {
-          "titulo": " Riscos e Proteção no Uso do Crédito",
-          "descricao" : "Identifique os riscos associados ao uso de crédito e aprender a se proteger",
-          "questoes": [
-            {
-              "Idquest": 5,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 6,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 7,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 8,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            }
-          ]
-        },
-        "cap5": {
-          "titulo": "Crédito e Planejamento de Longo Prazo",
-          "descricao" : "Planejar o uso do crédito para objetivos de longo prazo e melhorar a saúde financeira.",
-          "questoes": [
-            {
-              "Idquest": 5,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 6,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 7,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
-                }
-              ]
-            },
-            {
-              "Idquest": 8,
-              "text": "Essa é uma pergunta. Qual a resposta certa?",
-              "respostas": [
-                {
-                  "text": "Essa é uma resposta. Ela pode estar errada.",
-                  "correta": false
-                },
-                {
-                  "text": "Essa é uma outra resposta. Ela pode estar correta.",
-                  "correta": false
+                  "Idquest": 55,
+                  "text": "Quais são algumas estratégias para evitar dívidas na aposentadoria?",
+                  "respostas": [
+                    {
+                      "text": "Pagar dívidas antes de se aposentar e planejar com antecedência para despesas futuras.",
+                      "correta": true
+                    },
+                    {
+                      "text": "Ignorar completamente quaisquer dívidas acumuladas.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Aumentar automaticamente o limite de crédito para cobrir despesas.",
+                      "correta": false
+                    },
+                    {
+                      "text": "Depender exclusivamente de crédito para despesas diárias.",
+                      "correta": false
+                    }
+                  ]
                 }
               ]
             }
@@ -317,3 +1337,5 @@
     }
   ]
 }
+
+  

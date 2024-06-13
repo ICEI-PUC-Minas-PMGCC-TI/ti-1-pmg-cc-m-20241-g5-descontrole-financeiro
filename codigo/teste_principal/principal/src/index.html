@@ -57,38 +57,48 @@
             </main>
 
 <script>
+    var indice = 0;
     function carregarDados() {
-        fetch('/codigo/db.json')
+      fetch('/codigo/db.json')
         .then(response => response.json())
         .then(data => {
-            const fases = data.fases[0].capitulos;
-            const mainContent = document.querySelector('.main_fases_content');
-
-            for (const capituloKey in fases) {
-                if (fases.hasOwnProperty(capituloKey)) {
-                    const capitulo = fases[capituloKey];
-                    const divCapitulo = document.createElement('div');
-                    divCapitulo.classList.add('header_cap');
-                    divCapitulo.innerHTML = `<div class = "big-header"><h1>${capitulo.titulo}</h1><h2>${capitulo.descricao}</div></div>`;
-                    capitulo.questoes.forEach((questao, index) => {
-                        const divFase = document.createElement('div');
-                        divFase.classList.add('fase', `fase${index + 1}`);
-                        divFase.innerHTML = `<a href="#">${index + 1}</a>`;
-                        divCapitulo.appendChild(divFase);
-                        });
-
-                    const fimCapituloDiv = document.createElement('div');
-                    fimCapituloDiv.classList.add('fim_cap');
-                    fimCapituloDiv.innerHTML = `
-                        <div class="line-fim"></div>
-                        <h3>Fim do Capitulo ${capituloKey.replace(/\D/g,'')}</h3>
-                        <div class="line-fim"></div>
-                    `;
-                    divCapitulo.appendChild(fimCapituloDiv);
+          const fases = data.fases[0].capitulos;
+          const mainContent = document.querySelector('.main_fases_content');
+          for (const capituloKey in fases) {
+            if (fases.hasOwnProperty(capituloKey)) {
+              indice += 1;
+              const capitulo = fases[capituloKey];
+              console.log(capitulo);
+              const divCapitulo = document.createElement('div');
+              divCapitulo.classList.add('header_cap');
+              divCapitulo.innerHTML = `
+                <div class="big-header">
+                  <h1>Capítulo ${indice} - ${capitulo.titulo}</h1>
+                  <h2>${capitulo.descricao}</h2>
+                </div>
+              `;
+              console.log(capitulo.titulo);
+              console.log(capitulo.descricao);
+              capitulo.fases.forEach((questao, index) => {
                 
-                    mainContent.appendChild(divCapitulo);
-                }
+                const divFase = document.createElement('div');
+                divFase.classList.add('fase', `fase${index + 1}`);
+                divFase.innerHTML = `<a href="#">${index + 1}</a>`;
+                divCapitulo.appendChild(divFase);
+              });
+
+              const fimCapituloDiv = document.createElement('div');
+              fimCapituloDiv.classList.add('fim_cap');
+              fimCapituloDiv.innerHTML = `
+                <div class="line-fim"></div>
+                <h3>Fim do Capítulo ${capituloKey.replace(/\D/g,'')}</h3>
+                <div class="line-fim"></div>
+              `;
+              divCapitulo.appendChild(fimCapituloDiv);
+
+              mainContent.appendChild(divCapitulo);
             }
+          }
         })
         .catch(error => console.error('Erro ao carregar os dados:', error));
     }
