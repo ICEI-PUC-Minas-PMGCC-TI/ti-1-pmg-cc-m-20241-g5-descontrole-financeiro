@@ -15,9 +15,9 @@
   body {
     min-height: 100%;
     min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /*display: flex;
+    flex-direction: row;
+    align-items: center;*/
     background-color: #110e09;
     color: whitesmoke;
     font-family: "Josefin Sans", sans-serif;
@@ -44,6 +44,8 @@
     position: fixed;
     left: 0;
     top: 0;
+    width: 15%;
+    min-width: 14rem;
   }
 
   sidebar ul {
@@ -73,9 +75,10 @@
 
   main {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      /*justify-content: center;
+      align-items: center;*/
       padding: 5vh 0;
+      margin-left:15%;
   }
 
   .main_fases_content {
@@ -93,14 +96,18 @@
     gap: 5vh;
   }
 
-  .header_cap h1 {
+  .big-header {
     background-color: #ff6b35;
     white-space: pre-line;
     max-width: 650px;
     width: 100%;
-    padding: 7vh 20vh;
+    padding: 2vh 8vh;
     border-radius: 30px;
     box-shadow: 1vh 2vh 0 #5a210c;
+  }
+
+  .big-header h2 {
+    font-size: large;
   }
   
 .header_cap:nth-of-type(odd) .fase1 {
@@ -155,15 +162,22 @@
 
   .fase a{
     cursor: pointer;
-    padding: 2rem;
     width: 50px;
     height: 50px;
-    border: 2px solid whitesmoke;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
     text-decoration: none;
-    color: whitesmoke;
+    font-weight: 900;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 150, 0);
+    box-shadow: 0px 5px rgb(141, 82, 0);
+    padding: 2rem;
+  }
+
+  .fase a:active {
+    transform: translateY(3px);
+    box-shadow: none;
   }

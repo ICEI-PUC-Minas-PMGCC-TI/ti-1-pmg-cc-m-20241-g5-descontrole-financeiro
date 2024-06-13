@@ -38,7 +38,7 @@
                     const capitulo = fases[capituloKey];
                     const divCapitulo = document.createElement('div');
                     divCapitulo.classList.add('header_cap');
-                    divCapitulo.innerHTML = `<h1>${capitulo.titulo}</h1>`;
+                    divCapitulo.innerHTML = `<div class = "big-header"><h1>${capitulo.titulo}</h1><h2>${capitulo.descricao}</div></div>`;
                     capitulo.questoes.forEach((questao, index) => {
                         const divFase = document.createElement('div');
                         divFase.classList.add('fase', `fase${index + 1}`);

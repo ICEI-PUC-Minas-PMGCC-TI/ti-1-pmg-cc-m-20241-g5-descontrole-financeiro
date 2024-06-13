@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="card-body">
             <div class="title-holder">
-          <img src="/imgs/checked.png" class="img-fluid" alt="..." id="main-img">
+          <img src="../imgs/checked.png" class="img-fluid" alt="..." id="main-img">
           <h5 class="card-title">${quest.description}</h5>
           </div>
           <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="0" aria-valuemin="0" aria-valuemax="200" style="height: 30px" id="questProgressStructure1">
@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     wrongAnsBtn.addEventListener('click', function() {   
         questProgress = document.getElementById('questProgressBar2');
+        ansProgress = 0;
         questionRow = 0;
         questProgress.style.width = 0;
     })
