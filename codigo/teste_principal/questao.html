@@ -34,12 +34,29 @@
 
 <script>
   document.addEventListener("DOMContentLoaded",function() {
+
+    const main = document.getElementsByTagName('main')[0];
+
     fetch('../db.json')
     .then(response => response.json())
     .then(data => {
-        const capitulos = data.fases[0].capitulos;
-        
+        const fase = data.fases[0].capitulos.cap1.fases[0];
+        main.innerHTML = `<div class="question-intro">
+        <img src="./principal/imgs/leao.png" class="img-fluid" style="width:25%;">
+        <h2>${fase.titulo}</h2>
+    </div>`;
+    main.setAttribute('id','intro');
+    const nxt_btn = document.getElementById('next-btn');
+    nxt_btn.addEventListener('click', function() {
+        start_app();
     })
+
+    function start_app() {
+
+    }
+
+    })
+
   })
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
