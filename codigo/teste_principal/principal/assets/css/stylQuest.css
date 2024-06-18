@@ -46,6 +46,7 @@ html {
 
 .button-content-container {
     margin-top: 10px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -121,5 +122,35 @@ span {
     background-color: #ffba9b !important;
 }
 
+.titleP{
+    text-align: center;
+    background-color:  #5a210c !important;
+    height: 50px;
+}
 
+.t{
+    margin-top: 10px;
+}
 
+.Progresso{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 100px;
+    width: 80%;
+    border: 3px solid #362f22;
+    border-radius: 30px;
+    color: white !important;
+    background-color: #ff6b35 !important;
+    border-radius: 30px !important;
+    box-shadow: 1vh 2vh 0 #5a210c;
+}
+
+.progress{
+    margin-bottom: 30px;
+}
+
+.capTitle{
+    margin-top: 20px;
+}

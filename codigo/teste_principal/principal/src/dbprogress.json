@@ -1,0 +1,34 @@
+{
+   "Progress": [
+     {
+        "capituloAtual": 1,
+        "fases": [1, 2, 3, 4],
+        "faseAtual": 1,
+        "barra1": 0
+     },
+     {
+        "capituloAtual": 2,
+        "fases": [0, 1, 2, 3, 4],
+        "faseAtual": 0,
+        "barra2": 0
+     },
+     {
+        "capituloAtual": 3,
+        "fases": [0, 1, 2, 3, 4],
+        "faseAtual": 0,
+        "barra3": 0
+     },
+     {
+        "capituloAtual": 4,
+        "fases": [0, 1, 2, 3, 4],
+        "faseAtual": 1,
+        "barra4": 0
+     },
+     {
+        "capituloAtual": 5,
+        "fases": [0, 1, 2, 3, 4],
+        "faseAtual": 0,
+        "barra5": 0
+     }
+   ]
+}
