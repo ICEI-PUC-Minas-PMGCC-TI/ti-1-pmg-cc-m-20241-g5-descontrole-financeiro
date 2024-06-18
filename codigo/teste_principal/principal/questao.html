@@ -51,7 +51,9 @@
         const nxt_btn = document.getElementById('next-btn');
         var num = 0;
         nxt_btn.addEventListener('click', function() {
+            
             if (num < 3) {
+                if (num == 2) nxt_btn.innerHTML = 'Concluir';
                 start_app(fase.questoes, num);
                 num += 1;
                 nxt_btn.classList.add('hidden'); 
