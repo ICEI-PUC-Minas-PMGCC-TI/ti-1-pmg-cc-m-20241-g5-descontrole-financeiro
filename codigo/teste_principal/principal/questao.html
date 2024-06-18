@@ -23,7 +23,7 @@
     </main>
     <footer>
         <div class="btn_footer">
-            <a href="">Sair</a>
+            <button class="btn_footer sair" id="quit-btn">Sair</button>
         </div>
         <div class="btn_footer">
             <button class="btn_footer continuar" id="next-btn">Continuar</button>
@@ -35,7 +35,7 @@
 <script>
     document.addEventListener("DOMContentLoaded",function() {
 
-    const main = document.getElementsByTagName('main')[0];
+    var main = document.getElementsByTagName('main')[0];
     const { chapter, phase } = getQueryParams();
     var capitulo = `cap${chapter}`;
     var faseNum = phase-1;
@@ -43,14 +43,25 @@
     .then(response => response.json())
     .then(data => {
         const fase = data.fases[0].capitulos[capitulo].fases[faseNum];
+        console.log(fase.questoes);
         main.innerHTML = `<div class="question-intro">
         <img src="./imgs/leao.png" class="img-fluid" style="width:25%;">
         <h2>${fase.titulo}</h2>
     </div>`;
-    main.setAttribute('id','intro');
     const nxt_btn = document.getElementById('next-btn');
+    var num = 0;
     nxt_btn.addEventListener('click', function() {
-        start_app();
+        if (num < 3) {
+        start_app(fase.questoes,num);
+        num += 1;
+        }
+        else {
+            window.location.href = "./src/index.html";  
+        }
+    })
+    const quit_btn = document.getElementById('quit-btn');
+    quit_btn.addEventListener('click', function () {
+        window.location.href = "./src/index.html";
     })
     
     })
@@ -60,6 +71,21 @@
             const phase = params.get('phase');
             return { chapter, phase };
         }
+    function start_app(questoes,index) {
+        main.innerHTML = `
+        <div class="question-title">
+            <img src="./imgs/leao.png" class="img-fluid" style="width:8%;">
+            <h2>${questoes[index].text}</h2>
+        </div>
+        <h2 class="choose-opt">Escolha uma opção:</h2>
+        <div class="answers-container-buttons">
+            <button class="anw-btn">${questoes[index].respostas[0].text}</button>
+            <button class="anw-btn">${questoes[index].respostas[1].text}</button>
+            <button class="anw-btn">${questoes[index].respostas[2].text}</button>
+            <button class="anw-btn">${questoes[index].respostas[3].text}</button>
+        </div>`
+        
+    }
 
   })
 </script>
