@@ -124,8 +124,13 @@ span {
 
 .titleP{
     text-align: center;
-    background-color:  #5a210c !important;
-    height: 50px;
+    background-color:   #d15528 ;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #362f22;
+    
+    
 }
 
 .t{
@@ -139,18 +144,46 @@ span {
     gap: 30px;
     margin-bottom: 100px;
     width: 80%;
-    border: 3px solid #362f22;
+    border: 3px solid   #5a210c;
     border-radius: 30px;
     color: white !important;
-    background-color: #ff6b35 !important;
+    background-color: #e7693b !important;
     border-radius: 30px !important;
-    box-shadow: 1vh 2vh 0 #5a210c;
+    box-shadow: 1vh 2vh 0   #5a210c;
 }
 
 .progress{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .capTitle{
-    margin-top: 20px;
+    margin-top: 10px;
 }
+
+.card-progress{
+    padding: 20px;
+    padding-top: 0px;
+    border-radius: 20px;
+    background-color: #e7693b ;
+    margin-bottom: 0px;
+}
+
+.card-headerP{
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+    box-shadow:  1.3vh 0  #5a210c;
+    background-color: #5a210c !important;
+    border-radius: 2px !important;
+}
+
+
+.btn{
+    margin-bottom: 15px;
+}
+
+.Border{
+    border-bottom: 2px solid   #5a210c ;
+    margin: 20px;
+}
+
