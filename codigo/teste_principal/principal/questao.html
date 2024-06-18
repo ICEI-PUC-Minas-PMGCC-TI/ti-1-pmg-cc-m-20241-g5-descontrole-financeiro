@@ -33,45 +33,47 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded",function() {
-
+    document.addEventListener("DOMContentLoaded", function() {
     var main = document.getElementsByTagName('main')[0];
     const { chapter, phase } = getQueryParams();
     var capitulo = `cap${chapter}`;
-    var faseNum = phase-1;
+    var faseNum = phase - 1;
+
     fetch('/codigo/db.json')
     .then(response => response.json())
     .then(data => {
         const fase = data.fases[0].capitulos[capitulo].fases[faseNum];
-        console.log(fase.questoes);
         main.innerHTML = `<div class="question-intro">
-        <img src="./imgs/leao.png" class="img-fluid" style="width:25%;">
-        <h2>${fase.titulo}</h2>
-    </div>`;
-    const nxt_btn = document.getElementById('next-btn');
-    var num = 0;
-    nxt_btn.addEventListener('click', function() {
-        if (num < 3) {
-        start_app(fase.questoes,num);
-        num += 1;
-        }
-        else {
-            window.location.href = "./src/index.html";  
-        }
-    })
-    const quit_btn = document.getElementById('quit-btn');
-    quit_btn.addEventListener('click', function () {
-        window.location.href = "./src/index.html";
-    })
-    
-    })
+            <img src="./imgs/leao.png" class="img-fluid" style="width:25%;">
+            <h2>${fase.titulo}</h2>
+        </div>`;
+
+        const nxt_btn = document.getElementById('next-btn');
+        var num = 0;
+        nxt_btn.addEventListener('click', function() {
+            if (num < 3) {
+                start_app(fase.questoes, num);
+                num += 1;
+                nxt_btn.classList.add('hidden'); 
+            } else {
+                window.location.href = "./src/index.html";
+            }
+        });
+
+        const quit_btn = document.getElementById('quit-btn');
+        quit_btn.addEventListener('click', function() {
+            window.location.href = "./src/index.html";
+        });
+    });
+
     function getQueryParams() {
-            const params = new URLSearchParams(window.location.search);
-            const chapter = params.get('chapter');
-            const phase = params.get('phase');
-            return { chapter, phase };
-        }
-    function start_app(questoes,index) {
+        const params = new URLSearchParams(window.location.search);
+        const chapter = params.get('chapter');
+        const phase = params.get('phase');
+        return { chapter, phase };
+    }
+
+    function start_app(questoes, index) {
         main.innerHTML = `
         <div class="question-title">
             <img src="./imgs/leao.png" class="img-fluid" style="width:8%;">
@@ -79,15 +81,39 @@
         </div>
         <h2 class="choose-opt">Escolha uma opção:</h2>
         <div class="answers-container-buttons">
-            <button class="anw-btn">${questoes[index].respostas[0].text}</button>
-            <button class="anw-btn">${questoes[index].respostas[1].text}</button>
-            <button class="anw-btn">${questoes[index].respostas[2].text}</button>
-            <button class="anw-btn">${questoes[index].respostas[3].text}</button>
-        </div>`
-        
+            <button class="anw-btn" id="ans0">${questoes[index].respostas[0].text}</button>
+            <button class="anw-btn" id="ans1">${questoes[index].respostas[1].text}</button>
+            <button class="anw-btn" id="ans2">${questoes[index].respostas[2].text}</button>
+            <button class="anw-btn" id="ans3">${questoes[index].respostas[3].text}</button>
+        </div>`;
+
+        var buttons = document.getElementsByClassName('anw-btn');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                checkAnswer(questoes[index], i);
+                document.getElementById('next-btn').classList.remove('hidden'); // Show the button when an answer is selected
+            });
+        }
     }
 
-  })
+    function checkAnswer(question, selectedIndex) {
+        var buttons = document.getElementsByClassName('anw-btn');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true; // Disable buttons after an answer is selected
+            if (i === selectedIndex) {
+                if (question.respostas[i].correta) {
+                    buttons[i].style.backgroundColor = 'green';
+                } else {
+                    buttons[i].style.backgroundColor = 'red';
+                }
+            }
+            if (question.respostas[i].correta) {
+                buttons[i].style.backgroundColor = 'green';
+            }
+        }
+    }
+});
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
