@@ -3,7 +3,7 @@
      {
         "capituloAtual": 1,
         "fases": [1, 2, 3, 4],
-        "faseAtual": 1,
+        "faseAtual": 0,
         "barra1": 0
      },
      {
@@ -21,7 +21,7 @@
      {
         "capituloAtual": 4,
         "fases": [0, 1, 2, 3, 4],
-        "faseAtual": 1,
+        "faseAtual": 0,
         "barra4": 0
      },
      {
