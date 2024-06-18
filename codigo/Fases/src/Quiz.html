@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Início</a>
+            <a href="#">Aprender</a>
+            <a href="#">Sobre</a>
+            <a href="#">Equipe</a>
+            <a href="#">Contato</a>
+        </div>
+    </nav>
+
+    <main>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <h1 class="title">Orçamento Pessoal</h1>
+        <h2 class="subtitle" id="questionText">Pergunta</h2>
+        <form id="quizForm" onsubmit="submitQuiz(event)">
+            <h2>Escolha uma opção:</h2>
+            <div id="optionsContainer"></div>
+            <button type="submit">Enviar</button>
+            <p class="bg-azul-escuro" id="resultMessage"></p>
+        </form>
+    </main>
+    <footer>
+        <div class="btn_footer">
+            <a href="Licao1.html">Voltar</a>
+        </div>
+    </footer>
+
+    <script>
+        const quizData = {
+            "quizzes": [
+                {
+                    "id": 1,
+                    "title": "Orçamento Pessoal",
+                    "category": "Orçamento Pessoal",
+                    "questions": [
+                        {
+                            "id": 1,
+                            "text": "Qual é a principal vantagem de criar e seguir um orçamento pessoal, conforme a experiência de Gabriel?",
+                            "options": [
+                                { "id": 1, "text": "Manter em um estilo de vida extravagante sem consequências financeiras", "is_correct": false},
+                                { "id": 2, "text": "Perder a liberdade de gastar dinheiro como desejar", "is_correct": false},
+                                { "id": 3, "text": "Aumentar o controle sobre suas finanças e evitar dívidas desnecessárias *", "is_correct": true},
+                                { "id": 4, "text": "Aumentar suas rendas mensais", "is_correct": false}
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "text": "Analisando sua situação financeira, como Roberto pode comprar o carro novo?",
+                            "options": [
+                                { "id": 1, "text": "Pedindo um empréstimo sem verificar suas finanças atuais", "is_correct": false},
+                                { "id": 2, "text": "Criando um orçamento pessoal detalhado para comparar suas rendas e despesas *", "is_correct": true},
+                                { "id": 3, "text": "Consultando amigos e familiares sobre suas finanças", "is_correct": false},
+                                { "id": 4, "text": "Comprando o carro imediatamente e ajustando suas finanças depois", "is_correct": false}
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "text": "Ana não sabe por onde começar, qual seria a melhor ação para ela criar seu fundo de emergência?",
+                            "options": [
+                                { "id": 1, "text": "Criar um orçamento pessoal detalhado, analisando suas rendas e despesas *", "is_correct": true},
+                                { "id": 2, "text": "Cortar imediatamente todos os gastos não essenciais", "is_correct": false},
+                                { "id": 3, "text": "Começar a economizar uma pequena quantidade fixa mensalmente sem análise prévia", "is_correct": false},
+                                { "id": 4, "text": "Pedir dinheiro emprestado a amigos e familiares para iniciar o fundo", "is_correct": false}
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "text": "Pedro decidiu criar um orçamento pessoal. Ele já tem o dinheiro para a viagem, mas agora quer criar um fundo de emergência para cobrir qualquer gasto imprevisto. Como ele pode determinar o quanto precisa para esse fundo de emergência?",
+                            "options": [
+                                { "id": 1, "text": "Pedro deve calcular a média de suas rendas mensais", "is_correct": false},
+                                { "id": 2, "text": "Pedro deve calcular a média de suas desculpas mensais e reservar um valor baseado nisso *", "is_correct": true},
+                                { "id": 3, "text": "Pedro deve cancelar a viagem para evitar qualquer risco financeiro", "is_correct": false},
+                                { "id": 4, "text": "Pedro deve criar um fundo de emergência sem fazer nenhuma análise prévia", "is_correct": false}
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+        let currentQuestionIndex = 0;
+    let correctAnswersCount = 0;
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const resultMessage = document.getElementById('resultMessage');
+
+    function displayQuestion() {
+        const currentQuestion = quizData.quizzes[0].questions[currentQuestionIndex];
+        questionText.textContent = currentQuestion.text;
+        optionsContainer.innerHTML = '';
+
+        currentQuestion.options.forEach(option => {
+            const radioBtn = document.createElement('input');
+            radioBtn.type = 'radio';
+            radioBtn.name = 'answer';
+            radioBtn.value = option.is_correct;
+            optionsContainer.appendChild(radioBtn);
+
+            const label = document.createElement('label');
+            label.textContent = option.text;
+            optionsContainer.appendChild(label);
+
+            optionsContainer.appendChild(document.createElement('br'));
+        });
+    }
+
+    function submitQuiz(event) {
+        event.preventDefault();
+        const selectedOption = document.querySelector('input[name="answer"]:checked');
+
+        if (selectedOption) {
+            const isCorrect = selectedOption.value === 'true';
+            if (isCorrect) {
+                if (currentQuestionIndex < quizData.quizzes[0].questions.length) {
+                    correctAnswersCount++;
+                }
+                resultMessage.textContent = 'Resposta Certa! Parabéns.';
+                resultMessage.style.color = 'green';
+            } else {
+                resultMessage.textContent = 'Resposta incorreta.';
+                resultMessage.style.color = 'red';
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.quizzes[0].questions.length) {
+                displayQuestion();
+            } else {
+                saveUserScore(correctAnswersCount);
+                resultMessage.textContent = `Você acertou ${correctAnswersCount} de ${quizData.quizzes[0].questions.length} questões.`;
+            }
+        } else {
+            resultMessage.textContent = 'Por favor, selecione uma opção.';
+            resultMessage.style.color = 'red';
+        }
+    }
+
+    function saveUserScore(score) {
+        
+        console.log(`Pontuação do usuário: ${score}`);
+    }
+
+    displayQuestion();
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        let elements = document.getElementsByClassName("sidenav");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.borderRight = "1px solid #4e4736";
+        }
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        let elements = document.getElementsByClassName("sidenav");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.border = "none";
+        }
+    }
+</script>

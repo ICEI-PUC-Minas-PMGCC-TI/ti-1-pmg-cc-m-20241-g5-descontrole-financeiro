@@ -130,7 +130,6 @@
             if (fases.hasOwnProperty(capituloKey)) {
               indice += 1;
               const capitulo = fases[capituloKey];
-              console.log(capitulo);
               const divCapitulo = document.createElement('div');
               divCapitulo.classList.add('header_cap');
               divCapitulo.innerHTML = `
@@ -139,13 +138,11 @@
                   <h2>${capitulo.descricao}</h2>
                 </div>
               `;
-              console.log(capitulo.titulo);
-              console.log(capitulo.descricao);
               capitulo.fases.forEach((questao, index) => {
 
                 const divFase = document.createElement('div');
                 divFase.classList.add('fase', `fase${index + 1}`);
-                divFase.innerHTML = `<a href="#">${index + 1}</a>`;
+                divFase.innerHTML = `<a id = "${indice}${index+1}">${index + 1}</a>`;
                 divCapitulo.appendChild(divFase);
               });
 
@@ -169,7 +166,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
+ <script src="flow.js"></script>
 </body>
 
 </html>

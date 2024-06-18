@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
    
-    fetch('db.json')
+    fetch('dbmissoes.json')
         .then(response => response.json())
         .then(data => {
             dailyQuests = data.dailyQuests;
