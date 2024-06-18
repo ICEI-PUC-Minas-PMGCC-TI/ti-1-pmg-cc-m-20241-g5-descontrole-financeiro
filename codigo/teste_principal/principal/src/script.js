@@ -3,59 +3,59 @@
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dailyQuestContainer = document.querySelector('.quest1-contents-container');
-    const weeklyQuestContainer = document.querySelector('.quest2-contents-container');
-    const changeDayBtn = document.getElementById('changeDayBtn');
-    const earnCoinsBtn = document.getElementById('earnCoinsBtn');
-    const rightAnsBtn = document.getElementById('rightAns');
-    const wrongAnsBtn = document.getElementById('wrongAns');
+document.addEventListener('DOMContentLoaded', function () {
+  const dailyQuestContainer = document.querySelector('.quest1-contents-container');
+  const weeklyQuestContainer = document.querySelector('.quest2-contents-container');
+  const changeDayBtn = document.getElementById('changeDayBtn');
+  const earnCoinsBtn = document.getElementById('earnCoinsBtn');
+  const rightAnsBtn = document.getElementById('rightAns');
+  const wrongAnsBtn = document.getElementById('wrongAns');
 
-    let ansProgress = 0;
-    let coinProgress = 0;
-    var dailyQuest = 0;
-    var weeklyQuest = 0;
-    var questionRow = 0;
-    var coins = 0;
+  let ansProgress = 0;
+  let coinProgress = 0;
+  var dailyQuest = 0;
+  var weeklyQuest = 0;
+  var questionRow = 0;
+  var coins = 0;
 
-    let dailyQuests, weeklyQuests;
+  let dailyQuests, weeklyQuests;
 
 
-   
-    fetch('dbmissoes.json')
-        .then(response => response.json())
-        .then(data => {
-            dailyQuests = data.dailyQuests;
-            weeklyQuests = data.weeklyQuests;
-            dailyQuest = loadRandomQuests(1,"Missão Diária :");
-            weeklyQuest = loadRandomQuests(2,"Missão Semanal :")
-        })
-        .catch(error => console.error('Error loading quests:', error));
-   
-    function loadRandomQuests(id,title) {
-        coins = 0;
-        ansProgress = 0;
-        coinProgress = 0;
-        questionRow = 0;
-        if (id == 1) { 
-          questContainer = dailyQuestContainer;
-          var randomQuest = dailyQuests[Math.floor(Math.random() * dailyQuests.length)];
-        }
-        else { 
-          questContainer = weeklyQuestContainer;
-          var randomQuest = weeklyQuests[Math.floor(Math.random() * weeklyQuests.length)];
 
-        }
-        questContainer.innerHTML = ''; 
+  fetch('dbmissoes.json')
+    .then(response => response.json())
+    .then(data => {
+      dailyQuests = data.dailyQuests;
+      weeklyQuests = data.weeklyQuests;
+      dailyQuest = loadRandomQuests(1, "Missão Diária :");
+      weeklyQuest = loadRandomQuests(2, "Missão Semanal :")
+    })
+    .catch(error => console.error('Error loading quests:', error));
 
-        questContainer.innerHTML += createQuestCard(title,randomQuest,id,false);
-        return randomQuest
+  function loadRandomQuests(id, title) {
+    coins = 0;
+    ansProgress = 0;
+    coinProgress = 0;
+    questionRow = 0;
+    if (id == 1) {
+      questContainer = dailyQuestContainer;
+      var randomQuest = dailyQuests[Math.floor(Math.random() * dailyQuests.length)];
     }
+    else {
+      questContainer = weeklyQuestContainer;
+      var randomQuest = weeklyQuests[Math.floor(Math.random() * weeklyQuests.length)];
+
+    }
+    questContainer.innerHTML = '';
+
+    questContainer.innerHTML += createQuestCard(title, randomQuest, id, false);
+    return randomQuest
+  }
 
 
-    function createQuestCard(title, quest, id, isCompleted) {
-        if (isCompleted == true) {
-            return `
+  function createQuestCard(title, quest, id, isCompleted) {
+    if (isCompleted == true) {
+      return `
             <div class="card">
         <div class="card-header">
           ${title}
@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
             `
-        }
-        else {
-            return `
+    }
+    else {
+      return `
             <div class="card">
         <div class="card-header">
           ${title}
@@ -89,68 +89,132 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
             `
-        }
-        
     }
 
-    function checkCompletion(score,quest,id,title) {
-        goal = quest.goal;
-        if (id == 1) { 
-          questContainer = dailyQuestContainer;
-        }
-        else { 
-          questContainer = weeklyQuestContainer;
+  }
 
-        }
-        if (score >= goal) {
-            questContainer.innerHTML = createQuestCard(title,quest,id,true);
-        }
-        else {
-            return
-        }
-        
+  function checkCompletion(score, quest, id, title) {
+    goal = quest.goal;
+    if (id == 1) {
+      questContainer = dailyQuestContainer;
+    }
+    else {
+      questContainer = weeklyQuestContainer;
+
+    }
+    if (score >= goal) {
+      questContainer.innerHTML = createQuestCard(title, quest, id, true);
+    }
+    else {
+      return
     }
 
-  
+  }
 
-    changeDayBtn.addEventListener('click', function () {
-      dailyQuest = loadRandomQuests(1,"Missão Diária :");
-      weeklyQuest = loadRandomQuests(2,"Missão Semanal :")
-    });
 
-    earnCoinsBtn.addEventListener("click",function() {
-        coins += 50;
-        questProgress = document.getElementById('questProgressBar1');
-        questGoal = document.getElementById("questProgressStructure1").getAttribute("aria-valuemax");
-        coinProgress += (50/questGoal)*100;
-        questProgress.style.width = `${coinProgress}%`;
-        if (coinProgress <= 100) {questProgress.innerHTML = `${Math.trunc(((coinProgress*questGoal)/100))}/${questGoal}` };
-        checkCompletion(coins,dailyQuest,1,"Missão Diária :"); 
-    });
 
-    rightAnsBtn.addEventListener('click', function() {
-        progressJson = weeklyQuest.progress;
-        progressJson += 1;
-        questionRow += 1;
-        goalJson = weeklyQuest.goal;
-        questProgress = document.getElementById('questProgressBar2');
-        ansProgress += (1/goalJson)*100;
-        questProgress.style.width = `${ansProgress}%`;
-        if (ansProgress <= 100) {questProgress.innerHTML = `${questionRow}/${goalJson}` }; 
-        checkCompletion(questionRow,weeklyQuest,2,"Missão Semanal :");  
-    });
+  changeDayBtn.addEventListener('click', function () {
+    dailyQuest = loadRandomQuests(1, "Missão Diária :");
+    weeklyQuest = loadRandomQuests(2, "Missão Semanal :")
+  });
 
-    wrongAnsBtn.addEventListener('click', function() {   
-        questProgress = document.getElementById('questProgressBar2');
-        ansProgress = 0;
-        questionRow = 0;
-        questProgress.style.width = 0;
-    })
+  earnCoinsBtn.addEventListener("click", function () {
+    coins += 50;
+    questProgress = document.getElementById('questProgressBar1');
+    questGoal = document.getElementById("questProgressStructure1").getAttribute("aria-valuemax");
+    coinProgress += (50 / questGoal) * 100;
+    questProgress.style.width = `${coinProgress}%`;
+    if (coinProgress <= 100) { questProgress.innerHTML = `${Math.trunc(((coinProgress * questGoal) / 100))}/${questGoal}` };
+    checkCompletion(coins, dailyQuest, 1, "Missão Diária :");
+  });
+
+  rightAnsBtn.addEventListener('click', function () {
+    progressJson = weeklyQuest.progress;
+    progressJson += 1;
+    questionRow += 1;
+    goalJson = weeklyQuest.goal;
+    questProgress = document.getElementById('questProgressBar2');
+    ansProgress += (1 / goalJson) * 100;
+    questProgress.style.width = `${ansProgress}%`;
+    if (ansProgress <= 100) { questProgress.innerHTML = `${questionRow}/${goalJson}` };
+    checkCompletion(questionRow, weeklyQuest, 2, "Missão Semanal :");
+  });
+
+  wrongAnsBtn.addEventListener('click', function () {
+    questProgress = document.getElementById('questProgressBar2');
+    ansProgress = 0;
+    questionRow = 0;
+    questProgress.style.width = 0;
+  })
 });
-
 
 
 
 /*Progresso do usuário nas fases*/
 
+var progresso;
 
+fetch('dbprogress.json')
+  .then(response => response.json())
+  .then(data => {
+    progresso = data;
+    atualizarProgresso();
+  })
+  .catch(error => {
+    console.error('Erro ao carregar o JSON:', error);
+  });
+
+function atualizarProgresso() {
+  progresso.Progress.forEach(function(item, index) {
+    var capitulo = index + 1;
+    var faseAtual = item.faseAtual;
+    var totalFases = item.fases.length;
+    var progressoPercentual = (faseAtual / totalFases) * 100;
+
+    var progressBarId = "P" + capitulo;
+    var progressBar = document.getElementById(progressBarId);
+    progressBar.style.width = progressoPercentual + "%";
+    progressBar.setAttribute("aria-valuenow", progressoPercentual);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var resetButton = document.getElementById('ResetProgress');
+
+  resetButton.addEventListener('click', function() {
+    ResetProgress();
+  });
+});
+
+function ResetProgress() {
+  progresso.Progress.forEach(function(item) {
+    item.faseAtual = 0;
+  });
+
+  atualizarProgresso();
+}
+
+document.getElementById("passFcap1").addEventListener("click", function() {
+  progresso.Progress[0].faseAtual++;
+  atualizarProgresso();
+});
+
+document.getElementById("passFcap2").addEventListener("click", function() {
+  progresso.Progress[1].faseAtual++;
+  atualizarProgresso();
+});
+
+document.getElementById("passFcap3").addEventListener("click", function() {
+  progresso.Progress[2].faseAtual++;
+  atualizarProgresso();
+});
+
+document.getElementById("passFcap4").addEventListener("click", function() {
+  progresso.Progress[3].faseAtual++;
+  atualizarProgresso();
+});
+
+document.getElementById("passFcap5").addEventListener("click", function() {
+  progresso.Progress[4].faseAtual++;
+  atualizarProgresso();
+});
