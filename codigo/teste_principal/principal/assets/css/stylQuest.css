@@ -145,12 +145,16 @@ span {
     gap: 30px;
     margin-bottom: 100px;
     width: 80%;
-    border: 3px solid   #5a210c;
+    border: 3px solid   rgb(99, 99, 99);
     border-radius: 30px;
     color: white !important;
-    background-color: #e7693b !important;
+    background-color: #110e09 !important;
     border-radius: 30px !important;
-    box-shadow: 1vh 2vh 0   #5a210c;
+    /*box-shadow: 1vh 2vh 0   #5a210c;*/
+}
+
+.Progresso * {
+    background-color: #110e09;
 }
 
 .progress{
@@ -165,7 +169,6 @@ span {
     padding: 20px;
     padding-top: 0px;
     border-radius: 20px;
-    background-color: #e7693b ;
     margin-bottom: 0px;
 }
 
@@ -184,7 +187,7 @@ span {
 }
 
 .Border{
-    border-bottom: 2px solid   #5a210c ;
+    border-bottom: 2px solid   rgb(99, 99, 99);
     margin: 20px;
 }
 
