@@ -85,7 +85,7 @@ span {
 }
 
 .quests-container {
-    margin-left: 10px;
+    margin-left: 100px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -153,11 +153,17 @@ span {
 }
 
 .Progresso * {
-    background-color: #110e09;
+    background-color: #110e09 !important;
+    box-shadow: none !important;
 }
+
 
 .progress{
     margin-bottom: 15px;
+}
+
+.Progresso .progress {
+    background-color: rgb(99, 99, 99) !important;
 }
 
 .capTitle{
