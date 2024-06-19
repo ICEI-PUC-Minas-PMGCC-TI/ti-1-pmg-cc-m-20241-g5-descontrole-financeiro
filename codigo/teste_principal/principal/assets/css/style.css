@@ -201,6 +201,7 @@ main {
     flex-direction: column;
     top: 0;
     right: 0;
+    position: sticky;
     max-width: 35%;
     padding: 10px;
 }
@@ -323,11 +324,8 @@ span {
 
 
 .Progresso{
-    margin-left: 10px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 100px;
     width: 80%;
     border: 3px solid   rgb(99, 99, 99);
     color: white !important;
