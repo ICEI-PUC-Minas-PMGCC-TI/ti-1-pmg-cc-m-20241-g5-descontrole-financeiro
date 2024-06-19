@@ -63,16 +63,16 @@
                         "correta": false
                       },
                       {
-                        "text": "Impedir o endividamento.",
-                        "correta": false
+                        "text": "Permitir que você compre algo agora e pague depois.",
+                        "correta": true
                       },
                       {
                         "text": "Garantir que você não pague juros.",
                         "correta": false
                       },
                       {
-                        "text": "Permitir que você compre algo agora e pague depois.",
-                        "correta": true
+                        "text": "Impedir o endividamento.",
+                        "correta": false
                       }
                     ]
                   }
@@ -380,12 +380,12 @@
                         "correta": false
                       },
                       {
-                        "text": "Uma estratégia para pagar dívidas de forma organizada.",
-                        "correta": true
-                      },
-                      {
                         "text": "Um método para evitar o pagamento de dívidas.",
                         "correta": false
+                      },
+                      {
+                        "text": "Uma estratégia para pagar dívidas de forma organizada.",
+                        "correta": true
                       },
                       {
                         "text": "Um desconto oferecido por bancos.",
@@ -477,12 +477,12 @@
                         "correta": false
                       },
                       {
-                        "text": "Pagar a fatura integralmente a cada mês.",
-                        "correta": false
-                      },
-                      {
                         "text": "Gastar mais do que pode pagar no final do mês.",
                         "correta": true
+                      },
+                      {
+                        "text": "Pagar a fatura integralmente a cada mês.",
+                        "correta": false
                       }
                     ]
                   },
