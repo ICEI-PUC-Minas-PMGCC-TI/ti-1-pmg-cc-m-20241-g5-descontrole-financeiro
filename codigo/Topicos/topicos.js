@@ -54,68 +54,14 @@ const toggleModalE = () => {
 openModalButtonE.addEventListener("click", toggleModalE);
 closeModalButtonE.addEventListener("click", toggleModalE);
 
-
-
-/*Aplicação da funcionalidade CRUD*/
-
-var dbmock = { topicos: [
-  {
-    id: "1",
-    conceito: "Mover recursos para retorno",
-    tipos: ["Ações", "Renda Fixa", "Fundos de investimentos"]
-  },
-  {
-    id: "2",
-    conceito: "Montante guardado para emergências",
-    tipos: ["poupança", "cofrinho"]
-  },
-  {
-    id: "3",
-    conceito: "Estado mental devido às finanças",
-    tipos: ["Saudavel", "Doente"]
-  },
-  {
-    id: "4",
-    conceito: "Estudo da utilização de recursos",
-    tipos: ["Macro", "Micro"]
-  }
-] }
-// Função para ler os dados do localStorage
-function leDados() {
-  let strDados = localStorage.getItem('dbmock');
-  let objdados = {};
-
-  if (strDados) {
-      objdados = JSON.parse(strDados);
-      console.log("Tópico armazenado com sucesso");
-  } else {
-      objdados = null;
-  }
-
-  return objdados;
-}
-
-// Função para salvar os dados no localStorage
-function SalvaDados(dados){
-    localStorage.setItem('dbmock', JSON.stringify(dados));
-}
-
-//configurar botoes
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('btn-selecionar').addEventListener('click', function() {
-      SalvaDados(dbmock.topicos[0]);
-  });
-
-  document.getElementById('btn-selecionarR').addEventListener('click', function() {
-      SalvaDados(dbmock.topicos[1]);
-  });
-
-  document.getElementById('btn-selecionarS').addEventListener('click', function() {
-      SalvaDados(dbmock.topicos[2]);
-  });
-
-  document.getElementById('btn-selecionarE').addEventListener('click', function() {
-      SalvaDados(dbmock.topicos[3]);
+document.querySelectorAll('.topics').forEach(button => {
+  button.addEventListener('click', function() {
+      var selectedTopic = this.textContent.trim();
+      sessionStorage.setItem('selectedTopic', selectedTopic);
+      window.location.href = '../Cadastro/cadastro.html'; // Redirect to the sign-up page
   });
 });
+
+
+
+
