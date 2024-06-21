@@ -45,7 +45,7 @@ function salvarCadastro() {
 
     document.getElementById('login-form').reset();
     $('#loginModal').modal('hide');
-    alert('Usuário cadastrado com sucesso!');
+    window.location.href = '../Quiz Nivelamento/fim_análise_de_perfil/index.html'; // Redirect to the login page
 }
 
 function addUser(nome, username, senha, email, selectedTopic) {
@@ -63,10 +63,48 @@ function addUser(nome, username, senha, email, selectedTopic) {
                 chapter_id: 1,
                 unlocked: true,
                 tasks: [
-                    { task_id: 1, completed: false },
-                    { task_id: 2, completed: false },
-                    { task_id: 3, completed: false },
-                    { task_id: 4, completed: false }
+                    { task_id: 1, name: "Introduction to Credit", completed: false },
+                    { task_id: 2, name: "Types of Credit", completed: false },
+                    { task_id: 3, name: "How Credit Works", completed: false },
+                    { task_id: 4, name: "Benefits of Credit", completed: false }
+                ]
+            },
+            {
+                chapter_id: 2,
+                unlocked: false,
+                tasks: [
+                    { task_id: 1, name: "Understanding Credit Scores", completed: false },
+                    { task_id: 2, name: "Improving Your Credit Score", completed: false },
+                    { task_id: 3, name: "Credit Score Myths", completed: false },
+                    { task_id: 4, name: "Maintaining a Good Credit Score", completed: false }
+                ]
+            },
+            {
+                chapter_id: 3,
+                unlocked: false,
+                tasks: [
+                    { task_id: 1, name: "Applying for Credit", completed: false },
+                    { task_id: 2, name: "Choosing the Right Credit Card", completed: false },
+                    { task_id: 3, name: "Credit Card Benefits", completed: false },
+                    { task_id: 4, name: "Managing Credit Card Debt", completed: false }
+                ]
+            },
+            {
+                chapter_id: 4,
+                unlocked: false,
+                tasks: [
+                    { task_id: 1, name: "Credit Reports", completed: false },
+                    { task_id: 2, name: "Disputing Errors on Credit Report", completed: false },
+                    { task_id: 3, name: "Understanding Credit Report Terms", completed: false }
+                ]
+            },
+            {
+                chapter_id: 5,
+                unlocked: false,
+                tasks: [
+                    { task_id: 1, name: "Credit Counseling", completed: false },
+                    { task_id: 2, name: "Debt Management Plans", completed: false },
+                    { task_id: 3, name: "Avoiding Credit Scams", completed: false }
                 ]
             }
         ]
