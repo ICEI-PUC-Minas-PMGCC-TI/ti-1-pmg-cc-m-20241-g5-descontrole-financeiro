@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (usuarioValido) {
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioValido));
             alert('Login realizado com sucesso!');
-            window.location.href = '../perfil/src/perfil.html';
+            window.location.href = '../teste_principal/principal/src/index.html';
         } else {
             alert('Login ou senha inválidos!');
         }

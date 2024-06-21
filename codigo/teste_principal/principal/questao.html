@@ -58,6 +58,7 @@
                 num += 1;
                 nxt_btn.classList.add('hidden'); 
             } else {
+                markTaskAsCompleted(chapter, phase);
                 window.location.href = "./src/index.html";
             }
         });
@@ -111,6 +112,24 @@
             }
             if (question.respostas[i].correta) {
                 buttons[i].style.backgroundColor = 'green';
+            }
+        }
+    }
+
+    function markTaskAsCompleted(chapterId, taskId) {
+        var currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+        var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+        var user = db_usuarios.users.find(user => user.id === currentUser.id);
+        if (user) {
+            var chapter = user.chapters.find(chap => chap.chapter_id == chapterId);
+            if (chapter) {
+                var task = chapter.tasks.find(t => t.task_id == taskId);
+                if (task) {
+                    task.completed = true;
+                    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+                    sessionStorage.setItem('usuarioCorrente', JSON.stringify(user));
+                    alert(`Task ${taskId} in Chapter ${chapterId} marked as completed!`);
+                }
             }
         }
     }
