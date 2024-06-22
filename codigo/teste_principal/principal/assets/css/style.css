@@ -344,8 +344,9 @@ span {
     margin-bottom: 15px;
 }
 
-.Progresso .progress {
+ .Progresso .progress {
     background-color: rgb(99, 99, 99) !important;
+    width: 100%;
 }
 
 .capTitle{
@@ -353,6 +354,8 @@ span {
 }
 
 .card-progress{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     padding-top: 0px;
     border-radius: 20px;
@@ -377,6 +380,28 @@ span {
     border-bottom: 2px solid   rgb(99, 99, 99);
     margin: 20px;
 }
+
+.caixa{
+    display: flex;
+}
+
+.imgTitle{
+    width: 35%;
+}
+
+.imgf{
+    text-align: center;
+}
+
+.imgf .imgs{
+    display: inline-block;
+}
+
+.imgs{
+    width: 25px;
+}
+
+
 
 @media screen and (max-width: 1250px) {
     sidebar h1 {
