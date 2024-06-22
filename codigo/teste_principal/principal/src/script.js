@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /*Progresso do usuário nas fases*/
-
+/*
 var progresso;
 
 fetch('dbprogress.json')
@@ -218,3 +218,4 @@ document.getElementById("passFcap5").addEventListener("click", function() {
   progresso.Progress[4].faseAtual++;
   atualizarProgresso();
 });
+*/
