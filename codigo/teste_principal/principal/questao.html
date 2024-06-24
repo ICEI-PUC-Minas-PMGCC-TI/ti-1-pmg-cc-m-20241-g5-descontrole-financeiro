@@ -38,7 +38,8 @@
     const { chapter, phase } = getQueryParams();
     var capitulo = `cap${chapter}`;
     var faseNum = phase - 1;
-
+    var userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    var consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
     fetch('/codigo/db.json')
     .then(response => response.json())
     .then(data => {
@@ -59,7 +60,8 @@
                 nxt_btn.classList.add('hidden'); 
             } else {
                 markTaskAsCompleted(chapter, phase);
-                window.location.href = "./src/index.html";
+                updateConsecutiveAnswers(consecutiveCorrectAnswers);
+                window.location.href = './src/index.html';
             }
         });
 
@@ -98,7 +100,6 @@
             });
         }
     }
-
     function checkAnswer(question, selectedIndex) {
         var buttons = document.getElementsByClassName('anw-btn');
         for (let i = 0; i < buttons.length; i++) {
@@ -106,8 +107,10 @@
             if (i === selectedIndex) {
                 if (question.respostas[i].correta) {
                     buttons[i].style.backgroundColor = 'green';
+                    consecutiveCorrectAnswers += 1;
                 } else {
                     buttons[i].style.backgroundColor = 'red';
+                    consecutiveCorrectAnswers = 0;
                 }
             }
             if (question.respostas[i].correta) {
@@ -133,6 +136,18 @@
             }
         }
     }
+    function updateConsecutiveAnswers(newCount) {
+        let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+        
+        if (userData) {
+            userData.consecutive_answers = consecutiveCorrectAnswers;
+            
+            sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
+        } else {
+            console.error('No user data found in session storage');
+        }
+    }
+    
 });
 
 </script>

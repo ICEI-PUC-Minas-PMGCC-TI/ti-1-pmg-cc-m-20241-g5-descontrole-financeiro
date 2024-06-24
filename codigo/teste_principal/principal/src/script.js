@@ -1,8 +1,3 @@
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const dailyQuestContainer = document.querySelector('.quest1-contents-container');
   const weeklyQuestContainer = document.querySelector('.quest2-contents-container');
@@ -10,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const earnCoinsBtn = document.getElementById('earnCoinsBtn');
   const rightAnsBtn = document.getElementById('rightAns');
   const wrongAnsBtn = document.getElementById('wrongAns');
-
+  const userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+  const consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
   let ansProgress = 0;
   let coinProgress = 0;
   var dailyQuest = 0;
@@ -20,15 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let dailyQuests, weeklyQuests;
 
-
-
   fetch('dbmissoes.json')
     .then(response => response.json())
     .then(data => {
       dailyQuests = data.dailyQuests;
       weeklyQuests = data.weeklyQuests;
       dailyQuest = loadRandomQuests(1, "Missão Diária :");
-      weeklyQuest = loadRandomQuests(2, "Missão Semanal :")
+      weeklyQuest = loadRandomQuests(2, "Missão Semanal :");
+      updateProgressFromSession();
     })
     .catch(error => console.error('Error loading quests:', error));
 
@@ -40,11 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (id == 1) {
       questContainer = dailyQuestContainer;
       var randomQuest = dailyQuests[Math.floor(Math.random() * dailyQuests.length)];
-    }
-    else {
+    } else {
       questContainer = weeklyQuestContainer;
       var randomQuest = weeklyQuests[Math.floor(Math.random() * weeklyQuests.length)];
-
     }
     questContainer.innerHTML = '';
 
@@ -52,66 +45,53 @@ document.addEventListener('DOMContentLoaded', function () {
     return randomQuest
   }
 
-
   function createQuestCard(title, quest, id, isCompleted) {
     if (isCompleted == true) {
       return `
-            <div class="card">
-        <div class="card-header">
-          ${title}
-        </div>
-        <div class="card-body">
+        <div class="card">
+          <div class="card-header">
+            ${title}
+          </div>
+          <div class="card-body">
             <div class="title-holder">
-          <img src="../imgs/checked.png" class="img-fluid" alt="..." id="main-img">
-          <h5 class="card-title">${quest.description}</h5>
+              <img src="../imgs/checked.png" class="img-fluid" alt="..." id="main-img">
+              <h5 class="card-title">${quest.description}</h5>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="0" aria-valuemin="0" aria-valuemax="${quest.goal}" style="height: 30px" id="questProgressStructure${id}">
+              <div class="progress-bar bg-success" style="width: 100%" id="questProgressBar${id}">Completo!</div>
+            </div>
           </div>
-          <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="0" aria-valuemin="0" aria-valuemax="200" style="height: 30px" id="questProgressStructure1">
-            <div class="progress-bar bg-success" style="width: 100%" id="questProgressBar1">Completo!</div>
-          </div>
-        </div>
-      </div>
-            `
-    }
-    else {
+        </div>`
+    } else {
       return `
-            <div class="card">
-        <div class="card-header">
-          ${title}
-        </div>
-        <div class="card-body">
+        <div class="card">
+          <div class="card-header">
+            ${title}
+          </div>
+          <div class="card-body">
             <div class="title-holder">
-          <img src="${quest.img_path}" class="img-fluid" alt="..." id="main-img">
-          <h5 class="card-title">${quest.description}</h5>
+              <img src="${quest.img_path}" class="img-fluid" alt="..." id="main-img">
+              <h5 class="card-title">${quest.description}</h5>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="0" aria-valuemin="0" aria-valuemax="${quest.goal}" style="height: 30px" id="questProgressStructure${id}">
+              <div class="progress-bar bg-danger" style="width: 0%" id="questProgressBar${id}">0/${quest.goal}</div>
+            </div>
           </div>
-          <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="0" aria-valuemin="0" aria-valuemax="${quest.goal}" style="height: 30px" id="questProgressStructure1">
-            <div class="progress-bar bg-danger" style="width: 0%" id="questProgressBar${id}">0/${quest.goal}</div>
-          </div>
-        </div>
-      </div>
-            `
+        </div>`
     }
-
   }
 
   function checkCompletion(score, quest, id, title) {
     goal = quest.goal;
     if (id == 1) {
       questContainer = dailyQuestContainer;
-    }
-    else {
+    } else {
       questContainer = weeklyQuestContainer;
-
     }
     if (score >= goal) {
       questContainer.innerHTML = createQuestCard(title, quest, id, true);
     }
-    else {
-      return
-    }
-
   }
-
-
 
   changeDayBtn.addEventListener('click', function () {
     dailyQuest = loadRandomQuests(1, "Missão Diária :");
@@ -145,8 +125,21 @@ document.addEventListener('DOMContentLoaded', function () {
     ansProgress = 0;
     questionRow = 0;
     questProgress.style.width = 0;
-  })
+    questProgress.innerHTML = `0/${weeklyQuest.goal}`;
+  });
+
+
+  function updateProgressFromSession() {
+    if (weeklyQuest) {
+      const questProgress = document.getElementById('questProgressBar2');
+      const questGoal = weeklyQuest.goal;
+      ansProgress = (consecutiveCorrectAnswers / questGoal) * 100;
+      questProgress.style.width = `${ansProgress}%`;
+      if (ansProgress <= 100) {
+        questProgress.innerHTML = `${consecutiveCorrectAnswers}/${questGoal}`;
+      }
+      checkCompletion(consecutiveCorrectAnswers, weeklyQuest, 1, "Missão Diária :");
+    }
+  }
 });
-
-
 

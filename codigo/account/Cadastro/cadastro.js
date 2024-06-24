@@ -54,6 +54,7 @@ function salvarCadastro() {
         email: email,
         coins: 0,
         selectedTopic: selectedTopic,
+        consecutive_answers: 0,
         chapters: [
             {
                 chapter_id: 1,
@@ -120,6 +121,7 @@ function addUser(nome, username, senha, email, selectedTopic, userId) {
         email: email,
         coins: 0,
         selectedTopic: selectedTopic,
+        consecutive_answers: 0,
         chapters: [
             {
                 chapter_id: 1,
