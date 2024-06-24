@@ -1,0 +1,349 @@
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #131F24;
+    box-sizing: border-box;
+}
+
+ul li{
+    
+    color: whit;
+}
+
+h2{
+    color: white;
+}
+
+/*Configurações do body*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.icon{
+    width: 120px;
+}
+
+.header{
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: #ffff;
+    font-size: 2em;
+    text-align: center;
+}
+
+.topics:hover{
+    background-color: rgb(162, 72, 15) ;
+    transition: 0.4s;
+}
+
+.topics {
+    color: white;
+    background-color:   rgb(223, 100, 23);
+    box-shadow: 0 1vh 0 rgb(223, 70, 23);
+    border: none; 
+    width: 150px; 
+    height: 100px;
+    border-radius: 5px;
+    margin: 5px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /
+}
+
+
+/*Configurações do modal*/
+
+/*Topico 1*/
+#close-modal{
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgb(223, 100, 23);
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}
+
+.modal-footer{
+    float: right;
+}
+
+#btn-selecionar{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionar:hover{
+    background-color: rgb(27, 82, 114);
+}
+
+/*Topico 2*/
+#close-modalR{
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#fadeR{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modalR{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color:rgb(223, 100, 23);
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-headerR{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-bodyR p{
+    margin-bottom: 1rem;
+}
+
+#modalR.hideR,
+#fadeR.hideR {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modalR.hideR {
+  top: 0;
+}
+
+#btn-selecionarR{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionarR:hover{
+    background-color: rgb(27, 82, 114);
+}
+
+/*Topico 3*/
+#close-modalS{
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#fadeS{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modalS{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgb(223, 100, 23);
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-headerS{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-bodyS p{
+    margin-bottom: 1rem;
+}
+
+#modalS.hideS,
+#fadeS.hideS {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modalS.hideS {
+  top: 0;
+}
+
+#btn-selecionarS{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionarS:hover{
+    background-color: rgb(27, 82, 114);
+}
+
+/*Topico 4*/
+#close-modalE{
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#fadeE{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modalE{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgb(223, 100, 23);
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-headerE{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-bodyE p{
+    margin-bottom: 1rem;
+}
+
+#modalE.hideE,
+#fadeE.hideE {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modalE.hideE {
+  top: 0;
+}
+
+#btn-selecionarE{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(40, 115, 149);
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#btn-selecionarE:hover{
+    background-color: rgb(27, 82, 114);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

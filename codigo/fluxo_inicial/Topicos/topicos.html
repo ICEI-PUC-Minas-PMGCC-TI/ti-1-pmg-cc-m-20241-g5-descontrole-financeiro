@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="topicos.css">
+    <title>Tópicos</title>
+</head>
+<body>
+    <div class="header">
+        <img src="leao.png" alt="icon" class="icon">
+        <h1 class="title">Qual tópico mais te interessa?</h1>
+    </div>
+  
+    <div class="container">
+        <button class="topics" id="open-modal">  Investimentos  </button>
+
+        <button class="topics" id="open-modalR">  Crédito  </button>
+
+        <button class="topics" id="open-modalS">  Saúde Financeira  </button>
+        
+        <button class="topics" id="open-modalE">  Economia  </button>
+    </div>
+
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Investimentos</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <p>Investimento é a aplicação de recursos financeiros, tempo ou esforço em um projeto, ativo ou empreendimento com o objetivo de obter retorno ou lucro no futuro. Existem diversos tipos de investimentos, cada um com características, riscos e potenciais de retorno diferentes. Entre os mais comuns estão:
+                <ul>
+                    <li> Ações: Compra de partes de empresas com a expectativa de valorização e/ou recebimento de dividendos.</li>
+                    <li> Imóveis: Aquisição de propriedades para aluguel ou revenda a um preço mais alto. </li>
+                    <li> Renda Fixa: Títulos como CDBs, Tesouro Direto e debêntures que oferecem rendimentos previsíveis. </li>
+                    <li> Fundos de Investimento: Carteiras coletivas administradas por gestores profissionais, que podem incluir diferentes ativos como ações, títulos, imóveis e outros. </li>
+                    <li> Educação: Investir em cursos e qualificações para melhorar o conhecimento e aumentar as oportunidades de carreira. </li>
+                </ul>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button id="btn-selecionar"> <a href="../Quiz Nivelamento/Voce_vai_aprender/index.html">Selecionar</a> </button>
+        </div>
+    </div>
+
+    <div id="fadeR" class="hideR"></div>
+    <div id="modalR" class="hideR">
+        <div class="modal-headerR">
+            <h2>Reserva monetária</h2>
+            <button id="close-modalR">Fechar</button>
+        </div>
+        <div class="modal-bodyR">
+            <p>Reserva monetária é a prática de acumular e manter uma quantia de dinheiro para ser usada em situações emergenciais ou imprevistas. É uma parte essencial da gestão financeira pessoal e corporativa, pois proporciona segurança e estabilidade financeira. Principais características e benefícios da reserva monetária:
+                <ul>
+                    <li>Liquidez: A reserva deve estar facilmente acessível, permitindo que os recursos sejam utilizados rapidamente em caso de necessidade. Isso geralmente significa mantê-la em contas de poupança ou investimentos de alta liquidez.</li>
+                    <li>Segurança: Deve ser mantida em ativos seguros e de baixo risco, evitando a volatilidade de investimentos mais arriscados como ações ou imóveis.</li>
+                    <li>Tranquilidade Financeira: Proporciona uma sensação de segurança ao saber que há recursos disponíveis para enfrentar emergências como perda de emprego, despesas médicas inesperadas, ou reparos urgentes.</li>
+                    <li>Planejamento e Disciplina: Construir uma reserva monetária exige planejamento financeiro e disciplina para poupar regularmente uma parte da renda.</li>
+                </ul>
+            
+            </p>
+
+        </div>
+        <div class="modal-footer">
+            <button id="btn-selecionarR"><a href="../Quiz Nivelamento/Voce_vai_aprender/index.html">Selecionar</a></button>
+        </div>
+    </div>
+
+    <div id="fadeS" class="hideS"></div>
+    <div id="modalS" class="hideS">
+        <div class="modal-headerS">
+            <h2>Saúde Financeira</h2>
+            <button id="close-modalS">Fechar</button>
+        </div>
+        <div class="modal-bodyS">
+            <p>Saúde financeira refere-se ao estado de bem-estar econômico de um indivíduo, família ou organização. Implica a capacidade de gerenciar adequadamente as finanças, alcançar objetivos financeiros e enfrentar imprevistos sem comprometer a estabilidade econômica. Uma boa saúde financeira é alcançada através de uma combinação de práticas e comportamentos financeiros responsáveis. Principais componentes da saúde financeira:
+                <ul>
+                    <li>Orçamento Equilibrado: Manter um equilíbrio entre receitas e despesas, garantindo que os gastos não excedam os ganhos e permitindo a poupança regular.</li>
+                    <li>Gestão de Dívidas: Administrar as dívidas de forma eficaz, evitando o acúmulo excessivo e garantindo que os pagamentos sejam feitos pontualmente para evitar juros altos e penalidades.</li>
+                    <li>Poupança e Investimentos: Construir e manter uma reserva de emergência e investir regularmente para alcançar objetivos de longo prazo como aposentadoria, compra de imóveis ou educação dos filhos.</li>
+                    <li>Conhecimento Financeiro: Educar-se sobre finanças pessoais, incluindo tópicos como investimentos, impostos, seguros e planejamento de aposentadoria, para tomar decisões informadas e seguras.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button id="btn-selecionarS"><a href="../Quiz Nivelamento/Voce_vai_aprender/index.html">Selecionar</a></button>
+        </div>
+    </div>
+
+    <div id="fadeE" class="hideE"></div>
+    <div id="modalE" class="hideE">
+        <div class="modal-headerE">
+            <h2>Economia</h2>
+            <button id="close-modalE">Fechar</button>
+        </div>
+        <div class="modal-bodyE">
+            <p>Economia é a ciência social que estuda a produção, distribuição e consumo de bens e serviços. <br> Ela analisa como os indivíduos, empresas, governos e nações tomam decisões sobre a alocação de recursos escassos para satisfazer necessidades e desejos ilimitados. A economia pode ser dividida em duas grandes áreas: microeconomia e macroeconomia. <br> Em resumo, a economia é uma ciência fundamental para entender como os recursos são alocados e utilizados, como as políticas econômicas podem influenciar o bem-estar social e como as decisões individuais e coletivas afetam o funcionamento global das economias.</p>
+        </div>
+        <div class="modal-footer">
+            <button id="btn-selecionarE"><a href="../Quiz Nivelamento/Voce_vai_aprender/index.html">Selecionar</a></button>
+        </div>
+    </div>
+
+    <script src="topicos.js"></script>
+    <script src="../collectdata.js"></script>
+</body>
+</html>

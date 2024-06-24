@@ -278,8 +278,7 @@ span {
 .quests-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
     width: 80%;
     border: 3px solid #362f22;
     color: white !important;
@@ -293,6 +292,7 @@ span {
     background-color: #ff6b35 !important;
     border: none !important;
     border-radius: 30px !important;
+
     /*box-shadow: 1vh 2vh 0 #5a210c;*/
 }
 
