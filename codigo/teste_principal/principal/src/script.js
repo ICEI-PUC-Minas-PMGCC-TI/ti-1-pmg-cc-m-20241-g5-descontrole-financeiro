@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const wrongAnsBtn = document.getElementById('wrongAns');
   const userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
   const consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
+  const TelaCoins = document.querySelector('.profileItens');
   var moedas = userData ? userData.coins : 0;
   let ansProgress = 0;
   let coinProgress = 0;
@@ -81,6 +82,34 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>`;
     }
   }
+
+  function UptadeCoins() {
+  
+    let usuarioCorrente = sessionStorage.getItem('usuarioCorrente');
+    if (usuarioCorrente) {
+      
+        let usuario = JSON.parse(usuarioCorrente);
+
+        let project = document.createElement('div');
+        project.innerHTML = `
+            <div class="Moedas">
+                <img src="/codigo/teste_principal/principal/imgs/coin.png" alt="" class="img2">
+                <h3>${usuario.coins}</h3>
+            </div>
+        `;
+
+    
+        const TelaCoins = document.querySelector('.profileItens');
+        if (TelaCoins) {
+            TelaCoins.appendChild(project);
+        } else {
+            console.error('Elemento .profileItens não encontrado');
+        }
+    } else {
+        console.error('Nenhum dado encontrado no sessionStorage para "usuarioCorrente"');
+    }
+}
+
 
   function checkCompletion(score, quest, id, title) {
     const goal = quest.goal;
@@ -214,5 +243,6 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('currentWeeklyQuest', JSON.stringify(weeklyQuest));
   }
 
+  UptadeCoins();
   setNextUpdateTime(); // Initialize the next update times
 });
