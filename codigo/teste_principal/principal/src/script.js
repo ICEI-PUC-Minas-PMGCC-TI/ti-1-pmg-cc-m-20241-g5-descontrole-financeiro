@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const wrongAnsBtn = document.getElementById('wrongAns');
   const userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
   const consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
+  var moedas = userData ? userData.coins : 0;
   let ansProgress = 0;
   let coinProgress = 0;
   var dailyQuest = 0;
@@ -22,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
       dailyQuests = data.dailyQuests;
       weeklyQuests = data.weeklyQuests;
       checkAndUpdateQuests();
-      updateProgressFromSession();
+      updateProgressFromSessionWeekly();
+      updateProgressFromSessionDaily();
     })
     .catch(error => console.error('Error loading quests:', error));
 
@@ -133,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     questProgress.innerHTML = `0/${weeklyQuest.goal}`;
   });
 
-  function updateProgressFromSession() {
+  function updateProgressFromSessionWeekly() {
     if (weeklyQuest) {
       const questProgress = document.getElementById('questProgressBar2');
       const questGoal = weeklyQuest.goal;
@@ -143,6 +145,19 @@ document.addEventListener('DOMContentLoaded', function () {
         questProgress.innerHTML = `${consecutiveCorrectAnswers}/${questGoal}`;
       }
       checkCompletion(consecutiveCorrectAnswers, weeklyQuest, 2, "Missão Semanal :");
+    }
+  }
+  function updateProgressFromSessionDaily() {
+    if (dailyQuest) {
+      const questProgress = document.getElementById('questProgressBar1');
+      const questGoal = dailyQuest.goal;
+      ansProgress = (moedas / questGoal) * 100;
+      console.log(ansProgress);
+      questProgress.style.width = `${ansProgress}%`;
+      if (ansProgress <= 100) {
+        questProgress.innerHTML = `${moedas}/${questGoal}`;
+      }
+      checkCompletion(moedas, dailyQuest, 1, "Missão Diária :");
     }
   }
 
