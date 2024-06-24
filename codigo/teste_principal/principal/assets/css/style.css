@@ -387,8 +387,14 @@ span {
 
 .imgTitle{
     width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
-
+.imgTitle p {
+    margin-bottom: 0;
+}
 .imgf{
     text-align: center;
 }
@@ -399,7 +405,7 @@ span {
 
 .imgs{
     
-    width: 25px;
+    width: 30%;
 }
 
 
