@@ -100,6 +100,7 @@
             });
         }
     }
+
     function checkAnswer(question, selectedIndex) {
         var buttons = document.getElementsByClassName('anw-btn');
         for (let i = 0; i < buttons.length; i++) {
@@ -136,18 +137,26 @@
             }
         }
     }
+
     function updateConsecutiveAnswers(newCount) {
         let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+        var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+        var user = db_usuarios.users.find(user => user.id === userData.id);
         
         if (userData) {
             userData.consecutive_answers = consecutiveCorrectAnswers;
-            
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
         } else {
             console.error('No user data found in session storage');
         }
+        
+        if (user) {
+            user.consecutive_answers = consecutiveCorrectAnswers;
+            localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+        } else {
+            console.error('No user data found in local storage');
+        }
     }
-    
 });
 
 </script>

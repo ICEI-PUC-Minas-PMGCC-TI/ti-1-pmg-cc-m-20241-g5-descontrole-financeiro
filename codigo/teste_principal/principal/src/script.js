@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (ansProgress <= 100) {
         questProgress.innerHTML = `${consecutiveCorrectAnswers}/${questGoal}`;
       }
-      checkCompletion(consecutiveCorrectAnswers, weeklyQuest, 1, "Missão Diária :");
+      checkCompletion(consecutiveCorrectAnswers, weeklyQuest, 2, "Missão Semanal :");
     }
   }
 });
