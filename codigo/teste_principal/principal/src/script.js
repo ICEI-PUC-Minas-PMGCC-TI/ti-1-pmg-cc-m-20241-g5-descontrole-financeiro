@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       dailyQuests = data.dailyQuests;
       weeklyQuests = data.weeklyQuests;
-      dailyQuest = loadRandomQuests(1, "Missão Diária :");
-      weeklyQuest = loadRandomQuests(2, "Missão Semanal :");
+      checkAndUpdateQuests();
       updateProgressFromSession();
     })
     .catch(error => console.error('Error loading quests:', error));
@@ -32,21 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
     ansProgress = 0;
     coinProgress = 0;
     questionRow = 0;
+    let randomQuest;
     if (id == 1) {
       questContainer = dailyQuestContainer;
-      var randomQuest = dailyQuests[Math.floor(Math.random() * dailyQuests.length)];
+      randomQuest = dailyQuests[Math.floor(Math.random() * dailyQuests.length)];
     } else {
       questContainer = weeklyQuestContainer;
-      var randomQuest = weeklyQuests[Math.floor(Math.random() * weeklyQuests.length)];
+      randomQuest = weeklyQuests[Math.floor(Math.random() * weeklyQuests.length)];
     }
     questContainer.innerHTML = '';
-
     questContainer.innerHTML += createQuestCard(title, randomQuest, id, false);
-    return randomQuest
+    return randomQuest;
   }
 
   function createQuestCard(title, quest, id, isCompleted) {
-    if (isCompleted == true) {
+    if (isCompleted) {
       return `
         <div class="card">
           <div class="card-header">
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="progress-bar bg-success" style="width: 100%" id="questProgressBar${id}">Completo!</div>
             </div>
           </div>
-        </div>`
+        </div>`;
     } else {
       return `
         <div class="card">
@@ -77,12 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="progress-bar bg-danger" style="width: 0%" id="questProgressBar${id}">0/${quest.goal}</div>
             </div>
           </div>
-        </div>`
+        </div>`;
     }
   }
 
   function checkCompletion(score, quest, id, title) {
-    goal = quest.goal;
+    const goal = quest.goal;
     if (id == 1) {
       questContainer = dailyQuestContainer;
     } else {
@@ -95,16 +94,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   changeDayBtn.addEventListener('click', function () {
     dailyQuest = loadRandomQuests(1, "Missão Diária :");
-    weeklyQuest = loadRandomQuests(2, "Missão Semanal :")
+    weeklyQuest = loadRandomQuests(2, "Missão Semanal :");
+    setNextUpdateTime();
+    saveCurrentQuests();
   });
 
   earnCoinsBtn.addEventListener("click", function () {
     coins += 50;
-    questProgress = document.getElementById('questProgressBar1');
-    questGoal = document.getElementById("questProgressStructure1").getAttribute("aria-valuemax");
+    const questProgress = document.getElementById('questProgressBar1');
+    const questGoal = document.getElementById("questProgressStructure1").getAttribute("aria-valuemax");
     coinProgress += (50 / questGoal) * 100;
     questProgress.style.width = `${coinProgress}%`;
-    if (coinProgress <= 100) { questProgress.innerHTML = `${Math.trunc(((coinProgress * questGoal) / 100))}/${questGoal}` };
+    if (coinProgress <= 100) {
+      questProgress.innerHTML = `${Math.trunc(((coinProgress * questGoal) / 100))}/${questGoal}`;
+    }
     checkCompletion(coins, dailyQuest, 1, "Missão Diária :");
   });
 
@@ -112,22 +115,23 @@ document.addEventListener('DOMContentLoaded', function () {
     progressJson = weeklyQuest.progress;
     progressJson += 1;
     questionRow += 1;
-    goalJson = weeklyQuest.goal;
-    questProgress = document.getElementById('questProgressBar2');
+    const goalJson = weeklyQuest.goal;
+    const questProgress = document.getElementById('questProgressBar2');
     ansProgress += (1 / goalJson) * 100;
     questProgress.style.width = `${ansProgress}%`;
-    if (ansProgress <= 100) { questProgress.innerHTML = `${questionRow}/${goalJson}` };
+    if (ansProgress <= 100) {
+      questProgress.innerHTML = `${questionRow}/${goalJson}`;
+    }
     checkCompletion(questionRow, weeklyQuest, 2, "Missão Semanal :");
   });
 
   wrongAnsBtn.addEventListener('click', function () {
-    questProgress = document.getElementById('questProgressBar2');
+    const questProgress = document.getElementById('questProgressBar2');
     ansProgress = 0;
     questionRow = 0;
     questProgress.style.width = 0;
     questProgress.innerHTML = `0/${weeklyQuest.goal}`;
   });
-
 
   function updateProgressFromSession() {
     if (weeklyQuest) {
@@ -141,5 +145,59 @@ document.addEventListener('DOMContentLoaded', function () {
       checkCompletion(consecutiveCorrectAnswers, weeklyQuest, 2, "Missão Semanal :");
     }
   }
-});
 
+  function checkAndUpdateQuests() {
+    const now = new Date();
+    const nextDailyUpdate = new Date(localStorage.getItem('nextDailyUpdate') || 0);
+    const nextWeeklyUpdate = new Date(localStorage.getItem('nextWeeklyUpdate') || 0);
+
+    if (!localStorage.getItem('currentDailyQuest') || now >= nextDailyUpdate) {
+      dailyQuest = loadRandomQuests(1, "Missão Diária :");
+      localStorage.setItem('nextDailyUpdate', getNextDailyUpdateTime().toISOString());
+      localStorage.setItem('currentDailyQuest', JSON.stringify(dailyQuest));
+    } else {
+      dailyQuest = JSON.parse(localStorage.getItem('currentDailyQuest'));
+      dailyQuestContainer.innerHTML = createQuestCard("Missão Diária :", dailyQuest, 1, false);
+    }
+
+    if (!localStorage.getItem('currentWeeklyQuest') || now >= nextWeeklyUpdate) {
+      weeklyQuest = loadRandomQuests(2, "Missão Semanal :");
+      localStorage.setItem('nextWeeklyUpdate', getNextWeeklyUpdateTime().toISOString());
+      localStorage.setItem('currentWeeklyQuest', JSON.stringify(weeklyQuest));
+    } else {
+      weeklyQuest = JSON.parse(localStorage.getItem('currentWeeklyQuest'));
+      weeklyQuestContainer.innerHTML = createQuestCard("Missão Semanal :", weeklyQuest, 2, false);
+    }
+  }
+
+  function getNextDailyUpdateTime() {
+    const now = new Date();
+    const nextUpdate = new Date(now);
+    nextUpdate.setHours(24, 0, 0, 0); // Next midnight
+    return nextUpdate;
+  }
+
+  function getNextWeeklyUpdateTime() {
+    const now = new Date();
+    const nextUpdate = new Date(now);
+    nextUpdate.setDate(now.getDate() + ((7 - now.getDay()) % 7)); // Next Monday
+    nextUpdate.setHours(24, 0, 0, 0); // Next midnight
+    return nextUpdate;
+  }
+
+  function setNextUpdateTime() {
+    if (!localStorage.getItem('nextDailyUpdate')) {
+      localStorage.setItem('nextDailyUpdate', getNextDailyUpdateTime().toISOString());
+    }
+    if (!localStorage.getItem('nextWeeklyUpdate')) {
+      localStorage.setItem('nextWeeklyUpdate', getNextWeeklyUpdateTime().toISOString());
+    }
+  }
+
+  function saveCurrentQuests() {
+    localStorage.setItem('currentDailyQuest', JSON.stringify(dailyQuest));
+    localStorage.setItem('currentWeeklyQuest', JSON.stringify(weeklyQuest));
+  }
+
+  setNextUpdateTime(); // Initialize the next update times
+});
