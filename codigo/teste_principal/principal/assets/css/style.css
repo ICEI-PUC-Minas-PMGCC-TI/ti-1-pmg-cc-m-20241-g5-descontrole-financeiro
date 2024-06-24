@@ -188,22 +188,24 @@ main {
     box-shadow: 0px 5px rgb(141, 82, 0);
     padding: 2rem;
 }
-
+.modal-dialog {
+    border-radius: 40px;
+}
 .modal-body,.modal-content {
-    color: white !important;
-    background-color: #ff6b35 !important;
-    border: none !important;
-    border-radius: 30px !important;
-
-    /*box-shadow: 1vh 2vh 0 #5a210c;*/
+   background-color: #ff6b35;
+   color: white;
 }
 
-.modal-header, .modal-footer {
-    text-align: center;
-    font-weight: 500;
-    font-size: large;
+.modal-header {
+    background-color: #d15528;
+    color: white;
+}
+.modal-header * {
+    text-align: center !important;
+}
+.modal-footer  {
     background-color: #d15528 !important;
-    border-radius: 30px 30px 0 0!important;
+    color: white;
 }
 .fase a:active {
     transform: translateY(3px);
