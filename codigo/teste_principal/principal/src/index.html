@@ -181,70 +181,95 @@
 
   <script>
     var indice = 0;
-    function carregarDados() {
-      fetch('/codigo/db.json')
-        .then(response => response.json())
-        .then(data => {
-          const fases = data.fases[0].capitulos;
-          const mainContent = document.querySelector('.main_fases_content');
-          for (const capituloKey in fases) {
-            if (fases.hasOwnProperty(capituloKey)) {
-              indice += 1;
-              const capitulo = fases[capituloKey];
-              const divCapitulo = document.createElement('div');
-              divCapitulo.classList.add('header_cap');
-              divCapitulo.innerHTML = `
-                <div class="big-header">
-                  <h1>Capítulo ${indice} - ${capitulo.titulo}</h1>
-                  <h2>${capitulo.descricao}</h2>
-                </div>
-              `;
-              capitulo.fases.forEach((questao, index) => {
 
-                const divFase = document.createElement('div');
-                divFase.classList.add('fase', `fase${index + 1}`);
-                divFase.innerHTML = `<a id = "${indice}${index + 1}">${index + 1}</a>`;
-                divCapitulo.appendChild(divFase);
-              });
+function carregarDados() {
+  const currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+  if (!currentUser) {
+    console.error('No user data found in session storage');
+    return;
+  }
 
-              const fimCapituloDiv = document.createElement('div');
-              fimCapituloDiv.classList.add('fim_cap');
-              fimCapituloDiv.innerHTML = `
-                <div class="line-fim"></div>
-                <h3>Fim do Capítulo ${capituloKey.replace(/\D/g, '')}</h3>
-                <div class="line-fim"></div>
-              `;
-              divCapitulo.appendChild(fimCapituloDiv);
+  fetch('/codigo/db.json')
+    .then(response => response.json())
+    .then(data => {
+      const fases = data.fases[0].capitulos;
+      const mainContent = document.querySelector('.main_fases_content');
 
-              mainContent.appendChild(divCapitulo);
-            }
+      currentUser.chapters.forEach((userChapter, userChapterIndex) => {
+        if (fases.hasOwnProperty(`cap${userChapter.chapter_id}`)) {
+          indice += 1;
+          const capitulo = fases[`cap${userChapter.chapter_id}`];
+          const divCapitulo = document.createElement('div');
+          divCapitulo.classList.add('header_cap');
+          divCapitulo.setAttribute('capitulo', `${indice}`);
+          if (!userChapter.unlocked) {
+            divCapitulo.style.opacity = 0.5;
           }
-          updateProgressBars();
-          
-        })
-        .catch(error => console.error('Erro ao carregar os dados:', error));
-    }
-    function updateProgressBars() {
-      var currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-      if (!currentUser) return;
-
-      currentUser.chapters.forEach(chapter => {
-        console.log(chapter);
-          var totalTasks = chapter.tasks.length;
-          var completedTasks = chapter.tasks.filter(task => task.completed).length;
-          var progressPercentage = (completedTasks / totalTasks) * 100;
-          var progressBar = document.getElementById(`cpr${chapter.chapter_id}`);
-          if (progressBar) {
-              progressBar.style.width = `${progressPercentage}%`;
-              progressBar.setAttribute('aria-valuenow', progressPercentage);
-              if (progressPercentage == 100) {
-                progressBar.classList.add("bg-success");
-                progressBar.classList.remove("bg-danger");
-              }
+          else {
+            divCapitulo.style.opacity = 1;
           }
+
+          divCapitulo.innerHTML = `
+            <div class="big-header">
+              <h1>Capítulo ${indice} - ${capitulo.titulo}</h1>
+              <h2>${capitulo.descricao}</h2>
+            </div>
+          `;
+
+          userChapter.tasks.forEach((userTask, index) => {
+            const divFase = document.createElement('div');
+            divFase.classList.add('fase', `fase${index + 1}`);
+            divFase.innerHTML = `<a id="${indice}${index + 1}">${index + 1}</a>`;
+            divCapitulo.appendChild(divFase);
+          });
+
+          const fimCapituloDiv = document.createElement('div');
+          fimCapituloDiv.classList.add('fim_cap');
+          fimCapituloDiv.innerHTML = `
+            <div class="line-fim"></div>
+            <h3>Fim do Capítulo ${userChapter.chapter_id}</h3>
+            <div class="line-fim"></div>
+          `;
+          divCapitulo.appendChild(fimCapituloDiv);
+
+          mainContent.appendChild(divCapitulo);
+        }
       });
+
+      updateProgressBars();
+    })
+    .catch(error => console.error('Erro ao carregar os dados:', error));
+
+  // Update chapter icons in "Progresso" div
+  currentUser.chapters.forEach((userChapter) => {
+    const chapterImg = document.querySelector(`#cpr${userChapter.chapter_id}`).parentElement.previousElementSibling.querySelector('img');
+    if (!userChapter.unlocked) {
+      chapterImg.src = '/codigo/teste_principal/principal/imgs/padlock.png'; // Path to the locked chapter icon
     }
-    window.onload = carregarDados;
+  });
+}
+
+function updateProgressBars() {
+  var currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+  if (!currentUser) return;
+
+  currentUser.chapters.forEach(chapter => {
+    var totalTasks = chapter.tasks.length;
+    var completedTasks = chapter.tasks.filter(task => task.completed).length;
+    var progressPercentage = (completedTasks / totalTasks) * 100;
+    var progressBar = document.getElementById(`cpr${chapter.chapter_id}`);
+    if (progressBar) {
+      progressBar.style.width = `${progressPercentage}%`;
+      progressBar.setAttribute('aria-valuenow', progressPercentage);
+      if (progressPercentage == 100) {
+        progressBar.classList.add("bg-success");
+        progressBar.classList.remove("bg-danger");
+      }
+    }
+  });
+}
+
+window.onload = carregarDados;
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
