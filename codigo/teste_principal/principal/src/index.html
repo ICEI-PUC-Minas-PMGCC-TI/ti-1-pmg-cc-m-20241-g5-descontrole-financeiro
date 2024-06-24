@@ -330,15 +330,15 @@
         let errorMessage = '';
 
         if (previousChapter && !previousChapter.unlocked) {
-            errorMessage += 'You must unlock the previous chapter to access this one.<br>';
+            errorMessage += 'Você precisa desbloquear o capítulo anterior para ter acesso à este.<br>';
         }
 
         if (previousChapter && !previousChapter.tasks.every(task => task.completed)) {
-            errorMessage += 'You must complete all tasks in the previous chapter to unlock this one.<br>';
+            errorMessage += 'Você precisa completar todas as fases do capítulo anterior para ter acesso à este.<br>';
         }
 
         if (currentUser.coins < chapterCost) {
-            errorMessage += 'You do not have enough coins to unlock this chapter.';
+            errorMessage += 'Você não tem moedas o suficiente para desbloquear este capítulo.';
         }
 
         if (errorMessage) {
@@ -376,7 +376,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="buyModalLabel">Cannot Purchase Chapter</h5>
+        <h5 class="modal-title" id="buyModalLabel">Não foi possível desbloquear o Capítulo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="buyModalBody">
