@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Início</a>
+                <a href="#">Aprender</a>
+                <a href="#">Sobre</a>
+                <a href="#">Equipe</a>
+                <a href="#">Contato</a>
+              </div>
+        </nav>
+
+        <main>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <h1 class="title">Orçamento Pessoal</h1>
+            <h2 class="subtitle">Por que é importante estabelecer metas financeiras ao criar um orçamento pessoal?</h2>
+            <form id="quizForm">
+                <h2>Escolha uma opção:</h2>
+                <label>
+                    <input id="resposta" type="radio" name="option" value="1" required>
+                    <span>A)</span> Para limitar suas opções de gastos
+                </label>
+                <label>
+                    <input id="resposta" type="radio" name="option" value="2" required>
+                    <span>B)</span> Para manter um controle mais preciso sobre suas despesas
+                </label>
+                <label>
+                    <input id="resposta" type="radio" name="option" value="3" required>
+                    <span>C)</span> Para evitar completamente dívidas
+                </label>
+                <label>
+                    <input id="resposta" type="radio" name="option" value="4" required>
+                    <span>D)</span> Para ter direção e motivação ao gerenciar suas finanças <!--Alternativa Correta-->
+                </label>
+                <button type="submit" onclick="submitQuiz()">Enviar</button>
+                <p class="bg-azul-escuro" id="resultMessage"></p>
+            </form>
+        </main>
+        <footer>
+            <div class="btn_footer">
+                <a href="/src/Licao3.html">Voltar</a>
+            </div>
+        </footer>
+
+        <script src="/assets/js/a.js"></script>
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              let elements = document.getElementsByClassName("sidenav");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.borderRight = "1px solid #4e4736";
+                }
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              let elements = document.getElementsByClassName("sidenav");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.border = "none";
+                }
+            }
+
+            document.getElementById('quizForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                const options = document.getElementsByName('option');
+                let selectedValue;
+                for (const option of options) {
+                    if (option.checked) {
+                        selectedValue = option.value;
+                        break;
+                    }
+                }
+
+                const resultMessage = document.getElementById('resultMessage');
+                if (selectedValue === '4') {
+                    resultMessage.textContent = 'Resposta Certa! Parabéns';
+                    resultMessage.style.color = 'green';
+                } else {
+                    resultMessage.textContent = 'Resposta incorreta.';
+                    resultMessage.style.color = 'red';
+                }
+            });
+            </script>
+    </body>
+</html>

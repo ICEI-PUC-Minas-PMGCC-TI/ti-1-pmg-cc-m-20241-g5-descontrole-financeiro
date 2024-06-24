@@ -1,0 +1,56 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Início</a>
+                <a href="#">Aprender</a>
+                <a href="#">Sobre</a>
+                <a href="#">Equipe</a>
+                <a href="#">Contato</a>
+              </div>
+        </nav>
+
+        <main>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <h1 class="title">Orçamento Pessoal</h1>
+            <h2 class="subtitle">Objetivos</h2>
+            <p class="bg-azul-escuro">
+                Sempre que possível, revise seu orçamento para garantir que ele ainda reflita suas metas e circunstâncias atuais, fazendo ajustes conforme necessário para manter-se no controle. 
+                A revisão regular do seu orçamento é fundamental para acompanhar o progresso em direção aos seus objetivos financeiros. 
+                Ao revisar periodicamente seu orçamento, você pode identificar mudanças nos seus rendimentos, despesas ou prioridades financeiras, e isso permite com que você faça ajustes estratégicos, como realocar recursos para áreas que exigem mais atenção, cortar gastos desnecessários ou até mesmo estabelecer novas metas.
+            </p>
+        </main>
+        <footer>
+            <div class="btn_footer">
+                <a href="/src/Licao2.html">Voltar</a>
+                <a href="/src/Quiz1.html">Continuar</a>
+            </div>
+        </footer>
+
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              let elements = document.getElementsByClassName("sidenav");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.borderRight = "1px solid #4e4736";
+                }
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              let elements = document.getElementsByClassName("sidenav");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.border = "none";
+                }
+            }
+            </script>
+    </body>
+</html>
