@@ -182,6 +182,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
     var indice = 0;
+    const chapterCost = 1000; // Define the cost of unlocking a chapter
 
     function carregarDados() {
         const currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
@@ -203,14 +204,15 @@
                         var divCapitulo = document.createElement('div');
                         divCapitulo.classList.add('header_cap');
                         divCapitulo.setAttribute('capitulo', `${indice}`);
+                        divCapitulo.style.opacity = 0.5; // Default opacity
+
                         if (!userChapter.unlocked) {
-                            divCapitulo.style.opacity = 0.5;
                             divCapitulo.innerHTML = `
-                                <div class="buy lock" style="opacity:1;">
+                                <div class="buy lock">
                                     <h2>Comprar</h2>
                                     <div class="buy-child">
                                         <img src='/codigo/teste_principal/principal/imgs/coin.png' class="img-fluid">
-                                        <h3>1000</h3>
+                                        <h3>${chapterCost}</h3>
                                     </div>
                                 </div>
                             `;
@@ -248,9 +250,26 @@
                         if (buyDiv) {
                             buyDiv.addEventListener('mouseover', function() {
                                 divCapitulo.style.opacity = 1;
+
                             });
                             buyDiv.addEventListener('mouseout', function() {
                                 divCapitulo.style.opacity = 0.5;
+                            });
+
+                            // Add click event listener to the buy button
+                            buyDiv.addEventListener('click', function() {
+                                if (currentUser.coins >= chapterCost) {
+                                    currentUser.coins -= chapterCost;
+                                    userChapter.unlocked = true;
+                                    sessionStorage.setItem('usuarioCorrente', JSON.stringify(currentUser));
+                                    updateLocalStorage(currentUser);
+                                    divCapitulo.style.opacity = 1;
+                                    alert('Chapter unlocked!');
+                                    //buyDiv.style.display = 'none'; // Hide the buy button
+                                    location.reload();
+                                } else {
+                                    alert('Not enough coins to unlock this chapter.');
+                                }
                             });
                         }
                     }
@@ -287,6 +306,17 @@
                 }
             }
         });
+    }
+
+    function updateLocalStorage(currentUser) {
+        var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+        var userIndex = db_usuarios.users.findIndex(user => user.id === currentUser.id);
+        if (userIndex !== -1) {
+            db_usuarios.users[userIndex] = currentUser;
+            localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+        } else {
+            console.error('User not found in local storage');
+        }
     }
 
     window.onload = carregarDados;
