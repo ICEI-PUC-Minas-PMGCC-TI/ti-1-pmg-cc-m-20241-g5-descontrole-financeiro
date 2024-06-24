@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <h5 class="card-title">${quest.description}</h5>
             </div>
             <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="0" aria-valuemin="0" aria-valuemax="${quest.goal}" style="height: 30px" id="questProgressStructure${id}">
-              <div class="progress-bar bg-danger" style="width: 0%" id="questProgressBar${id}">0/${quest.goal}</div>
+              <div class="progress-bar bg-warning text-dark" style="width: 0%" id="questProgressBar${id}">0/${quest.goal}</div>
             </div>
           </div>
         </div>`;
