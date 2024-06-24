@@ -26,15 +26,33 @@
     </ul>
 
     <div class="profileItens">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
       
     </div>
   </sidebar>
   <main>
     <div class="main_fases_content">
-
+      
     </div>
 
     <div class="main-quests-content">
+      
       <div class="quests-container">
         <div class="quest1-contents-container" id="Q1">
           <!--As missões serão inseridas aqui-->
@@ -182,7 +200,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
     var indice = 0;
-    const chapterCost = 1000; // Define the cost of unlocking a chapter
+    const chapterCost = 100; // Define the cost of unlocking a chapter
 
     function carregarDados() {
         const currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
@@ -230,7 +248,7 @@
                         userChapter.tasks.forEach((userTask, index) => {
                             const divFase = document.createElement('div');
                             divFase.classList.add('fase', `fase${index + 1}`);
-                            divFase.innerHTML = `<a id="${indice}${index + 1}">${index + 1}</a>`;
+                            divFase.innerHTML = `<a id="${indice}${index + 1}" ${!userChapter.unlocked ? 'class="disabled"' : ''}>${index + 1}</a>`;
                             divCapitulo.appendChild(divFase);
                         });
 
@@ -250,7 +268,6 @@
                         if (buyDiv) {
                             buyDiv.addEventListener('mouseover', function() {
                                 divCapitulo.style.opacity = 1;
-
                             });
                             buyDiv.addEventListener('mouseout', function() {
                                 divCapitulo.style.opacity = 0.5;
@@ -258,18 +275,7 @@
 
                             // Add click event listener to the buy button
                             buyDiv.addEventListener('click', function() {
-                                if (currentUser.coins >= chapterCost) {
-                                    currentUser.coins -= chapterCost;
-                                    userChapter.unlocked = true;
-                                    sessionStorage.setItem('usuarioCorrente', JSON.stringify(currentUser));
-                                    updateLocalStorage(currentUser);
-                                    divCapitulo.style.opacity = 1;
-                                    alert('Chapter unlocked!');
-                                    //buyDiv.style.display = 'none'; // Hide the buy button
-                                    location.reload();
-                                } else {
-                                    alert('Not enough coins to unlock this chapter.');
-                                }
+                                handleBuyClick(currentUser, userChapter, divCapitulo, buyDiv);
                             });
                         }
                     }
@@ -319,14 +325,69 @@
         }
     }
 
+    function handleBuyClick(currentUser, userChapter, divCapitulo, buyDiv) {
+        const previousChapter = currentUser.chapters.find(chap => chap.chapter_id === (userChapter.chapter_id - 1));
+        let errorMessage = '';
+
+        if (previousChapter && !previousChapter.unlocked) {
+            errorMessage += 'You must unlock the previous chapter to access this one.<br>';
+        }
+
+        if (previousChapter && !previousChapter.tasks.every(task => task.completed)) {
+            errorMessage += 'You must complete all tasks in the previous chapter to unlock this one.<br>';
+        }
+
+        if (currentUser.coins < chapterCost) {
+            errorMessage += 'You do not have enough coins to unlock this chapter.';
+        }
+
+        if (errorMessage) {
+            showModal(errorMessage);
+        } else {
+            currentUser.coins -= chapterCost;
+            userChapter.unlocked = true;
+            sessionStorage.setItem('usuarioCorrente', JSON.stringify(currentUser));
+            updateLocalStorage(currentUser);
+            divCapitulo.style.opacity = 1;
+            buyDiv.style.display = 'none'; // Hide the buy button
+            showModal('Parabéns! Você acaba de adquirir um novo capítulo.');
+            location.reload();
+        }
+    }
+
+    function showModal(message) {
+        const modalBody = document.getElementById('buyModalBody');
+        modalBody.innerHTML = message;
+        const buyModal = new bootstrap.Modal(document.getElementById('buyModal'));
+        buyModal.show();
+    }
+
     window.onload = carregarDados;
 });
+
+
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="flow.js"></script>
+  <div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="buyModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModalLabel">Cannot Purchase Chapter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="buyModalBody">
+        <!-- Dynamic message will be inserted here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
