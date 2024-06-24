@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXhW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/styleQuiz.css">
 </head>
 <body>
@@ -31,134 +31,177 @@
         
     </footer>
 
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-    var main = document.getElementsByTagName('main')[0];
-    const { chapter, phase } = getQueryParams();
-    var capitulo = `cap${chapter}`;
-    var faseNum = phase - 1;
-    var userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-    var consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
-    fetch('/codigo/db.json')
-    .then(response => response.json())
-    .then(data => {
-        const fase = data.fases[0].capitulos[capitulo].fases[faseNum];
-        main.innerHTML = `<div class="question-intro">
-            <img src="./imgs/leao.png" class="img-fluid" style="width:25%;">
-            <h2>${fase.titulo}</h2>
-        </div>`;
+        var main = document.getElementsByTagName('main')[0];
+        const { chapter, phase } = getQueryParams();
+        var capitulo = `cap${chapter}`;
+        var faseNum = phase - 1;
+        var userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+        var consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
+        var coins = userData ? userData.coins : 0;
 
-        const nxt_btn = document.getElementById('next-btn');
-        var num = 0;
-        nxt_btn.addEventListener('click', function() {
-            
-            if (num < 3) {
-                if (num == 2) nxt_btn.innerHTML = 'Concluir';
-                start_app(fase.questoes, num);
-                num += 1;
-                nxt_btn.classList.add('hidden'); 
-            } else {
-                markTaskAsCompleted(chapter, phase);
-                updateConsecutiveAnswers(consecutiveCorrectAnswers);
-                window.location.href = './src/index.html';
-            }
-        });
+        fetch('/codigo/db.json')
+        .then(response => response.json())
+        .then(data => {
+            const fase = data.fases[0].capitulos[capitulo].fases[faseNum];
+            main.innerHTML = `<div class="question-intro">
+                <img src="./imgs/leao.png" class="img-fluid" style="width:25%;">
+                <h2>${fase.titulo}</h2>
+            </div>`;
 
-        const quit_btn = document.getElementById('quit-btn');
-        quit_btn.addEventListener('click', function() {
-            window.location.href = "./src/index.html";
-        });
-    });
-
-    function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        const chapter = params.get('chapter');
-        const phase = params.get('phase');
-        return { chapter, phase };
-    }
-
-    function start_app(questoes, index) {
-        main.innerHTML = `
-        <div class="question-title">
-            <img src="./imgs/leao.png" class="img-fluid" style="width:8%;">
-            <h2>${questoes[index].text}</h2>
-        </div>
-        <h2 class="choose-opt">Escolha uma opção:</h2>
-        <div class="answers-container-buttons">
-            <button class="anw-btn" id="ans0">${questoes[index].respostas[0].text}</button>
-            <button class="anw-btn" id="ans1">${questoes[index].respostas[1].text}</button>
-            <button class="anw-btn" id="ans2">${questoes[index].respostas[2].text}</button>
-            <button class="anw-btn" id="ans3">${questoes[index].respostas[3].text}</button>
-        </div>`;
-
-        var buttons = document.getElementsByClassName('anw-btn');
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function() {
-                checkAnswer(questoes[index], i);
-                document.getElementById('next-btn').classList.remove('hidden'); // Show the button when an answer is selected
+            const nxt_btn = document.getElementById('next-btn');
+            var num = 0;
+            nxt_btn.addEventListener('click', function() {
+                
+                if (num < 3) {
+                    if (num == 2) nxt_btn.innerHTML = 'Concluir';
+                    start_app(fase.questoes, num);
+                    num += 1;
+                    nxt_btn.classList.add('hidden'); 
+                } else {
+                    markTaskAsCompleted(chapter, phase);
+                    updateConsecutiveAnswers(consecutiveCorrectAnswers);
+                    updateCoins(coins);
+                    window.location.href = './src/index.html';
+                }
             });
-        }
-    }
 
-    function checkAnswer(question, selectedIndex) {
-        var buttons = document.getElementsByClassName('anw-btn');
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].disabled = true; // Disable buttons after an answer is selected
-            if (i === selectedIndex) {
+            const quit_btn = document.getElementById('quit-btn');
+            quit_btn.addEventListener('click', function() {
+                window.location.href = "./src/index.html";
+            });
+        });
+
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const chapter = params.get('chapter');
+            const phase = params.get('phase');
+            return { chapter, phase };
+        }
+
+        function start_app(questoes, index) {
+            main.innerHTML = `
+            <div class="question-title">
+                <img src="./imgs/leao.png" class="img-fluid" style="width:8%;">
+                <h2>${questoes[index].text}</h2>
+            </div>
+            <h2 class="choose-opt">Escolha uma opção:</h2>
+            <div class="answers-container-buttons">
+                <button class="anw-btn" id="ans0">${questoes[index].respostas[0].text}</button>
+                <button class="anw-btn" id="ans1">${questoes[index].respostas[1].text}</button>
+                <button class="anw-btn" id="ans2">${questoes[index].respostas[2].text}</button>
+                <button class="anw-btn" id="ans3">${questoes[index].respostas[3].text}</button>
+            </div>`;
+
+            var buttons = document.getElementsByClassName('anw-btn');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function() {
+                    checkAnswer(questoes[index], i);
+                    document.getElementById('next-btn').classList.remove('hidden'); // Show the button when an answer is selected
+                });
+            }
+        }
+
+        function checkAnswer(question, selectedIndex) {
+            var buttons = document.getElementsByClassName('anw-btn');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true; // Disable buttons after an answer is selected
+                if (i === selectedIndex) {
+                    if (question.respostas[i].correta) {
+                        buttons[i].style.backgroundColor = 'green';
+                        consecutiveCorrectAnswers += 1;
+                        coins += 5*calculateCoins(consecutiveCorrectAnswers);
+                    } else {
+                        buttons[i].style.backgroundColor = 'red';
+                        consecutiveCorrectAnswers = 0;
+                    }
+                }
                 if (question.respostas[i].correta) {
                     buttons[i].style.backgroundColor = 'green';
-                    consecutiveCorrectAnswers += 1;
-                } else {
-                    buttons[i].style.backgroundColor = 'red';
-                    consecutiveCorrectAnswers = 0;
                 }
             }
-            if (question.respostas[i].correta) {
-                buttons[i].style.backgroundColor = 'green';
+            updateSessionStorage();
+        }
+
+        function calculateCoins(consecutiveCorrectAnswers) {
+            // Define your multiplier logic here
+            if (consecutiveCorrectAnswers >= 5) {
+                return 5; // For example, 5 coins for 5 or more consecutive correct answers
+            } else if (consecutiveCorrectAnswers === 4) {
+                return 4;  // For example, 4 coins for 4 consecutive correct answers
+            } else if (consecutiveCorrectAnswers === 3) {
+                return 3;  // For example, 3 coins for 3 consecutive correct answers
+            } else if (consecutiveCorrectAnswers === 2) {
+                return 2;  // For example, 2 coins for 2 consecutive correct answers
+            } else {
+                return 1;  // For example, 1 coin for 1 consecutive correct answer
             }
         }
-    }
 
-    function markTaskAsCompleted(chapterId, taskId) {
-        var currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-        var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
-        var user = db_usuarios.users.find(user => user.id === currentUser.id);
-        if (user) {
-            var chapter = user.chapters.find(chap => chap.chapter_id == chapterId);
-            if (chapter) {
-                var task = chapter.tasks.find(t => t.task_id == taskId);
-                if (task) {
-                    task.completed = true;
-                    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
-                    sessionStorage.setItem('usuarioCorrente', JSON.stringify(user));
-                    alert(`Task ${taskId} in Chapter ${chapterId} marked as completed!`);
+        function markTaskAsCompleted(chapterId, taskId) {
+            var currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+            var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+            var user = db_usuarios.users.find(user => user.id === currentUser.id);
+            if (user) {
+                var chapter = user.chapters.find(chap => chap.chapter_id == chapterId);
+                if (chapter) {
+                    var task = chapter.tasks.find(t => t.task_id == taskId);
+                    if (task) {
+                        task.completed = true;
+                        localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+                        sessionStorage.setItem('usuarioCorrente', JSON.stringify(user));
+                        alert(`Task ${taskId} in Chapter ${chapterId} marked as completed!`);
+                    }
                 }
             }
         }
-    }
 
-    function updateConsecutiveAnswers(newCount) {
-        let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-        var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
-        var user = db_usuarios.users.find(user => user.id === userData.id);
-        
-        if (userData) {
-            userData.consecutive_answers = consecutiveCorrectAnswers;
-            sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
-        } else {
-            console.error('No user data found in session storage');
+        function updateConsecutiveAnswers(newCount) {
+            let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+            var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+            var user = db_usuarios.users.find(user => user.id === userData.id);
+            
+            if (userData) {
+                userData.consecutive_answers = consecutiveCorrectAnswers;
+                sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
+            } else {
+                console.error('No user data found in session storage');
+            }
+            
+            if (user) {
+                user.consecutive_answers = consecutiveCorrectAnswers;
+                localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+            } else {
+                console.error('No user data found in local storage');
+            }
         }
-        
-        if (user) {
-            user.consecutive_answers = consecutiveCorrectAnswers;
-            localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
-        } else {
-            console.error('No user data found in local storage');
-        }
-    }
-});
 
+        function updateCoins(newCoins) {
+            let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+            var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+            var user = db_usuarios.users.find(user => user.id === userData.id);
+            
+            if (userData) {
+                userData.coins = coins;
+                sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
+            } else {
+                console.error('No user data found in session storage');
+            }
+            
+            if (user) {
+                user.coins = coins;
+                localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+            } else {
+                console.error('No user data found in local storage');
+            }
+        }
+
+        function updateSessionStorage() {
+            updateConsecutiveAnswers(consecutiveCorrectAnswers);
+            updateCoins(coins);
+        }
+    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
