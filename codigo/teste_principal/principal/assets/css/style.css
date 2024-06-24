@@ -433,3 +433,45 @@ span {
         display: none;
     }
 }
+
+.buy-child {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    gap: 1vh;
+    width: 60%;
+}
+.buy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    width: 20%;
+    border: 3px solid   rgb(99, 99, 99);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.buy h2 {
+    font-size: x-large;
+}
+.buy h3 {
+    font-size: larger;
+}
+
+.buy img {
+    width: 50%;
+}
+
+.lock {
+    opacity: 0.5;
+}
+.header_cap {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.buy:hover ~ .header_cap {
+    opacity: 1 !important;
+}
