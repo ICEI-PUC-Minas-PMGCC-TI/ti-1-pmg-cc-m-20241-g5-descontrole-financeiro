@@ -203,7 +203,6 @@ main {
     right: 0;
     position: sticky;
     max-width: 35%;
-    padding: 10px;
 }
 
 .quest-contents-container {
@@ -278,7 +277,7 @@ span {
 .quests-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 80%;
     border: 3px solid #362f22;
     color: white !important;
@@ -317,7 +316,7 @@ span {
     padding-bottom: 20px;
     border-bottom: 1px solid #362f22;
     padding-top: 10px;
-    
+    font-size: xx-large;
     
 }
 

@@ -108,7 +108,7 @@ function salvarCadastro() {
 
     sessionStorage.setItem('usuarioCorrente', JSON.stringify(currentUser));
 
-    window.location.href = '../Quiz Nivelamento/fim_análise_de_perfil/index.html'; // Redirect to the main page
+    window.location.href = '../Cadastro/success/index.html'; // Redirect to the main page
 }
 
 function addUser(nome, username, senha, email, selectedTopic, userId) {

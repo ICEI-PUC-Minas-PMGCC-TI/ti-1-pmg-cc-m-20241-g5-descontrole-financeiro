@@ -19,6 +19,6 @@ document.querySelectorAll('.topics').forEach(button => {
   button.addEventListener('click', function() {
       var selectedTopic = this.textContent.trim();
       sessionStorage.setItem('selectedTopic', selectedTopic);
-      window.location.href = '../Cadastro/cadastro.html'; // Redirect to the sign-up page
+      window.location.href = '/codigo/fluxo_inicial/Voce_vai_aprender/index.html'; // Redirect to the sign-up page
   });
 });
