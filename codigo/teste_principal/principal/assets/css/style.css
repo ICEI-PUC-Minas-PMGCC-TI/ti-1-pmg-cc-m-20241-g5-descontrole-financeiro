@@ -71,6 +71,10 @@ sidebar h1 {
     font-size: 2em;
     display: block;
 }
+sidebar ul li a .icons{
+    width: 32px;
+    margin-right: 15px;
+}
 
 main {
     display: flex;
