@@ -60,48 +60,48 @@ function salvarCadastro() {
                 chapter_id: 1,
                 unlocked: true,
                 tasks: [
-                    { task_id: 1, name: "Introduction to Credit", completed: false },
-                    { task_id: 2, name: "Types of Credit", completed: false },
-                    { task_id: 3, name: "How Credit Works", completed: false },
-                    { task_id: 4, name: "Benefits of Credit", completed: false }
+                    { task_id: 1, name: "Introduction to Credit", completed: false, questions: [] },
+                    { task_id: 2, name: "Types of Credit", completed: false, questions: [] },
+                    { task_id: 3, name: "How Credit Works", completed: false, questions: [] },
+                    { task_id: 4, name: "Benefits of Credit", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 2,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Understanding Credit Scores", completed: false },
-                    { task_id: 2, name: "Improving Your Credit Score", completed: false },
-                    { task_id: 3, name: "Credit Score Myths", completed: false },
-                    { task_id: 4, name: "Maintaining a Good Credit Score", completed: false }
+                    { task_id: 1, name: "Understanding Credit Scores", completed: false, questions: [] },
+                    { task_id: 2, name: "Improving Your Credit Score", completed: false, questions: [] },
+                    { task_id: 3, name: "Credit Score Myths", completed: false, questions: [] },
+                    { task_id: 4, name: "Maintaining a Good Credit Score", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 3,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Applying for Credit", completed: false },
-                    { task_id: 2, name: "Choosing the Right Credit Card", completed: false },
-                    { task_id: 3, name: "Credit Card Benefits", completed: false },
-                    { task_id: 4, name: "Managing Credit Card Debt", completed: false }
+                    { task_id: 1, name: "Applying for Credit", completed: false, questions: [] },
+                    { task_id: 2, name: "Choosing the Right Credit Card", completed: false, questions: [] },
+                    { task_id: 3, name: "Credit Card Benefits", completed: false, questions: [] },
+                    { task_id: 4, name: "Managing Credit Card Debt", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 4,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Credit Reports", completed: false },
-                    { task_id: 2, name: "Disputing Errors on Credit Report", completed: false },
-                    { task_id: 3, name: "Understanding Credit Report Terms", completed: false }
+                    { task_id: 1, name: "Credit Reports", completed: false, questions: [] },
+                    { task_id: 2, name: "Disputing Errors on Credit Report", completed: false, questions: [] },
+                    { task_id: 3, name: "Understanding Credit Report Terms", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 5,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Credit Counseling", completed: false },
-                    { task_id: 2, name: "Debt Management Plans", completed: false },
-                    { task_id: 3, name: "Avoiding Credit Scams", completed: false }
+                    { task_id: 1, name: "Credit Counseling", completed: false, questions: [] },
+                    { task_id: 2, name: "Debt Management Plans", completed: false, questions: [] },
+                    { task_id: 3, name: "Avoiding Credit Scams", completed: false, questions: [] }
                 ]
             }
         ]
@@ -127,48 +127,48 @@ function addUser(nome, username, senha, email, selectedTopic, userId) {
                 chapter_id: 1,
                 unlocked: true,
                 tasks: [
-                    { task_id: 1, name: "Introduction to Credit", completed: false },
-                    { task_id: 2, name: "Types of Credit", completed: false },
-                    { task_id: 3, name: "How Credit Works", completed: false },
-                    { task_id: 4, name: "Benefits of Credit", completed: false }
+                    { task_id: 1, name: "Introduction to Credit", completed: false, questions: [] },
+                    { task_id: 2, name: "Types of Credit", completed: false, questions: [] },
+                    { task_id: 3, name: "How Credit Works", completed: false, questions: [] },
+                    { task_id: 4, name: "Benefits of Credit", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 2,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Understanding Credit Scores", completed: false },
-                    { task_id: 2, name: "Improving Your Credit Score", completed: false },
-                    { task_id: 3, name: "Credit Score Myths", completed: false },
-                    { task_id: 4, name: "Maintaining a Good Credit Score", completed: false }
+                    { task_id: 1, name: "Understanding Credit Scores", completed: false, questions: [] },
+                    { task_id: 2, name: "Improving Your Credit Score", completed: false, questions: [] },
+                    { task_id: 3, name: "Credit Score Myths", completed: false, questions: [] },
+                    { task_id: 4, name: "Maintaining a Good Credit Score", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 3,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Applying for Credit", completed: false },
-                    { task_id: 2, name: "Choosing the Right Credit Card", completed: false },
-                    { task_id: 3, name: "Credit Card Benefits", completed: false },
-                    { task_id: 4, name: "Managing Credit Card Debt", completed: false }
+                    { task_id: 1, name: "Applying for Credit", completed: false, questions: [] },
+                    { task_id: 2, name: "Choosing the Right Credit Card", completed: false, questions: [] },
+                    { task_id: 3, name: "Credit Card Benefits", completed: false, questions: [] },
+                    { task_id: 4, name: "Managing Credit Card Debt", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 4,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Credit Reports", completed: false },
-                    { task_id: 2, name: "Disputing Errors on Credit Report", completed: false },
-                    { task_id: 3, name: "Understanding Credit Report Terms", completed: false }
+                    { task_id: 1, name: "Credit Reports", completed: false, questions: [] },
+                    { task_id: 2, name: "Disputing Errors on Credit Report", completed: false, questions: [] },
+                    { task_id: 3, name: "Understanding Credit Report Terms", completed: false, questions: [] }
                 ]
             },
             {
                 chapter_id: 5,
                 unlocked: false,
                 tasks: [
-                    { task_id: 1, name: "Credit Counseling", completed: false },
-                    { task_id: 2, name: "Debt Management Plans", completed: false },
-                    { task_id: 3, name: "Avoiding Credit Scams", completed: false }
+                    { task_id: 1, name: "Credit Counseling", completed: false, questions: [] },
+                    { task_id: 2, name: "Debt Management Plans", completed: false, questions: [] },
+                    { task_id: 3, name: "Avoiding Credit Scams", completed: false, questions: [] }
                 ]
             }
         ]

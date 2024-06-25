@@ -19,7 +19,6 @@
             <button class="anw-btn"> Essa é uma resposta da pergunta acima.</button>
             <button class="anw-btn"> Essa é uma resposta da pergunta acima.</button>
         </div>
-        
     </main>
     <footer>
         <div class="btn_footer">
@@ -28,7 +27,6 @@
         <div class="btn_footer">
             <button class="btn_footer continuar" id="next-btn">Continuar</button>
         </div>
-        
     </footer>
 
 <script>
@@ -104,30 +102,38 @@
             var buttons = document.getElementsByClassName('anw-btn');
             for (let i = 0; i < buttons.length; i++) {
                 buttons[i].addEventListener('click', function() {
-                    checkAnswer(questoes[index], i);
+                    checkAnswer(questoes[index], i, chapter, phase);
                     document.getElementById('next-btn').classList.remove('hidden'); // Show the button when an answer is selected
                 });
             }
         }
 
-        function checkAnswer(question, selectedIndex) {
+        function checkAnswer(question, selectedIndex, chapter, phase) {
             var buttons = document.getElementsByClassName('anw-btn');
+            var questionResult = {
+                text: question.text,
+                correct: []
+            };
             for (let i = 0; i < buttons.length; i++) {
                 buttons[i].disabled = true; // Disable buttons after an answer is selected
                 if (i === selectedIndex) {
                     if (question.respostas[i].correta) {
                         buttons[i].style.backgroundColor = 'green';
                         consecutiveCorrectAnswers += 1;
-                        coins += 5*calculateCoins(consecutiveCorrectAnswers);
+                        coins += 5 * calculateCoins(consecutiveCorrectAnswers);
+                        questionResult.correct.push(question.respostas[i].text);
                     } else {
                         buttons[i].style.backgroundColor = 'red';
                         consecutiveCorrectAnswers = 0;
+                        questionResult.correct.push(null);
                     }
                 }
                 if (question.respostas[i].correta) {
                     buttons[i].style.backgroundColor = 'green';
                 }
             }
+
+            updateUserData(questionResult, chapter, phase);
             updateSessionStorage();
         }
 
@@ -160,6 +166,27 @@
                         sessionStorage.setItem('usuarioCorrente', JSON.stringify(user));
                     }
                 }
+            }
+        }
+
+        function updateUserData(questionResult, chapterId, phaseId) {
+            let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+            var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
+            var user = db_usuarios.users.find(user => user.id === userData.id);
+            
+            if (userData && user) {
+                let chapter = userData.chapters.find(chap => chap.chapter_id == chapterId);
+                let task = chapter.tasks.find(t => t.task_id == phaseId);
+                task.questions.push(questionResult);
+
+                let chapterLocal = user.chapters.find(chap => chap.chapter_id == chapterId);
+                let taskLocal = chapterLocal.tasks.find(t => t.task_id == phaseId);
+                taskLocal.questions.push(questionResult);
+
+                sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
+                localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+            } else {
+                console.error('User data not found in session or local storage');
             }
         }
 
