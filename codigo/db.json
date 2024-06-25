@@ -9,6 +9,7 @@
             "fases": [
               {
                 "titulo": "O que é Crédito",
+                "texto" : "O crédito é a permissão dada por uma instituição financeira para que uma pessoa utilize temporariamente fundos que não são seus, com a promessa de devolver esse dinheiro futuramente, geralmente com o acréscimo de juros. Existem diversos tipos de crédito, cada um com suas características específicas e finalidades. Um exemplo importante é o crédito ao consumidor, que é um tipo de financiamento oferecido a indivíduos para a compra de bens e serviços de consumo. Esse crédito permite que os consumidores adquiram produtos imediatamente e paguem o valor ao longo do tempo.",
                 "questoes": [
                   {
                     "Idquest": 1,
@@ -80,6 +81,7 @@
               },
               {
                 "titulo": "Tipos de Crédito",
+                "texto" : "Existem diversos tipos de crédito disponíveis para os consumidores, cada um com características próprias. O empréstimo pessoal, por exemplo, é comum, mas tem juros muito altos. O crédito rotativo está associado aos cartões de crédito, permitindo que os usuários paguem uma parte do saldo devedor e financiem o restante. O crédito consignado tem juros mais baixos pois as parcelas são descontadas diretamente do salário, e empréstimos hipotecários usam imóveis como garantia, oferecendo taxas de juros mais baixas em troca dessa segurança. Cada tipo de crédito é útil para diferentes necessidades financeiras.",
                 "questoes": [
                   {
                     "Idquest": 4,
@@ -151,6 +153,7 @@
               },
               {
                 "titulo": "Funcionamento do Crédito",
+                "texto" : "O crédito funciona quando uma instituição empresta dinheiro a alguém que promete pagar de volta em um prazo, acrescido de juros. A taxa de juros é o custo do empréstimo, variando conforme o risco do cliente, risco este que pode ser analisado com a pontuação de crédito, que avalia o histórico financeiro do indivíduo. Ao se pagar um empréstimo, pode ser realizado uma amortização, o pagamento gradual do empréstimo, onde cada parcela paga inclui uma parte para cobrir os juros e outra para reduzir o saldo devedor.",
                 "questoes": [
                   {
                     "Idquest": 7,
@@ -222,6 +225,7 @@
               },
               {
                 "titulo": "O que é Crédito",
+                "texto": "O crédito é a permissão dada por uma instituição financeira para que uma pessoa utilize temporariamente fundos que não são seus, com a promessa de devolver esse dinheiro futuramente, geralmente com o acréscimo de juros. Existem diversos tipos de crédito, cada um com suas características específicas e finalidades. Um exemplo importante é o crédito ao consumidor, que é um tipo de financiamento oferecido a indivíduos para a compra de bens e serviços de consumo. Esse crédito permite que os consumidores adquiram produtos imediatamente e paguem o valor ao longo do tempo.",
                 "questoes": [
                   {
                     "Idquest": 10,
@@ -299,6 +303,7 @@
             "fases": [
               {
                 "titulo": "Planejamento de Crédito",
+                "texto": "Planejar o uso do crédito é fundamental para evitar dívidas desnecessárias e manter uma saúde financeira sólida. Usar o crédito de maneira responsável, como gastar dentro dos limites e pagar em dia, é essencial para manter um bom histórico de crédito. Ter uma boa pontuação de crédito é crucial, pois permite obter empréstimos com taxas mais baixas, já que isso demonstra confiança e responsabilidade financeira.",
                 "questoes": [
                   {
                     "Idquest": 13,
@@ -370,6 +375,7 @@
               },
               {
                 "titulo": "Controle de Dívidas",
+                "texto": "Um plano de pagamento de dívidas é essencial para gerenciar e reduzir e controlar dívidas de forma eficaz. Porém, para evitar o acúmulo de dívidas, é importante manter um orçamento equilibrado, gastar dentro dos limites financeiros e criar um plano de pagamento de dívidas organizado e eficiente. Não pagar as dívidas pode resultar em impactos negativos adicionais, como a a deterioração da pontuação de crédito, aumento das taxas de juros, restrições no acesso ao crédito, cobranças de multas e até ações legais. Portanto, é fundamental manter um compromisso firme com o pagamento das dívidas para preservar a estabilidade financeira e evitar consequências adversas.",
                 "questoes": [
                   {
                     "Idquest": 16,
@@ -441,6 +447,7 @@
               },
               {
                 "titulo": "Práticas Saudáveis de Crédito",
+                "texto": "Práticas saudáveis ao usar crédito envolvem responsabilidade financeira, como pagar contas em dia, não gastar além dos limites e monitorar a pontuação de crédito. É importante evitar certos comportamentos ao utilizar um cartão de crédito, como o pagamento mínimo da fatura, o uso excessivo do limite e o desconhecimento das taxas. É muito importante ler todos os termos do contrato de crédito, e estar ciente das taxas propostas, para evitar dificuldades futuramente.",
                 "questoes": [
                   {
                     "Idquest": 19,
@@ -512,6 +519,7 @@
               },
               {
                 "titulo": "O que é Crédito",
+                "texto": "O crédito é a permissão dada por uma instituição financeira para que uma pessoa utilize temporariamente fundos que não são seus, com a promessa de devolver esse dinheiro futuramente, geralmente com o acréscimo de juros. Existem diversos tipos de crédito, cada um com suas características específicas e finalidades. Um exemplo importante é o crédito ao consumidor, que é um tipo de financiamento oferecido a indivíduos para a compra de bens e serviços de consumo. Esse crédito permite que os consumidores adquiram produtos imediatamente e paguem o valor ao longo do tempo.",
                 "questoes": [
                   {
                     "Idquest": 22,
@@ -589,6 +597,7 @@
             "fases": [
               {
                 "titulo": "Benefícios do Crédito",
+                "texto": "O uso de crédito pode beneficiar sua vida financeira ao permitir a compra de bens sem o pagamento imediato, cobrir emergências e construir um histórico de crédito favorável. Para maximizar esses benefícios, deve-se pagar as faturas em dia e evitar pagamentos mínimos. Além disso, alguns créditos possuem programas de recompensas, que podem ser aproveitados pelos usuários para ganhar pontos ou milhas que podem ser trocados por produtos, serviços e descontos. É possivel maximizar estes benefícios ao se usar o cartão de forma responsável e regular.",
                 "questoes": [
                   {
                     "Idquest": 25,
@@ -660,6 +669,7 @@
               },
               {
                 "titulo": "Uso Estratégico do Crédito",
+                "texto": "Utilizar o crédito de forma estratégica envolve planejar e usar o dinheiro emprestado de maneira eficiente, considerando taxas de juros e prazos de pagamento. Por exemplo, é possível usar um empréstimo para investir em oportunidades que ofereçam retorno financeiro. Pagar as faturas em dia é crucial, pois a falta de pagamento acarreta juros compostos, aumentando o valor total a ser pago e reduzindo o retorno do empréstimo.",
                 "questoes": [
                   {
                     "Idquest": 28,
@@ -731,6 +741,7 @@
               },
               {
                 "titulo": "Melhoria da Saúde Financeira",
+                "texto": "O uso responsável do crédito pode melhorar a saúde financeira ao evitar o endividamento excessivo, manter um histórico de crédito favorável e aumentar a capacidade de investimento. Uma prática para manter uma boa saúde financeira é criar e seguir um orçamento, onde se acompanha as receitas e despesas, identificando oportunidades de economia e controle de gastos. Caso já se tenha dívidas, é aconselhável priorizar o pagamento das dívidas com as taxas de juros mais altas. Além disso, deve-se considerar a consolidação das dívidas, a fim de buscar um empréstimo com uma taxa de juros mais baixa para quitar as dívidas e simplificar o pagamento em parcelas mais acessíveis.",
                 "questoes": [
                   {
                     "Idquest": 31,
@@ -824,6 +835,7 @@
           },
           {
             "titulo": "O que é Crédito",
+            "texto": "O crédito é a permissão dada por uma instituição financeira para que uma pessoa utilize temporariamente fundos que não são seus, com a promessa de devolver esse dinheiro futuramente, geralmente com o acréscimo de juros. Existem diversos tipos de crédito, cada um com suas características específicas e finalidades. Um exemplo importante é o crédito ao consumidor, que é um tipo de financiamento oferecido a indivíduos para a compra de bens e serviços de consumo. Esse crédito permite que os consumidores adquiram produtos imediatamente e paguem o valor ao longo do tempo.",
             "questoes": [
               {
                 "Idquest": 35,
@@ -901,6 +913,7 @@
         "fases": [
           {
             "titulo": "Planejamento Financeiro",
+            "texto": "O planejamento financeiro ao longo prazo é fundamental para garantir estabilidade e segurança financeira no futuro. Pois permite definir metas financeiras, como a aposentadoria, a compra de imóveis investimentos. Uma ferramenta essencial para maximizar a eficácia do planejamento financeiro é o orçamento financeiro, este que auxilia no controle das finanças pessoais e consiste na elaboração de um registro detalhado das receitas e despesas, permitindo visualizar o fluxo de dinheiro e identificar oportunidades de economia e investimento. Revisar regularmente o orçamento financeiro é essencial para acompanhar a evolução das finanças, ajustar metas conforme o necessário, identificar despesas desnecessárias ou excessivas e garantir que o plano esteja alinhado com as metas estabelecidas. Esse processo ajuda a manter um maior controle sobre as finanças e a tomar decisões mais assertivas em relação ao dinheiro.",
             "questoes": [
               {
                 "Idquest": 38,
@@ -972,6 +985,7 @@
           },
           {
             "titulo": "Investimento e Crescimento Financeiro",
+            "texto": "O crédito é uma ferramenta para financiar investimentos, e pode ser usado estrategicamente para promover o crescimento financeiro ao possibilitar a realização de investimentos que, por sua vez, podem gerar retorno financeiro ao longo prazo. Afim de reduzir o risco e aumentar o retorno do investimento é possivel diversifica-lo, e fazer diversos investimentos. Ao distribuir seus recursos em diferentes tipos de investimentos, como ações, títulos e imóveis você fica menos exposto a variações negativas. Isso ajuda a proteger seu patrimônio e a maximizar as oportunidades de crescimento financeiro.",
             "questoes": [
               {
                 "Idquest": 41,
@@ -1043,6 +1057,7 @@
           },
           {
             "titulo": "Manutenção de um Bom Crédito",
+            "texto": "Para manter um bom crédito, é necessário manter um bom histórico de pagamento, ou seja, pagar as contas em dia e integralmente, evitar o uso excessivo de crédito, manter saldos baixos em cartões de crédito em relação ao limite disponível. Além disso, é importante verificar seu relatório de crédito regularmente para identificar erros ou atividades suspeitas, caso houver algo errado, sempre entre em contato com a agência do crédito responsável para contestar e corrigir as informações incorretas.",
             "questoes": [
               {
                 "Idquest": 44,
@@ -1120,6 +1135,7 @@
         "fases": [
           {
             "titulo": "Gestão Avançada de Crédito",
+            "texto": "A alavancagem financeira é a prática de usar fundos emprestados para ampliar o potencial de retorno de um investimento, esta pode ser vantajosa pois permite ampliar os investimentos e aumentar o potencial de lucro sem a necessidade de investir todo o capital próprio. No entanto, a alavancagem financeira também apresenta riscos significativos, já que pode ampliar as perdas em caso de movimentos desfavoráveis no mercado, que podem resultar em prejuízos substanciais e até mesmo a perda total do capital investido. Portanto, embora a alavancagem financeira possa oferecer oportunidades de ampliação de lucros, é importante considerar cuidadosamente os riscos associados e gerenciar adequadamente a exposição aos riscos.",
             "questoes": [
               {
                 "Idquest": 47,
@@ -1191,6 +1207,7 @@
             },
             {
               "titulo": "Estratégias de Crédito Avançadas",
+              "texto": "O refinanciamento é o processo de substituir um empréstimo existente por um novo, geralmente com termos diferentes, como uma taxa de juros mais baixa ou um prazo de pagamento alterado. Essa prática pode ser aplicada a diversos tipos de dívidas, como hipotecas, empréstimos pessoais e dívidas de cartão de crédito. O refinanciamento possui possíveis benefícios, como a redução das taxas de juros, o que pode resultar em pagamentos mensais menores, e a extensão do prazo do empréstimo. No entanto, ao considerar um refinanciamento, é importante avaliar vários fatores. Entre eles estão as taxas e custos associados ao novo empréstimo e se o refinanciamento realmente proporcionará uma economia significativa a longo prazo, considerando o novo prazo e a taxa de juros. Em suma, é crucial analisar a própria situação financeira e a capacidade de manter os pagamentos ao longo do novo prazo do empréstimo.",
               "questoes": [
                 {
                   "Idquest": 50,
@@ -1262,6 +1279,7 @@
             },
             {
               "titulo": "Planejamento de Aposentadoria e Crédito",
+              "texto" : "A relação entre crédito e o planejamento de aposentadoria está no papel crucial que o crédito pode desempenhar na gestão financeira durante os anos de trabalho e na preparação para o futuro. Usado de forma estratégica, o crédito pode ajudar a alcançar objetivos financeiros que contribuem para uma aposentadoria mais confortável, investindo na criação de um fundo monetário para a aposentadoria. O crédito pode ser usado para investir em diversos ativos que gerem renda passiva, assegurando uma melhor qualidade de vida durante a aposentadoria. Para evitar dívidas durante a aposentadoria, é essencial adotar estratégias eficazes, sendo a mais eficiente pagar as dívidas antes de se aposentar, priorizando a quitação de dívidas de alto custo. Além disso, a criação de um fundo de emergência é fundamental, pois ajuda a cobrir despesas inesperadas sem a necessidade de contrair novas dívidas. Manter uma gestão cuidadosa e responsável do crédito ao longo da vida ativa é essencial para garantir que, ao chegar à aposentadoria, as finanças estejam em ordem e os rendimentos sejam suficientes para manter um padrão de vida confortável.",
               "questoes": [
                 {
                   "Idquest": 53,
