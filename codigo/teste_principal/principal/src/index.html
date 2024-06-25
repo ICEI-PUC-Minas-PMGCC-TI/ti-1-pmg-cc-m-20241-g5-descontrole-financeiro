@@ -37,7 +37,7 @@
               ...
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="refresh-elem">Close</button>
               <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
@@ -200,7 +200,7 @@
   <script>
    document.addEventListener("DOMContentLoaded", function() {
     var indice = 0;
-    const chapterCost = 1000; // Define the cost of unlocking a chapter
+    const chapterCost = 200; // Define the cost of unlocking a chapter
 
     function carregarDados() {
         const currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
@@ -354,12 +354,16 @@
             updateLocalStorage(currentUser);
             divCapitulo.style.opacity = 1;
             buyDiv.style.display = 'none'; // Hide the buy button
-            alert('Chapter unlocked!');
+            showModal("Capítulo Desbloqueado!");
         }
     }
 
     function showModal(message) {
         const modalBody = document.getElementById('buyModalBody');
+        modalButton = document.getElementById('refresh-elem');
+        modalButton.addEventListener('click',function() {
+          location.reload();
+        });
         modalBody.innerHTML = message;
         const buyModal = new bootstrap.Modal(document.getElementById('buyModal'));
         buyModal.show();
