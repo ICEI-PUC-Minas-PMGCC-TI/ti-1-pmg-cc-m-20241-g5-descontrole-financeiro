@@ -13,11 +13,12 @@
   }
   
   body {
-    min-height: 100%;
+    min-height: 100vh;
     min-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #110e09;
     color: whitesmoke;
     font-family: "Josefin Sans", sans-serif;
@@ -38,10 +39,26 @@
     width: 100%;
   }
 
+  .question-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question-header h1 {
+    margin-top: 5vh;
+    font-size: 3em;
+  }
+
   .question-title {
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    width: 70%;
+    max-width: 100%;
+    font-size: 1.5em;
     gap: 2rem;
   }
  
@@ -50,7 +67,7 @@
     display: flex;
     flex-direction: column;
     gap: 4vh;
-    width: 80%;
+    width: 40%;
     margin-bottom: 3rem;
   }
   
@@ -116,7 +133,7 @@ footer {
     box-shadow: none;
   }
 
-  .continuar {
+  .continuar, .sair {
     text-decoration: none;
     font-weight: 900;
     text-align: right;
@@ -132,9 +149,15 @@ footer {
     box-shadow: none;
   }
 
-  .question-title h2 {
-    margin-top: 3rem;
-  }
+ .question-text {
+  margin-top: 3vh;
+  width: 60%;
+  text-align: center;
+ }
+
+ .question-text p {
+  font-size: 1.2em;
+ }
 
   .question-intro {
     display: flex;
@@ -142,7 +165,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    padding: 2em 2em 10em 2em;
   }
   
 

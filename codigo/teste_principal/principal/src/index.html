@@ -248,7 +248,7 @@
                         userChapter.tasks.forEach((userTask, index) => {
                             const divFase = document.createElement('div');
                             divFase.classList.add('fase', `fase${index + 1}`);
-                            const completedBadge = userTask.completed ? '<span class="badge text-bg-warning">Feito!</span>' : '';
+                            const completedBadge = userTask.completed ? '<span class="btn-feito">Feito!</span>' : '';
                             divFase.innerHTML = `<a id="${indice}${index + 1}" ${!userChapter.unlocked ? 'class="disabled"' : ''}>${index + 1}</a>${completedBadge}`;
                             divCapitulo.appendChild(divFase);
                         });
