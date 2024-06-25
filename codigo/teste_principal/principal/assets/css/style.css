@@ -499,3 +499,13 @@ span {
 .buy:hover ~ .header_cap {
     opacity: 1 !important;
 }
+
+.btn-feito {
+    background-color: #ff6b35;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 0.5em #ff9600;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    padding: 0.2em;
+}
