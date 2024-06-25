@@ -200,7 +200,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
     var indice = 0;
-    const chapterCost = 100; // Define the cost of unlocking a chapter
+    const chapterCost = 1000; // Define the cost of unlocking a chapter
 
     function carregarDados() {
         const currentUser = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
@@ -248,7 +248,8 @@
                         userChapter.tasks.forEach((userTask, index) => {
                             const divFase = document.createElement('div');
                             divFase.classList.add('fase', `fase${index + 1}`);
-                            divFase.innerHTML = `<a id="${indice}${index + 1}" ${!userChapter.unlocked ? 'class="disabled"' : ''}>${index + 1}</a>`;
+                            const completedBadge = userTask.completed ? '<span class="badge text-bg-warning">Feito!</span>' : '';
+                            divFase.innerHTML = `<a id="${indice}${index + 1}" ${!userChapter.unlocked ? 'class="disabled"' : ''}>${index + 1}</a>${completedBadge}`;
                             divCapitulo.appendChild(divFase);
                         });
 
@@ -330,15 +331,15 @@
         let errorMessage = '';
 
         if (previousChapter && !previousChapter.unlocked) {
-            errorMessage += 'Você precisa desbloquear o capítulo anterior para ter acesso à este.<br>';
+            errorMessage += 'You must unlock the previous chapter to access this one.<br>';
         }
 
         if (previousChapter && !previousChapter.tasks.every(task => task.completed)) {
-            errorMessage += 'Você precisa completar todas as fases do capítulo anterior para ter acesso à este.<br>';
+            errorMessage += 'You must complete all tasks in the previous chapter to unlock this one.<br>';
         }
 
         if (currentUser.coins < chapterCost) {
-            errorMessage += 'Você não tem moedas o suficiente para desbloquear este capítulo.';
+            errorMessage += 'You do not have enough coins to unlock this chapter.';
         }
 
         if (errorMessage) {
@@ -350,8 +351,7 @@
             updateLocalStorage(currentUser);
             divCapitulo.style.opacity = 1;
             buyDiv.style.display = 'none'; // Hide the buy button
-            showModal('Parabéns! Você acaba de adquirir um novo capítulo.');
-            location.reload();
+            alert('Chapter unlocked!');
         }
     }
 
@@ -364,6 +364,7 @@
 
     window.onload = carregarDados;
 });
+
 
 
 
