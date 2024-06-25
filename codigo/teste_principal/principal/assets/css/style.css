@@ -443,7 +443,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    font-size: 0.75em;
+    font-size: 1em;
     margin-bottom: 5em;
 }
 
@@ -451,13 +451,13 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 1em;
     flex-direction: row;
 }
 
 .img2{
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 20%;
 }
 
 .buy-child {
