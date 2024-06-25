@@ -9,7 +9,7 @@
             "fases": [
               {
                 "titulo": "O que é Crédito",
-                "texto" : "O crédito é a permissão dada por uma instituição financeira para que uma pessoa utilize temporariamente fundos que não são seus, com a promessa de devolver esse dinheiro futuramente, geralmente com o acréscimo de juros. Existem diversos tipos de crédito, cada um com suas características específicas e finalidades. Um exemplo importante é o crédito ao consumidor, que é um tipo de financiamento oferecido a indivíduos para a compra de bens e serviços de consumo. Esse crédito permite que os consumidores adquiram produtos imediatamente e paguem o valor ao longo do tempo.",
+                "texto" : "O crédito é a permissão dada por uma instituição financeira para que uma pessoa utilize temporariamente fundos que não são seus, com a promessa de devolver esse dinheiro futuramente, geralmente com o acréscimo de juros.<br>Existem diversos tipos de crédito, cada um com suas características específicas e finalidades. Um exemplo importante é o crédito ao consumidor, que é um tipo de financiamento oferecido a indivíduos para a compra de bens e serviços de consumo. Esse crédito permite que os consumidores adquiram produtos imediatamente e paguem o valor ao longo do tempo.",
                 "questoes": [
                   {
                     "Idquest": 1,

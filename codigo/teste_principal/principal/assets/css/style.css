@@ -119,6 +119,12 @@ main {
 .big-header h2 {
     font-size: large;
 }
+.fase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .header_cap:nth-of-type(odd) .fase1 {
     margin-right: 5vh;
