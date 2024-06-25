@@ -436,30 +436,28 @@ span {
     width: 30%;
 }
 
-.profileItens{
-    width: 100%;
-    height: 10vh;
-    padding-left: 40px;
+.Perfil {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 0.75em;
+    margin-bottom: 5em;
 }
 
-.Moedas{
+.Perfil .Moedas{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
     flex-direction: row;
 }
 
 .img2{
-    width: 20%;
-    height: 20%;
-}
-
-.usercoins{
-    margin-left: 10px;
-}
-
-@media screen and (max-width: 1250px) {
-    sidebar h1 {
-        display: none;
-    }
+    width: 10%;
+    height: 10%;
 }
 
 .buy-child {

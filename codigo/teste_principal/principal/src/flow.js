@@ -14,9 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let project = document.createElement('div');
       project.innerHTML = `
-            <div class="Moedas">
-                <img src="/codigo/teste_principal/principal/imgs/coin.png" alt="" class="img2">
-                <h3 class="usercoins">${usuario.coins}</h3>
+            <div class="Perfil">
+              <h1>${usuario.nome}</h1>
+              <div class="Moedas">
+                  <img src="/codigo/teste_principal/principal/imgs/coin.png" alt="" class="img2">
+                  <h3 class="usercoins">${usuario.coins}</h3>
+              </div>
             </div>
         `;
 
