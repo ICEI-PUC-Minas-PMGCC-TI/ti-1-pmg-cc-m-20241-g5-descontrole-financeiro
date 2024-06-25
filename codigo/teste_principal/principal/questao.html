@@ -38,6 +38,7 @@
         var userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
         var consecutiveCorrectAnswers = userData ? userData.consecutive_answers : 0;
         var coins = userData ? userData.coins : 0;
+        var currentQuizAnswers = []; // Store the current quiz answers
 
         fetch('/codigo/db.json')
         .then(response => response.json())
@@ -66,6 +67,7 @@
                     nxt_btn.classList.add('hidden'); 
                 } else {
                     markTaskAsCompleted(chapter, phase);
+                    updateUserData(currentQuizAnswers, chapter, phase);
                     updateConsecutiveAnswers(consecutiveCorrectAnswers);
                     updateCoins(coins);
                     window.location.href = './src/index.html';
@@ -133,8 +135,7 @@
                 }
             }
 
-            updateUserData(questionResult, chapter, phase);
-            updateSessionStorage();
+            currentQuizAnswers.push(questionResult); // Store the current question result
         }
 
         function calculateCoins(consecutiveCorrectAnswers) {
@@ -169,7 +170,7 @@
             }
         }
 
-        function updateUserData(questionResult, chapterId, phaseId) {
+        function updateUserData(quizAnswers, chapterId, phaseId) {
             let userData = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
             var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios')) || { users: [] };
             var user = db_usuarios.users.find(user => user.id === userData.id);
@@ -177,11 +178,11 @@
             if (userData && user) {
                 let chapter = userData.chapters.find(chap => chap.chapter_id == chapterId);
                 let task = chapter.tasks.find(t => t.task_id == phaseId);
-                task.questions.push(questionResult);
+                task.questions = quizAnswers; // Replace old answers with new ones
 
                 let chapterLocal = user.chapters.find(chap => chap.chapter_id == chapterId);
                 let taskLocal = chapterLocal.tasks.find(t => t.task_id == phaseId);
-                taskLocal.questions.push(questionResult);
+                taskLocal.questions = quizAnswers; // Replace old answers with new ones
 
                 sessionStorage.setItem('usuarioCorrente', JSON.stringify(userData));
                 localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
