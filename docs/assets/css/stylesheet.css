@@ -170,6 +170,10 @@ button:active {
   outline: none;
 }
 
+.imgKB{
+  width: 70%;
+}
+
 p {
   line-height: 1.8;
 }
