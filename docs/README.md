@@ -20,44 +20,32 @@ Esta seção traz explicações breves sobre o conjunto de artefatos que precisa
 
 ## Problema
 
-Segundo metodologias propostas por grandes empreendedores, é fundamental que os desenvolvedores de um projeto sintam a dor do outro para realizar um entendimento plenamente perfeito do problema. Atingido tal estado mental, torna-se fácil produzir uma solução coerente e coesa.
-	O problema que será tratado, mais especificamente dentro do aspecto do descontrole financeiro, será: Como criar, nos jovens universitários, uma consciência financeira, pensando a curto e longo prazo, evitando o descontrole financeiro?
-	Para melhor compreensão da problemática, foram entrevistadas seis pessoas que se encontram ingressadas na universidade em seus respectivos cursos, cuja média das idades gira em torno de 20 anos, entretanto suas realidades financeiras se divergem em diversos aspectos, como em suas respectivas fontes de renda, a necessidade de gastos, seus lazeres, dentre outros aspectos. Muitos destes universitários não sabem nem como lidar efetivamente com seus recursos monetários, apesar de muitos dizerem que sabem seus supostos gastos e citarem quantias relativas. Diante de tal contexto, faz-se necessário debruçar sobre os seguintes questionamentos: Ficaram os seguintes questionamentos, sendo o primeiro extremamente importante: Quanto eu gastei neste mês?  Com o que eu mais gasto? Será que eu tenho gastado muito para o tanto que eu recebo? Será que meus gastos são de fato necessários? Porque eu gasto mais do que posso? Quais são as dificuldades que eu possuo para administrar meu dinheiro? Como eu lido com meu primeiro salário? O que eu devo fazer assim que eu o recebo? Como devo separar, em partes, aquilo que ganho? Como posso administrar meu dinheiro de forma que eu me locomova para a faculdade, realize minhas atividades de lazer, e me alimente? Dessa forma, responder tais perguntas é algo extremamente importante para qualquer jovem que passará por uma reformulação mental sobre os conceitos financeiros, trazê-las para a mente e o contexto dos mancebos é o desafio. 
+Segundo metodologias propostas por grandes empreendedores, é fundamental que os desenvolvedores de um projeto sintam a dor do outro para realizar um entendimento plenamente perfeito do problema. Atingido tal estado mental, torna-se fácil produzir uma solução coerente e coesa. O problema que será tratado, mais especificamente dentro do aspecto do descontrole financeiro, é: Como criar, nos jovens universitários, uma consciência financeira, pensando a curto e longo prazo, evitando o descontrole financeiro?
 
+Para melhor compreensão da problemática, foram entrevistadas seis pessoas que se encontram ingressadas na universidade em seus respectivos cursos, cuja média das idades gira em torno de 20 anos, entretanto suas realidades financeiras se divergem em diversos aspectos, como em suas respectivas fontes de renda, a necessidade de gastos, seus lazeres, dentre outros aspectos. Muitos destes universitários não sabem nem como lidar efetivamente com seus recursos monetários, apesar de muitos dizerem que sabem seus supostos gastos e citarem quantias relativas. Diante de tal contexto, faz-se necessário debruçar sobre os seguintes questionamentos, sendo o primeiro extremamente importante: Quanto eu gastei neste mês? Com o que eu mais gasto? Será que eu tenho gastado muito para o tanto que eu recebo? Será que meus gastos são de fato necessários? Por que eu gasto mais do que posso? Quais são as dificuldades que eu possuo para administrar meu dinheiro? Como eu lido com meu primeiro salário? O que eu devo fazer assim que eu o recebo? Como devo separar, em partes, aquilo que ganho? Como posso administrar meu dinheiro de forma que eu me locomova para a faculdade, realize minhas atividades de lazer, e me alimente?
+
+Dessa forma, responder tais perguntas é algo extremamente importante para qualquer jovem que passará por uma reformulação mental sobre os conceitos financeiros, trazê-las para a mente e o contexto dos jovens é o desafio.
 
 ## Objetivos
 
 1) Geral:  
-*	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
-*	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
-*	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário.
+• Promover a educação financeira entre os usuários, ajudando-os a entender os conceitos básicos de gerenciamento de dinheiro, poupança, investimento e crédito..
+• Incentivar a adoção de práticas financeiras responsáveis e saudáveis através da gamificação
+•Capacitar os usuários para tomar decisões financeiras informadas e seguras.
 
 2) Específico:
-*	 Verificar se o jovem recebe renda fixa ou não.
-*	 Verificar se o jovem possui planejamentos financeiros.
-*	 Verificar se o jovem possui reserva financeira.
-*	 Analisar rotina de estudo e/ou trabalho.
-*	 Analisar compromisso com rotina de estudo e/ou trabalho
-
+• Desenvolver lições interativas que abordem situações financeiras do cotidiano.
+•  Criar metas e desafios diários para manter o engajamento dos usuários.
+• Implementar um sistema de recompensas para incentivar o progresso dos usuários.
 
 ## Justificativa
 
 O descontrole financeiro é um fenômeno que trata sobre a dificuldade de manutenção dos recursos monetários de uma pessoa, tal fenômeno se expressa com certa abundância na contemporaneidade. Em 2023, no Brasil, uma pesquisa realizada pela Federação Brasileira de Bancos (FEBRABAN), em cooperação técnica com o Banco Central do Brasil e membros do sistema financeiro nacional, constatou que cerca de 43.8% dos entrevistados afirmam estar sob estresse financeiro, que é uma condição que resulta de eventos tanto financeiros/econômicos que criam ansiedade, preocupação ou sensação de escassez. Em se tratando de jovens entre seus 17 e 24 anos, devido ao advento das tecnologias de pagamento eletrônico, muitos deles se tornam suscetíveis ao consumo, além disso o materialismo influencia muitas pessoas a consumir por necessidade de ter status social ou por necessidade de saciar fragilidades emocionais, simplesmente.
-	Desse modo, o estudo em questão, tem como causa a ambição dos desenvolvedores deste projeto em criar soluções práticas para que os estudantes no ambiente universitário desenvolvam a habilidade de possuir pleno controle sobre sua vida financeira, trazendo a educação monetária para a mente dos jovens, evitando com que dados como os retro citados supracitados cresçam no futuro.
-
+ Desse modo, o estudo em questão, tem como causa a ambição dos desenvolvedores deste projeto em criar soluções práticas para que os estudantes no ambiente universitário desenvolvam a habilidade de possuir pleno controle sobre sua vida financeira, trazendo a educação monetária para a mente dos jovens, evitando com que dados como os supracitados cresçam no futuro.
+ 
 ## Público-Alvo
 
 O público alvo do projeto em questão são jovens entre 17 a 25 anos, possuem ensino médio completo e (estudam no ambiente universitário) fazem faculdade, recebendo dinheiro de estágios ou dos pais para realizar suas atividades diárias. Além disso, estes jovens moram com suas famílias, ou em repúblicas, ou sozinhos caso não estejam em suas respectivas cidades natais para estudar.
-	
-
-Consistência na descrição do conjunto de artefatos derivados da fase de empatia com o 
-conjunto de requisitos
-
-Associação clara de requisitos funcionais com as implementações a serem feitas no software.
-
-Min. 6 histórias de usuários
-
-Min. 10 requisitos funcionais
 
 ## Personas
 
@@ -268,11 +256,10 @@ Como Arthur Carvalho, eu gostaria de encontrar um modo de monitorar meus investi
 
 ## Requisitos
 
-Requisitos funcionais
+
 Após se inscrever no aplicativo, serão coletadas informações à respeito dos interesses do cliente dentro daquilo oferecido pelo projeto. Com todas as informações, será criado um perfil de usuário que permita o desenvolvimento de um plano didático relacionado à educação financeira, para que assim o cliente participe das fases existentes no aplicativo e ao mesmo tempo pratique o que foi aprendido com o próprio dinheiro. 
 
-Requisitos Funcionais
-O usuário vai aprender a manusear seu dinheiro e obter controle sobre seus gastos. Além disso, vai aprender como gerenciar suas finanças pessoais a partir do conhecimento inicial que já obtinha. Serão apresentadas opções de investimento e oportunidades de renda baseadas no interesse do usuário. A cada fase, o utilizador vai avançar na jornada financeira e masterizar os seus conhecimentos na área. Aperfeiçoando suas práticas monetárias com o passar do tempo. 
+O usuário vai aprender a manusear seu dinheiro e obter controle sobre seus gastos. Além disso, ele vai aprender como gerenciar suas finanças pessoais a partir do conhecimento inicial que já obtinha. A cada fase, o utilizador vai avançar na jornada financeira e masterizar os seus conhecimentos na área. Aperfeiçoando suas práticas monetárias com o passar do tempo. 
 
 
 ## User Flow

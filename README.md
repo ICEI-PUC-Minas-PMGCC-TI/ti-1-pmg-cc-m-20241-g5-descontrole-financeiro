@@ -1,15 +1,14 @@
 # Guarda Grana 
 
 1) Geral:  
-*	Analisar o entendimento dos jovens que fazem faculdade sobre educação financeira.
-*	Finalidade do projeto: Analisar o entendimento dos jovens sobre educação financeira.
-*	Delimitação da pesquisa: Aplicar a pesquisa no Ambiente universitário. 
+• Promover a educação financeira entre os usuários, ajudando-os a entender os conceitos básicos de gerenciamento de dinheiro, poupança, investimento e crédito..
+• Incentivar a adoção de práticas financeiras responsáveis e saudáveis através da gamificação
+•Capacitar os usuários para tomar decisões financeiras informadas e seguras.
+
 2) Específico:
-*	 Verificar se o jovem recebe renda fixa ou não.
-*	 Verificar se o jovem possui planejamentos financeiros.
-*	 Verificar se o jovem possui reserva financeira.
-*	 Analisar rotina de estudo e/ou trabalho.
-*  Analisar compromisso com rotina de estudo e/ou trabalho
+• Desenvolver lições interativas que abordem situações financeiras do cotidiano.
+•  Criar metas e desafios diários para manter o engajamento dos usuários.
+• Implementar um sistema de recompensas para incentivar o progresso dos usuários.
 
 
 ## Alunos integrantes da equipe
