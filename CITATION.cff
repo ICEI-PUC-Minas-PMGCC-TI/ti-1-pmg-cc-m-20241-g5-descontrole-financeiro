@@ -1,9 +1,9 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: GuardaGraba
+title: GuardaGrana
 authors:
   - family-names: Carvalho
-    given-names: Arthue
+    given-names: Arthur
   - family-names: Soares
     given-names: Arthur
   - family-names: Bortolaia
